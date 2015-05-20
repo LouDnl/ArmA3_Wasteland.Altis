@@ -2,15 +2,19 @@
 //Author: Apoc
 
 //APOC_AA_coolDownTime = 1; //Debug seconds
-APOC_AA_coolDownTime = 1800; //Expressed in sec. 1800 = 30 minutes
+APOC_AA_coolDownTime = 600; //Expressed in sec. 1800 = 30 minutes
 
 APOC_AA_VehOptions =
 [ // ["Menu Text",		ItemClassname,				Price,	"Drop Type"]
-["Quadbike (Civilian)", "C_Quadbike_01_F", 			1200, 	 "vehicle"],
-["MH-9 Hummingbird",	"B_Heli_Light_01_F", 		10000,	 "vehicle"],
-["Strider HMG", 		"I_MRAP_03_hmg_F", 			30000, 	 "vehicle"],
+["Quadbike (Civilian)", "C_Quadbike_01_F", 			  600, 	"vehicle"],
+["Hatchback Sport",     "C_Hatchback_01_sport_F",	 2600, 	"vehicle"],
+["MH-9 Hummingbird",	"B_Heli_Light_01_F", 		 5000,	"vehicle"],
+["Strider HMG", 		"I_MRAP_03_hmg_F", 			19000, 	"vehicle"],
 ["MSE-3 Marid", 		"O_APC_Wheeled_02_rcws_F", 	50000,  "vehicle"],
-["MBT-52 Kuma", 		"I_MBT_03_cannon_F", 		200000,  "vehicle"]
+["MBT-52 Kuma", 		"I_MBT_03_cannon_F", 		99000,  "vehicle"],
+["Offroad HMG", 		"B_G_Offroad_01_armed_F", 	 3000,  "vehicle"],
+["AH-9 Pawnee", 		"B_Heli_Light_01_armed_F", 	39000,  "vehicle"],
+["HEMTT Ammo", 		    "B_Truck_01_ammo_F", 	    79000,  "vehicle"]
 ];
 
 APOC_AA_SupOptions =

@@ -3,13 +3,13 @@ sleep 90;
 private ["_messages", "_timeout"];
 
 _messages = [
-	["NLU", "NL United A3Wasteland"],
+	["DADS", "DADS #2 Stratis A3wasteland "],
 	["Welcome", (name player)],
 	["A3Wasteland", worldName],
-	["Teamspeak", "ts.nl-united.nl"],
-	["Website/Forums", "www.nl-united.nl"],
-	["Saving", "Check the Server Rules to see saving times."],
-	["ATM / Bank", "You can use any ATM found in Altis."],
+	["Teamspeak", "ts1.dadsarmy.se"],
+	["Website/Forums", "www.dadsarmy.se"],
+	["DONATE", "To keep server running: lordmaju@hotmail.com"],
+	["ATM / Bank", "You can use any ATM found in Stratis."],
 	["Earplugs", "Put in your earplugs by using the END key."]
 ];
 

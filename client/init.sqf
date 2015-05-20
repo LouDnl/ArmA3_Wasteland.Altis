@@ -38,8 +38,6 @@ playerSetupComplete = false;
 waitUntil {!isNull player};
 waitUntil {time > 0.1};
 
-enableEnvironment false; // Temporary fix for client side FPS problems. Disables all wildlife and environment sounds
-
 removeAllWeapons player;
 player switchMove "";
 

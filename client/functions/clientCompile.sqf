@@ -65,6 +65,7 @@ playerSetup = "client\functions\playerSetup.sqf" call mf_compile;
 playerSetupStart = "client\functions\playerSetupStart.sqf" call mf_compile;
 playerSetupGear = "client\functions\playerSetupGear.sqf" call mf_compile;
 playerSetupEnd = "client\functions\playerSetupEnd.sqf" call mf_compile;
+kits = "addons\classes\kits.sqf" call mf_compile;
 spawnAction = "client\functions\spawnAction.sqf" call mf_compile;
 spawnInTown = "client\functions\spawnInTown.sqf" call mf_compile;
 spawnOnBeacon = "client\functions\spawnOnBeacon.sqf" call mf_compile;
