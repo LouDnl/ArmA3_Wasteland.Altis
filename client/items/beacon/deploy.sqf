@@ -11,24 +11,10 @@
 #define ANIM "AinvPknlMstpSlayWrflDnon_medic"
 #define ERR_CANCELLED "Action Cancelled"
 #define ERR_IN_VEHICLE "Action Failed! You can't do this in a vehicle"
-#define ERR_DONATOR "Action Failed! You are not allowed to place a beacon near this base"
 #define MAX_BEACONS format ["You cannot deploy more then %1 spawnbeacons", [_MaxSpawnbeacons]]
 _MaxSpawnbeacons = ceil (["A3W_maxSpawnBeacons", 5] call getPublicVar);
 
-private ["_hasFailed", "_success","_pos","_uid","_beacon","_IsProtected","_IsAllowed","_beacons","_ownedBeacons"];
-
-_IsProtected = false;
-_IsAllowed = false;
-
-{
-	if(((player distance getMarkerPos (_x select 3)) <  (_x select 1))) then 
-	{
-		_IsProtected = true;			
-		if ((getPlayerUID player) in (_x select 5)) then {				
-			_IsAllowed = true;
-		};
-	};
-} forEach call Donators;
+private ["_hasFailed", "_success","_pos","_uid","_beacon","_beacons","_ownedBeacons"];
 
 _beacons = []; 
 { 
@@ -48,7 +34,6 @@ _hasFailed = {
 		case (!alive player): {};
 		case (doCancelAction) :{doCancelAction = false; _text = ERR_CANCELLED;};
 		case (vehicle player != player): {_text = ERR_IN_VEHICLE};
-		case ((_IsProtected) && !(_IsAllowed)): {_text = ERR_DONATOR};
 		case (_ownedBeacons >= _MaxSpawnbeacons): {_text = MAX_BEACONS; player spawn deleteBeacon};
 		default {
 			_text = format["Spawn Beacon %1%2 Deployed", round(_progress*100), "%"];

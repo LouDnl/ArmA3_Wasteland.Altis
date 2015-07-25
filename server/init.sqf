@@ -73,10 +73,6 @@ if (isServer) then
 	{
 		[[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"], "BIS_fnc_execVM", true, true] call A3W_fnc_MP;
 	};
-
-	// Load Donators and NLU members
-	[] execVM (externalConfigFolder + "\donators.sqf");
-	[] execVM (externalConfigFolder + "\nlunited.sqf");
 };
 
 diag_log "WASTELAND SERVER - Server Compile Finished";

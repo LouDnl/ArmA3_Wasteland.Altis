@@ -2,8 +2,8 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
-//	@file Name: setupStoreNPC.sqf
-//	@file Author: AgentRev
+//	@file Name: setupWaterStoreNPC.sqf
+//	@file Author: AgentRev, edited by LouD to be able to create stores above water.
 //	@file Created: 12/10/2013 12:36
 //	@file Args:
 

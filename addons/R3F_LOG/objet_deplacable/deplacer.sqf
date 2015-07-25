@@ -22,7 +22,7 @@ else
 	
 	R3F_LOG_objet_selectionne = objNull;
 	
-	private ["_objet", "_decharger", "_joueur", "_dir_joueur", "_arme_courante", "_muzzle_courant", "_mode_muzzle_courant", "_restaurer_arme","_IsProtected","_IsAllowed"];
+	private ["_objet", "_decharger", "_joueur", "_dir_joueur", "_arme_courante", "_muzzle_courant", "_mode_muzzle_courant", "_restaurer_arme"];
 	private ["_vec_dir_rel", "_vec_dir_up", "_dernier_vec_dir_up", "_avant_dernier_vec_dir_up", "_normale_surface"];
 	private ["_pos_rel_objet_initial", "_pos_rel_objet", "_dernier_pos_rel_objet", "_avant_dernier_pos_rel_objet"];
 	private ["_elev_cam_initial", "_elev_cam", "_offset_hauteur_cam", "_offset_bounding_center", "_offset_hauteur_terrain"];
@@ -49,25 +49,6 @@ else
 		hint format["This object belongs to %1 and they're nearby you cannot take this.", _objet getVariable "R3F_Side"]; R3F_LOG_mutex_local_verrou = false;
 	};
 	
-	//Start donator part
-	_IsProtected = false;
-	_IsAllowed = false;
-	
-	{
-		if(((_objet distance getMarkerPos  (_x select 3)) <  (_x select 1))) then
-		{	
-			_IsProtected = true;			
-			if ((getPlayerUID player) in (_x select 5)) then {				
-				_IsAllowed = true;
-			};
-		};
-	} forEach call Donators;
-	
-	if ((_IsProtected) && !(_IsAllowed)) exitwith {	 
-		hint "This base is protected by donator status"; R3F_LOG_mutex_local_verrou = false;
-	};
-	//End donator part
-
 	if (((_objet distance getMarkerPos "_BluBaseMarker") < 100) && !(side player == blufor)) exitwith {
 		hint "This base can only be changed by Blufor"; R3F_LOG_mutex_local_verrou = false;
 	};

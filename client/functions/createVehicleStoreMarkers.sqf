@@ -23,10 +23,4 @@
 		_markerName setMarkerSizeLocal [1,1];
 		_markerName setMarkerTextLocal "Vehicle Store";
 	};
-	if (!isPlayer _x && {["VehStore6", name _x] call fn_startsWith}) then
-	{
-		_npcPos = getPos _x;
-		_markerName = format["marker_shop_title_%1",_x];
-		deleteMarkerLocal _markerName;
-	};
 } forEach entities "CAManBase";

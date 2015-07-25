@@ -329,8 +329,8 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Intro script
 <br/> [Added] Player controlled IP cameras
 <br/> [Added] Device detector (IP Cameras, Spawn Beacons and Base Lockers)
-<br/> [Added] Donator bases with donator lock state
-<br/> [Added] BluFor and OpFor Base
+<br/> [Added] Altis Madhouse and Orino Fortress (Altis)
+<br/> [Added] BluFor and OpFor Base (Altis)
 <br/> [Added] Mortar to one mission as reward
 <br/> [Added] High value target and Drugs runner
 <br/> [Added] Gas Grenades and Gas Masks by Mokey
@@ -349,6 +349,8 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Fix for spawnbeacons placed above water
 <br/> [Added] IEDs to stores and vehicles.
 <br/> [Added] Several new objects to General store for base building
+<br/> [Added] Extra mission spawns (Altis)
+<br/> [Added] Extra towns (Altis)
 <br/> [Removed] Mortar from store
 <br/> [Changed] Starting gear
 <br/> [Changed] Only 2 vehicle stores sell planes (Altis)
