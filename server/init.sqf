@@ -27,7 +27,23 @@ if (isServer) then
 		_name = _this select 3;
 
 		diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3", [_name, _uid], alive _unit, local _unit];
-
+		
+		_bountyMarker = format ["%1_bountyMarker", _name];  	
+		if (markerType _bountyMarker == "mil_dot") then
+		{
+			deleteMarker _bountyMarker;
+			{_x commandChat format ["[SERVER] %1 disconnected while being high value target!", _name];} forEach playableUnits;
+			diag_log format ["Possible Combat logger: %1 disconnected while being %2!", _name, _bountyMarker];
+		};
+		
+		_drugsMarker = format ["%1_drugsMarker", _name];  	
+		if (markerType _drugsMarker == "mil_dot") then
+		{
+			deleteMarker _drugsMarker;
+			{_x commandChat format ["[SERVER] %1 disconnected while being a drugs runner!", _name];} forEach playableUnits;
+			diag_log format ["Possible Combat logger: %1 disconnected while being %2!", _name, _drugsMarker];
+		};
+				
 		if (alive _unit) then
 		{
 			if (!(_unit call A3W_fnc_isUnconscious) && {!isNil "isConfigOn" && {["A3W_playerSaving"] call isConfigOn}}) then
