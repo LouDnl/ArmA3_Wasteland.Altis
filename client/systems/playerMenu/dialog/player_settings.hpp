@@ -187,10 +187,10 @@ class playerSettings {
 		/*class btnDistanceCustom : w_RscButton {
 			idc = -1;
 			text = "Custom";
-			onButtonClick = "[] execVM 'addons\taw_vd\fn_openTAWVD.sqf'";
+			onButtonClick = "[] execVM 'custom_view_distance.sqf'";
 			x = 0.158; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
-		};*/ // Disable viewdistance button for now
+		};*/ // Disable viewdistance button for now // Not used
 
 		
 		class TOParmaInfoButton : w_RscButton {
