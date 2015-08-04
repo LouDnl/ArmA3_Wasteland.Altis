@@ -61,6 +61,9 @@ else
 			
 			_objet_a_decharger setVariable ["R3F_LOG_est_transporte_par", objNull, true];
 			
+			// Airdrop base addition
+			_objet_a_decharger setVariable ["R3F_LOG_Disabled", false, true];
+			
 			// Prise en compte de l'objet dans l'environnement du joueur (accélérer le retour des addActions)
 			_objet_a_decharger spawn
 			{

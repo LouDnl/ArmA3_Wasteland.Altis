@@ -327,7 +327,8 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"APC_Tracked_03_base_F",
 	"MBT_01_base_F",
 	"MBT_02_base_F",
-	"MBT_03_base_F"
+	"MBT_03_base_F",
+	"Land_Pod_Heli_Transport_04_box_F"
 ];
 
 
@@ -379,7 +380,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["Heli_Transport_03_base_F", 150],
 	["Heli_Transport_04_base_F", 30],
 	["Heli_Attack_01_base_F", 10],
-	["Heli_Attack_02_base_F", 20]
+	["Heli_Attack_02_base_F", 20],
+	["Land_Pod_Heli_Transport_04_box_F", 250]
 ];
 
 /**
@@ -518,5 +520,6 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_ToiletBox_F",
 	"Land_BarrelWater_F",
 	"Land_HandyCam_F",
-	"Land_Laptop_F"
+	"Land_Laptop_F",
+	"Land_Pod_Heli_Transport_04_box_F"
 ];

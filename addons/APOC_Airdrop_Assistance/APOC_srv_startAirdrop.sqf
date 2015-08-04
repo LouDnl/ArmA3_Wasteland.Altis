@@ -19,6 +19,7 @@ switch (_type) do {
 	case "vehicle": {_selectionArray = APOC_AA_VehOptions};
 	case "supply": 	{_selectionArray = APOC_AA_SupOptions};
 	case "picnic":	{_selectionArray = APOC_AA_SupOptions};
+	case "base":	{_selectionArray = APOC_AA_SupOptions};
 	default 		{_selectionArray = APOC_AA_VehOptions; diag_log "AAA - Default Array Selected - Something broke";};
 };
 
@@ -110,6 +111,21 @@ _object = switch (_type) do {
 		_object setVariable ["A3W_purchasedStoreObject", true];
 		_object setVariable ["R3F_LOG_Disabled", false, true];
 		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
+		_object
+	};
+	case "base":
+	{
+		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
+		_object = createVehicle ["Land_Pod_Heli_Transport_04_box_F", _objectSpawnPos, [], 0, "None"];
+		//diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
+		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object setVariable ["R3F_LOG_disabled",false,true];
+		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
+		[_object, ["Land_Device_assembled_F", "Land_Cargo_Tower_V1_F", ["Land_Canal_Wall_Stairs_F", 2], ["Land_Mil_WallBig_4m_F", 5], ["Land_Canal_WallSmall_10m_F", 10], ["Land_RampConcreteHigh_F",2], ["Land_RampConcrete_F", 2],["Land_Crash_barrier_F",2],["Land_LampShabby_F",2]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+		clearBackpackCargoGlobal _object;
+		clearMagazineCargoGlobal _object;
+		clearWeaponCargoGlobal _object;
+		clearItemCargoGlobal _object;
 		_object
 	};
 	default {
