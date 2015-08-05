@@ -83,8 +83,10 @@ _object = switch (_type) do {
 		_object setVariable ["A3W_purchasedStoreObject", true];
 		_object setVariable ["A3W_purchasedVehicle", true, true];
 		_object setVariable ["ownerUID", getPlayerUID _player, true];
-		_object setVariable ["R3F_LOG_Disabled", false, true];
+		_object setVariable ["R3F_LOG_Disabled", true, true]; // Make vehicle locked
+		_object lock 2; // Make vehicle locked
 		[_object, false] call vehicleSetup;
+		[_object, "#(rgb,1,1,1)color(0.01,0.01,0.01,1)"] call applyVehicleTexture; // Apply black color
 		if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
 		{
 			_object call fn_manualVehicleSave;
