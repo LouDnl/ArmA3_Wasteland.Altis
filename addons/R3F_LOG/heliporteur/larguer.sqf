@@ -22,8 +22,8 @@ else
 	
 	_heliporteur = _this select 0;
 	_objet = _heliporteur getVariable "R3F_LOG_heliporte";
-	_parachute = [_this, 3, false, [false]] call BIS_fnc_param;
-	
+	_parachute = param [3, false, [false]];
+
 	_heliporteur setVariable ["R3F_LOG_heliporte", objNull, true];
 	_objet setVariable ["R3F_LOG_est_transporte_par", objNull, true];
 

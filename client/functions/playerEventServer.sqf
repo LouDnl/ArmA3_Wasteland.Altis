@@ -4,13 +4,13 @@
 //	@file Name: playerEventServer.sqf
 //	@file Author: AgentRev
 
-_type = [_this, 0, "", [""]] call BIS_fnc_param;
+_type = param [0, "", [""]];
 
 switch (toLower _type) do
 {
 	case "pickupmoney":
 	{
-		_amount = [_this, 1, 0, [0]] call BIS_fnc_param;
+		_amount = param [1, 0, [0]];
 
 		if (_amount > 0) then
 		{
@@ -29,7 +29,7 @@ switch (toLower _type) do
 
 	case "transaction":
 	{
-		_amount = [_this, 1, 0, [0]] call BIS_fnc_param;
+		_amount = param [1, 0, [0]];
 
 		if (_amount != 0) then
 		{
@@ -55,8 +55,8 @@ switch (toLower _type) do
 
 	case "atmtransfersent":
 	{
-		_amount = [_this, 1, 0, [0]] call BIS_fnc_param;
-		_name = [_this, 2, "", [""]] call BIS_fnc_param;
+		_amount = param [1, 0, [0]];
+		_name = param [2, "", [""]];
 
 		if (_amount != 0) then
 		{
@@ -80,8 +80,8 @@ switch (toLower _type) do
 
 	case "atmtransferreceived":
 	{
-		_amount = [_this, 1, 0, [0]] call BIS_fnc_param;
-		_name = [_this, 2, "", [""]] call BIS_fnc_param;
+		_amount = param [1, 0, [0]];
+		_name = param [2, "", [""]];
 
 		_message = if (isStreamFriendlyUIEnabled) then {
 			"You have received $%1 from a bank transfer" 
