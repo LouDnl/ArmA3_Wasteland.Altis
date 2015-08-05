@@ -166,6 +166,7 @@ _exclObjectIDs = [];
 		if (_unlock) exitWith
 		{
 			_obj setVariable ["objectLocked", false, true];
+			_obj hideObjectGlobal false; // Tentative fix for invisible spawn beacons and warchests
 		};
 
 		if (_boxSavingOn && {_class call _isBox}) then
