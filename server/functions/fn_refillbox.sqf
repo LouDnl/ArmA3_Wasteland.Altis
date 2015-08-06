@@ -146,7 +146,6 @@ switch (_boxType) do
 			["itm", "Medikit", RANDOM_BETWEEN(2,3)],
 			["itm", "Toolkit", RANDOM_BETWEEN(2,3)],
 			["itm", "Laserbatteries", RANDOM_BETWEEN(2,4)],
-			["itm", "a3w_spawnBeacon", 3],
 			["itm", "MineDetector", 3],
 			["itm", ["H_CrewHelmetHeli_B","H_CrewHelmetHeli_O", "H_CrewHelmetHeli_I"], RANDOM_BETWEEN(2,4)],
 			["bac", ["B_Kitbag_mcamo", "B_Bergen_sgg", "B_FieldPack_khk", "B_Carryall_mcamo"], RANDOM_BETWEEN(3,5)],
