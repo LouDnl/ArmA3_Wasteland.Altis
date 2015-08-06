@@ -32,7 +32,17 @@ if (isServer) then
 		if (markerType _bountyMarker == "mil_dot") then
 		{
 			deleteMarker _bountyMarker;
-			{_x commandChat format ["[SERVER] %1 disconnected while being high value target!", _name];} forEach playableUnits;
+
+			[
+				parseText format
+				[
+					"<t color='#ff0000' size='1.2' align='center'>[SERVER MESSAGE]</t><br />" +
+					"<t color='#FFFFFF'>------------------------------</t><br/>" +
+					"<t color='#FFFFFF' size='1.0'>player %1 disconnected while being high value target!</t>",
+					_name
+				]
+			] call hintBroadcast;
+
 			diag_log format ["Possible Combat logger: %1 disconnected while being %2!", _name, _bountyMarker];
 		};
 		
@@ -40,7 +50,17 @@ if (isServer) then
 		if (markerType _drugsMarker == "mil_dot") then
 		{
 			deleteMarker _drugsMarker;
-			{_x commandChat format ["[SERVER] %1 disconnected while being a drugs runner!", _name];} forEach playableUnits;
+
+			[
+				parseText format
+				[
+					"<t color='#ff0000' size='1.2' align='center'>[SERVER MESSAGE]</t><br />" +
+					"<t color='#FFFFFF'>------------------------------</t><br/>" +
+					"<t color='#FFFFFF' size='1.0'>player %1 disconnected while being a drugsrunner!</t>",
+					_name
+				]
+			] call hintBroadcast;
+
 			diag_log format ["Possible Combat logger: %1 disconnected while being %2!", _name, _drugsMarker];
 		};
 				
