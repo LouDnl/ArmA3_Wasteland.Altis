@@ -52,6 +52,13 @@ switch (true) do
 		_variables pushBack ["groupOnly", _obj getVariable ["groupOnly", false]];
 		_variables pushBack ["ownerName", toArray (_obj getVariable ["ownerName", "[Beacon]"])];
 	};
+	case (_obj call _isCamonet):
+	{
+		_variables pushBack ["a3w_camoNet", true];
+		_variables pushBack ["R3F_LOG_disabled", true];
+		_variables pushBack ["packing", false];
+		_variables pushBack ["ownerName", toArray (_obj getVariable ["ownerName", ""])];
+	};
 	case (_obj call _isCamera):
 	{
 		_variables pushBack ["a3w_cctv_camera", true];
