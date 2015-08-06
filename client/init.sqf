@@ -144,10 +144,10 @@ A3W_scriptThreads pushBack execVM "addons\fpsFix\vehicleManager.sqf";
 A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "client\functions\drawPlayerIcons.sqf";
 [] execVM "addons\far_revive\FAR_revive_init.sqf";
-[] execVM "addons\camera\functions.sqf";            // Improved admin camera addon
-[] execVM "addons\UAV_Control\functions.sqf";       // Protected UAV addon
-[] execVM "addons\water_edge\functions.sqf";        // Water edge fix
-[] execVM "addons\cctv\functions.sqf";              // CCTV Camera addon
+[] execVM "addons\camera\functions.sqf";           // Improved admin camera addon
+[] execVM "addons\UAV_Control\functions.sqf";      // Protected UAV addon
+[] execVM "addons\water_edge\functions.sqf";       // Water edge fix
+[] execVM "addons\cctv\functions.sqf";             // CCTV Camera addon
 
 call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
