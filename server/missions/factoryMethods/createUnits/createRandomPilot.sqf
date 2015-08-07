@@ -27,6 +27,7 @@ _soldier = _group createUnit [_soldierTypes call BIS_fnc_selectRandom, _position
 _soldier addUniform (_uniformTypes call BIS_fnc_selectRandom);
 _soldier addVest (_vestTypes call BIS_fnc_selectRandom);
 _soldier addBackpack (_backpackTypes call BIS_fnc_selectRandom);
+_soldier addMagazine "HandGrenade";
 [_soldier, _weaponTypes call BIS_fnc_selectRandom, 3] call BIS_fnc_addWeapon;
 
 sleep 0.1; // Without this delay, headgear doesn't get removed properly

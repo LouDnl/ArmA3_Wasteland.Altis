@@ -20,6 +20,7 @@ _leader addWeapon "srifle_GM6_LRPS_F";
 _leader addPrimaryWeaponItem "optic_Nightstalker";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
+_leader addMagazine "HandGrenade";
 
 // Sniper
 _man2 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 1, 0], [], 1, "Form"];
@@ -29,6 +30,7 @@ _man2 addMagazine "5Rnd_127x108_APDS_Mag";
 _man2 addWeapon "srifle_GM6_LRPS_F";
 _man2 addMagazine "5Rnd_127x108_APDS_Mag";
 _man2 addMagazine "5Rnd_127x108_APDS_Mag";
+_man2 addMagazine "HandGrenade";
 
 // Sniper
 _man3 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 1, 0], [], 1, "Form"];
@@ -38,6 +40,7 @@ _man3 addMagazine "5Rnd_127x108_APDS_Mag";
 _man3 addWeapon "srifle_GM6_LRPS_F";
 _man3 addMagazine "5Rnd_127x108_APDS_Mag";
 _man3 addMagazine "5Rnd_127x108_APDS_Mag";
+_man3 addMagazine "HandGrenade";
 
 // Spotter
 _man4 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
@@ -47,6 +50,7 @@ _man4 addMagazine "20Rnd_762x51_Mag";
 _man4 addWeapon "srifle_EBR_SOS_F";
 _man4 addMagazine "20Rnd_762x51_Mag";
 _man4 addMagazine "20Rnd_762x51_Mag";
+_man4 addMagazine "HandGrenade";
 _man4 addItem "Rangefinder";
 
 // Spotter
@@ -57,6 +61,7 @@ _man5 addMagazine "20Rnd_762x51_Mag";
 _man5 addWeapon "srifle_EBR_SOS_F";
 _man5 addMagazine "20Rnd_762x51_Mag";
 _man5 addMagazine "20Rnd_762x51_Mag";
+_man5 addMagazine "HandGrenade";
 _man5 addItem "Rangefinder";
 
 // Spotter
@@ -67,6 +72,7 @@ _man6 addMagazine "20Rnd_762x51_Mag";
 _man6 addWeapon "srifle_EBR_SOS_F";
 _man6 addMagazine "20Rnd_762x51_Mag";
 _man6 addMagazine "20Rnd_762x51_Mag";
+_man6 addMagazine "HandGrenade";
 _man6 addItem "Rangefinder";
 
 //AT Defender
@@ -84,6 +90,7 @@ _man7 addWeapon "launch_RPG32_F";
 _man7 addMagazine "RPG32_F";
 _man7 addMagazine "RPG32_F";
 _man7 addMagazine "RPG32_F";
+_man7 addMagazine "HandGrenade";
 _man7 selectWeapon "launch_RPG32_F";
 
 //AA Defender
@@ -100,6 +107,7 @@ _man8 addMagazine "Titan_AA";
 _man8 addWeapon "launch_I_Titan_F";
 _man8 addMagazine "Titan_AA";
 _man8 addMagazine "Titan_AA";
+_man8 addMagazine "HandGrenade";
 _man8 selectWeapon "launch_I_Titan_F";
 
 sleep 0.1; // Without this delay, headgear doesn't get removed properly
