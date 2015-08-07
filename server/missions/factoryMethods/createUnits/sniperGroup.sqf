@@ -16,7 +16,7 @@ _leader = _group createUnit ["C_man_polo_1_F", [(_pos select 0) + 10, _pos selec
 _leader addUniform "U_I_Ghilliesuit";
 _leader addVest "V_PlateCarrierIA1_dgtl";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
-_leader addWeapon "srifle_GM6_SOS_F";
+_leader addWeapon "srifle_GM6_LRPS_F";
 _leader addPrimaryWeaponItem "optic_Nightstalker";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
 _leader addMagazine "5Rnd_127x108_APDS_Mag";
@@ -26,7 +26,7 @@ _man2 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 
 _man2 addUniform "U_I_Ghilliesuit";
 _man2 addVest "V_PlateCarrierIA1_dgtl";
 _man2 addMagazine "5Rnd_127x108_APDS_Mag";
-_man2 addWeapon "srifle_GM6_SOS_F";
+_man2 addWeapon "srifle_GM6_LRPS_F";
 _man2 addMagazine "5Rnd_127x108_APDS_Mag";
 _man2 addMagazine "5Rnd_127x108_APDS_Mag";
 
@@ -35,7 +35,7 @@ _man3 = _group createUnit ["C_man_polo_2_F", [(_pos select 0) - 30, _pos select 
 _man3 addUniform "U_I_Ghilliesuit";
 _man3 addVest "V_PlateCarrierIA1_dgtl";
 _man3 addMagazine "5Rnd_127x108_APDS_Mag";
-_man3 addWeapon "srifle_GM6_SOS_F";
+_man3 addWeapon "srifle_GM6_LRPS_F";
 _man3 addMagazine "5Rnd_127x108_APDS_Mag";
 _man3 addMagazine "5Rnd_127x108_APDS_Mag";
 
