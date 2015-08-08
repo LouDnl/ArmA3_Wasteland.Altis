@@ -10,7 +10,7 @@ if(mutexScriptInProgress) exitWith {
 private["_totalDuration", "_checks", "_success"];
 
 mutexScriptInProgress = true;
-_totalDuration = 60;
+_totalDuration = 240;
 
 _checks =
 {
