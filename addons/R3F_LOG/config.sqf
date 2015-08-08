@@ -383,7 +383,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["Heli_Transport_04_base_F", 30],
 	["Heli_Attack_01_base_F", 10],
 	["Heli_Attack_02_base_F", 20],
-	["Land_Pod_Heli_Transport_04_box_F", 250]
+	["Land_Pod_Heli_Transport_04_box_F", 300]
 ];
 
 /**
