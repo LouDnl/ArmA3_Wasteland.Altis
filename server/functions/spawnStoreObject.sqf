@@ -196,6 +196,12 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 
 			switch (true) do
 			{
+				// Add default password to baselocker, safe and doorlocks.
+				case ({_object isKindOf _x} count ["Land_InfoStand_V2_F", "Land_Device_assembled_F", "Box_NATO_AmmoVeh_F"] > 0):
+				{
+					_object setVariable ["password", "0000", true];
+				};
+
 				// Add food to bought food sacks.
 				case ({_object isKindOf _x} count ["Land_Sacks_goods_F"] > 0):
 				{

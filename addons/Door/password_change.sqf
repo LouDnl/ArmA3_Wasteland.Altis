@@ -22,5 +22,7 @@ if (OutputText=="")then {
 	["You successfully changed the PIN", 5] call mf_notify_client;	
 	};	
 
+pvar_manualObjectSave = netId _object;
+publicVariableServer "pvar_manualObjectSave";
 
 OutputText = nil;
