@@ -138,15 +138,6 @@ switch (true) do
 		   _variables pushBack ["password", _password];
 		};
 	};
-	case ( _obj isKindOf "Land_Canal_Wall_10m_F"):
-	{
-		_password = _obj getVariable "password";
-
-		if (!isNil "_password") then 
-		{
-		   _variables pushBack ["password", _password];
-		};
-	};
 };
 //BASE - SAFE LOCKING End
 

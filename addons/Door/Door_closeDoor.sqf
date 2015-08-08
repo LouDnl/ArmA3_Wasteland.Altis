@@ -6,15 +6,16 @@
 //	@file Author: LouD / Cael817 for original script
 //	@file Description: Door script
 
-private ["_key","_door","_doorFinder"];
-_key = cursorTarget;
-_doorFinder = (nearestObjects [_key, ["Land_Canal_Wall_10m_F"], 15]);
+private ["_doorFinder","_door"];
+_doorFinder = (nearestObjects [player, ["Land_Canal_Wall_10m_F"], 10]);
 _door = _doorFinder select 0;
 
-if (!isNil "_door" && {!isNull _door}) then 
+if (!isNil "_door" && {!isNull _door}) then
 {
 	[[netId _door, false], "A3W_fnc_hideObjectGlobal", _door] call A3W_fnc_MP;
 	hint "Your door is closed";
-} else {
-	hint "No door found";
+}
+else 
+{
+	hint "No locked door found";
 };
