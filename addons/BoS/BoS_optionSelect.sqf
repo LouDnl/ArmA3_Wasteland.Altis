@@ -47,7 +47,17 @@ if (!isNil "_uid") then
 					closeDialog 0;					
 					execVM "addons\BoS\BoS_releaseLockDown.sqf";
 				};
-				case 5: //Change Password
+				case 5: //Turn off all lights
+				{
+					closeDialog 0;
+					execVM "addons\BoS\BoS_lightsOff.sqf";;
+				};
+				case 6: //Turn on all lighs
+				{
+					closeDialog 0;
+					execVM "addons\BoS\BoS_lightsOn.sqf";
+				};
+				case 7: //Change Password
 				{
 					closeDialog 0;					
 					execVM "addons\Bos\password_change.sqf";

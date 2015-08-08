@@ -19,7 +19,9 @@ if (!isNil "_uid") then {
 					"Show Base Border",
 					"Repair Locker",
 					"Lock Down Base",
-					"Release Lock Down"
+					"Release Lock Down",
+					"Lights OFF",
+					"Lights ON"
 	];
 
 	{

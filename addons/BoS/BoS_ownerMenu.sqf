@@ -20,6 +20,8 @@ if (!isNil "_uid") then {
 					"Repair Locker",
 					"Lock Down Base",
 					"Release Lock Down",
+					"Lights OFF",
+					"Lights ON",
 					"Change PIN"
 	];
 
