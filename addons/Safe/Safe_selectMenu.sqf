@@ -34,7 +34,7 @@ Safe_open =
 		};
 		default
 		{
-		hint "An unknown error occurred. This could be because your Base Locker is not locked."
+		hint "An unknown error occurred. This could be because your safe is not locked."
 		};
 
 	};
