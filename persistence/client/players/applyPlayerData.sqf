@@ -45,7 +45,8 @@ removeHeadgear player;
 			{
 				if (player isUniformAllowed _value) then
 				{
-					player addUniform _value;
+					//player addUniform _value;
+					player forceAddUniform _value;
 				}
 				else
 				{
@@ -53,11 +54,13 @@ removeHeadgear player;
 
 					if (player isUniformAllowed _newUniform) then
 					{
-						player addUniform _newUniform;
+						//player addUniform _newUniform;
+						player forceAddUniform _newUniform;
 					}
 					else
 					{
-						player addUniform ([player, "uniform"] call getDefaultClothing);
+						//player addUniform ([player, "uniform"] call getDefaultClothing);
+						player forceAddUniform ([player, "uniform"] call getDefaultClothing);
 					}
 				};
 			};
@@ -119,8 +122,7 @@ removeHeadgear player;
 			{
 				if ([player, _x] call isAssignableBinocular) then
 				{
-					// Temporary fix for http://feedback.arma3.com/view.php?id=21618
-					if (_x == "Laserdesignator" && {{_x == "Laserbatteries"} count magazines player == 0}) then
+					if (_x select [0,15] == "Laserdesignator" && {{_x == "Laserbatteries"} count magazines player == 0}) then
 					{
 						[player, "Laserbatteries"] call fn_forceAddItem;
 					};

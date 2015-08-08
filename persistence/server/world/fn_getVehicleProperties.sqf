@@ -4,7 +4,7 @@
 //	@file Name: fn_getVehicleProperties.sqf
 //	@file Author: AgentRev
 
-private ["_veh", "_flying", "_class", "_purchasedVehicle", "_missionVehicle", "_pos", "_dir", "_vel", "_fuel", "_damage", "_hitPoints", "_variables", "_owner", "_doubleBSlash", "_textures", "_tex", "_texArr", "_weapons", "_magazines", "_items", "_backpacks", "_turretMags", "_turretMags2", "_turretMags3", "_hasDoorGuns", "_turrets", "_path", "_ammoCargo", "_fuelCargo", "_repairCargo", "_props"];
+private ["_veh", "_flying", "_class", "_purchasedVehicle", "_missionVehicle", "_pos", "_dir", "_vel", "_fuel", "_lockState", "_damage", "_hitPoints", "_variables", "_owner", "_doubleBSlash", "_textures", "_tex", "_texArr", "_weapons", "_magazines", "_items", "_backpacks", "_turretMags", "_turretMags2", "_turretMags3", "_hasDoorGuns", "_turrets", "_path", "_ammoCargo", "_fuelCargo", "_repairCargo", "_props"];
 
 _veh = _this select 0;
 _flying = if (count _this > 1) then { _this select 1 } else { false };
@@ -38,6 +38,18 @@ switch (true) do
 	{
 		_variables pushBack ["A3W_missionVehicle", true];
 	};
+};
+
+//Save lockstate by LouD
+_lockState = _veh getVariable "R3F_LOG_disabled";
+
+if (!isNil "_lockState") then
+{
+	_variables pushBack ["R3F_LOG_disabled", _lockState];
+}
+else
+{
+	_variables pushBack ["R3F_LOG_disabled", false];
 };
 
 _owner = _veh getVariable ["ownerUID", ""];

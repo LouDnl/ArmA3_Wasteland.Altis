@@ -14,6 +14,7 @@
 #define TOWN_SPAWN_COOLDOWN (["A3W_townSpawnCooldown", 5*60] call getPublicVar)
 #define SPAWN_BEACON_COOLDOWN (["A3W_spawnBeaconCooldown", 5*60] call getPublicVar)
 #define BEACON_CHECK_RADIUS 250
+#define UNCONSCIOUS(UNIT) (UNIT getVariable ["FAR_isUnconscious", 0] == 1)
 
 disableSerialization;
 waitUntil {!isNil "bis_fnc_init" && {bis_fnc_init}};
@@ -46,7 +47,7 @@ _side = switch (playerSide) do
 	default      { "Independent" };
 };
 
-_respawnText ctrlSetStructuredText parseText (format ["Welcome to A3Wasteland<br/>You are on %1. Please select a spawn point.", _side]);
+_respawnText ctrlSetStructuredText parseText (format ["Welcome to NL United A3Wasteland<br/>You are on %1. Please select a spawn point.", _side]);
 respawnDialogActive = true;
 
 //buttonSetAction [respawn_Random_Button, format ["%1 [%2,0] execVM 'client\functions\spawnAction.sqf'", _disableAllButtons, respawn_Random_Button]];

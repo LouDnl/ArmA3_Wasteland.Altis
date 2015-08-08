@@ -12,10 +12,10 @@ if (!isServer) exitWith {};
 scopeName "spawnStoreObject";
 private ["_player", "_class", "_marker", "_key", "_isGenStore", "_isGunStore", "_isVehStore", "_timeoutKey", "_objectID", "_playerSide", "_objectsArray", "_itemEntry", "_itemPrice", "_safePos", "_object"];
 
-_player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_class = [_this, 1, "", [""]] call BIS_fnc_param;
-_marker = [_this, 2, "", [""]] call BIS_fnc_param;
-_key = [_this, 3, "", [""]] call BIS_fnc_param;
+_player = param [0, objNull, [objNull]];
+_class = param [1, "", [""]];
+_marker = param [2, "", [""]];
+_key = param [3, "", [""]];
 
 _isGenStore = ["GenStore", _marker] call fn_startsWith;
 _isGunStore = ["GunStore", _marker] call fn_startsWith;
@@ -129,6 +129,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_objectID = netId _object;
 			_object setVariable ["A3W_purchasedStoreObject", true];
 			_object setVariable ["ownerUID", getPlayerUID _player, true];
+			_object setVariable ["R3F_LOG_Disabled", false, true];
 
 			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
 			{
@@ -150,6 +151,18 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					} forEach crew _veh;
 				};
 			};
+			
+			if (_class isKindOf "Plane") then
+			{
+				{
+					if (["CMFlare", _x] call fn_findString != -1) then
+					{
+						_object removeMagazinesTurret [_x, [-1]];
+					};
+				} forEach getArray (configFile >> "CfgVehicles" >> _class >> "magazines");
+
+				_object addMagazineTurret ["60Rnd_CMFlare_Chaff_Magazine", [-1]];
+			};
 
 			if (isPlayer _player && !(_player getVariable [_timeoutKey, true])) then
 			{
@@ -165,6 +178,9 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			{
 				_object setPosATL [_safePos select 0, _safePos select 1, 0.05];
 				_object setVelocity [0,0,0.01];
+				_object engineOn true; // Lets already turn the engine one to see if it fixes exploding vehicles.
+				_object lock 2; // Spawn vehicles in locked
+				_object setVariable ["R3F_LOG_disabled", true, true]; // Spawn vehicles in locked
 				// _object spawn cleanVehicleWreck;
 				_object setVariable ["A3W_purchasedVehicle", true, true];
 			};
@@ -179,6 +195,18 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 
 			switch (true) do
 			{
+				// Add food to bought food sacks.
+				case ({_object isKindOf _x} count ["Land_Sacks_goods_F"] > 0):
+				{
+					_object setVariable ["food", 50, true];
+				};
+				
+				// Add water to bought water barrels.
+				case ({_object isKindOf _x} count ["Land_BarrelWater_F"] > 0):
+				{
+					_object setVariable ["water", 50, true];
+				};
+
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
 				{
 					_object setAmmoCargo 5;

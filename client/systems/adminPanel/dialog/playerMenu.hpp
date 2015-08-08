@@ -12,6 +12,7 @@
 #define playerMenuPlayerHealth 55508
 #define playerMenuWarnMessage 55509
 #define playerMenuPlayerUID 55510
+#define playerMenuPlayerBank 55511
 
 class PlayersMenu
 {
@@ -103,13 +104,24 @@ class PlayersMenu
 			h = 0.04 * safezoneH;
 		};
 
+		class PlayerBankText: w_RscText
+		{
+			idc = playerMenuPlayerBank;
+			text = "Money:";
+			sizeEx = 0.030;
+			x = 0.52 * safezoneW + safezoneX;
+			y = 0.295 * safezoneH + safezoneY;
+			w = 0.25 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		
 		class PlayerItemsText: w_RscText
 		{
 			idc = playerMenuPlayerItems;
 			text = "Items:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
-			y = 0.295 * safezoneH + safezoneY;
+			y = 0.315 * safezoneH + safezoneY;
 			w = 0.40 * safezoneW;
 			h = 0.04 * safezoneH;
 		};
@@ -120,7 +132,7 @@ class PlayersMenu
 			text = "Health:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
-			y = 0.315 * safezoneH + safezoneY;
+			y = 0.335 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
 			h = 0.04 * safezoneH;
 		};
@@ -131,7 +143,7 @@ class PlayersMenu
 			text = "Position:";
 			sizeEx = 0.030;
 			x = 0.52 * safezoneW + safezoneX;
-			y = 0.335 * safezoneH + safezoneY;
+			y = 0.355 * safezoneH + safezoneY;
 			w = 0.25 * safezoneW;
 			h = 0.04 * safezoneH;
 		};

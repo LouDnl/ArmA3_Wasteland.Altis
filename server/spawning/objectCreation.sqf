@@ -12,6 +12,7 @@ _objList = _this select 1;
 
 _objClass = _objList call BIS_fnc_selectRandom;
 _obj = createVehicle [_objClass, _objPos, [], 50, "None"];
+_obj setVariable ["R3F_LOG_disabled",false,true];
 
 switch (true) do
 {
@@ -31,9 +32,11 @@ switch (true) do
 		clearWeaponCargoGlobal _obj;
 		clearItemCargoGlobal _obj;
 
+		_obj addMagazineCargoGlobal ["16Rnd_9x21_Mag", 10];
 		_obj addMagazineCargoGlobal ["9Rnd_45ACP_Mag", 10];
-		_obj addMagazineCargoGlobal ["Laserbatteries", 1];
-		_obj addWeaponCargoGlobal ["Laserdesignator", 1];
+		//_obj addMagazineCargoGlobal ["Laserbatteries", 1];
+		//_obj addWeaponCargoGlobal ["Laserdesignator", 1];
+		_obj addWeaponCargoGlobal ["Rangefinder", 2];
 		_obj addWeaponCargoGlobal ["Binocular", 5];
 		_obj addItemCargoGlobal ["FirstAidKit", 10];
 		_obj addItemCargoGlobal ["ItemGPS", 5];

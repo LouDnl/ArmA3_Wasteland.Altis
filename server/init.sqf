@@ -27,12 +27,48 @@ if (isServer) then
 		_name = _this select 3;
 
 		diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3", [_name, _uid], alive _unit, local _unit];
+		
+		_bountyMarker = format ["%1_bountyMarker", _name];  	
+		if (markerType _bountyMarker == "mil_dot") then
+		{
+			deleteMarker _bountyMarker;
 
+			[
+				parseText format
+				[
+					"<t color='#ff0000' size='1.2' align='center'>[SERVER MESSAGE]</t><br />" +
+					"<t color='#FFFFFF'>------------------------------</t><br/>" +
+					"<t color='#FFFFFF' size='1.0'>player %1 disconnected while being high value target!</t>",
+					_name
+				]
+			] call hintBroadcast;
+
+			diag_log format ["Possible Combat logger: %1 disconnected while being %2!", _name, _bountyMarker];
+		};
+		
+		_drugsMarker = format ["%1_drugsMarker", _name];  	
+		if (markerType _drugsMarker == "mil_dot") then
+		{
+			deleteMarker _drugsMarker;
+
+			[
+				parseText format
+				[
+					"<t color='#ff0000' size='1.2' align='center'>[SERVER MESSAGE]</t><br />" +
+					"<t color='#FFFFFF'>------------------------------</t><br/>" +
+					"<t color='#FFFFFF' size='1.0'>player %1 disconnected while being a drugsrunner!</t>",
+					_name
+				]
+			] call hintBroadcast;
+
+			diag_log format ["Possible Combat logger: %1 disconnected while being %2!", _name, _drugsMarker];
+		};
+				
 		if (alive _unit) then
 		{
 			if (!(_unit call A3W_fnc_isUnconscious) && {!isNil "isConfigOn" && {["A3W_playerSaving"] call isConfigOn}}) then
 			{
-				if (!(_unit getVariable ["playerSpawning", false]) && getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "headlessclient") then
+				if (!(_unit getVariable ["playerSpawning", true]) && getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "headlessclient") then
 				{
 					[_uid, [], [_unit, false] call fn_getPlayerData] spawn fn_saveAccount;
 				};
@@ -126,13 +162,15 @@ if (isServer) then
 		"A3W_atmRemoveIfDisabled",
 		"A3W_uavControl",
 		"A3W_townSpawnCooldown",
+		"A3W_maxSpawnBeacons",
 		"A3W_survivalSystem",
 		"A3W_extDB_GhostingAdmins",
 		"A3W_hcPrefix",
 		"A3W_hcObjCaching",
 		"A3W_hcObjCachingID",
 		"A3W_hcObjSaving",
-		"A3W_hcObjSavingID"
+		"A3W_hcObjSavingID",
+		"APOC_coolDownTimer"
 	];
 
 	["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
@@ -146,13 +184,15 @@ _staticWeaponSavingOn = ["A3W_staticWeaponSaving"] call isConfigOn;
 _warchestSavingOn = ["A3W_warchestSaving"] call isConfigOn;
 _warchestMoneySavingOn = ["A3W_warchestMoneySaving"] call isConfigOn;
 _beaconSavingOn = ["A3W_spawnBeaconSaving"] call isConfigOn;
+_camonetSavingOn = ["A3W_camoNetSaving"] call isConfigOn;
 _timeSavingOn = ["A3W_timeSaving"] call isConfigOn;
 _weatherSavingOn = ["A3W_weatherSaving"] call isConfigOn;
+_cameraSavingOn = ["A3W_cctvCameraSaving"] call isConfigOn;
 
 _purchasedVehicleSavingOn = ["A3W_purchasedVehicleSaving"] call isConfigOn;
 _missionVehicleSavingOn = ["A3W_missionVehicleSaving"] call isConfigOn;
 
-_objectSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn || _warchestSavingOn || _warchestMoneySavingOn || _beaconSavingOn);
+_objectSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn || _cameraSavingOn || _warchestSavingOn || _warchestMoneySavingOn || _beaconSavingOn || _camonetSavingOn);
 _vehicleSavingOn = (_purchasedVehicleSavingOn || _purchasedVehicleSavingOn);
 _hcObjSavingOn = ["A3W_hcObjSaving"] call isConfigOn;
 
@@ -267,7 +307,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _timeSavingOn || _
 
 				["A3W_flagCheckOnJoin", "onPlayerConnected", { [_uid, _name] spawn fn_kickPlayerIfFlagged }] call BIS_fnc_addStackedEventHandler;
 
-				{ [getPlayerUID _x, name _x] call fn_kickPlayerIfFlagged } forEach (call fn_allPlayers);
+				{ [getPlayerUID _x, name _x] call fn_kickPlayerIfFlagged } forEach allPlayers;
 			};
 		};
 	};
@@ -390,9 +430,11 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _timeSavingOn || _
 			["vehicleSaving", _vehicleSavingOn],
 			["boxSaving", _boxSavingOn],
 			["staticWeaponSaving", _staticWeaponSavingOn],
+			["cctvCameraSaving", _cameraSavingOn],
 			["warchestSaving", _warchestSavingOn],
 			["warchestMoneySaving", _warchestMoneySavingOn],
 			["spawnBeaconSaving", _beaconSavingOn],
+			["camoNetSaving", _camonetSavingOn],
 			["timeSaving", _timeSavingOn],
 			["weatherSaving", _weatherSavingOn],
 			["hcObjSaving", _hcObjSavingOn]
