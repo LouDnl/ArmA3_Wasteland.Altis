@@ -23,5 +23,4 @@ if (OutputText=="")then {
 	["You successfully changed the PIN", 5] call mf_notify_client;	
 	};	
 
-
 OutputText = nil;
