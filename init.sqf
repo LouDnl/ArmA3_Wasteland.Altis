@@ -43,7 +43,7 @@ if (!isDedicated) then
 	{
 		if (hasInterface) then // Normal player
 		{
-			9999 cutText ["Welcome to NL United A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
+			9999 cutText ["Welcome to 40-1 A3Wasteland, please wait for your client to initialize", "BLACK", 0.01];
 
 			waitUntil {!isNull player};
 			player setVariable ["playerSpawning", true, true];
@@ -92,7 +92,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";          // Keypad for base locking
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";     // Fastrope
 	[] execVM "addons\HvT\HvT.sqf";                       // High Value Target
-	[] execVM "addons\HvT\HvD.sqf";                       // High Value Drugrunner
+	//[] execVM "addons\HvT\HvD.sqf";                       // High Value Drugrunner
 	[] execVM "addons\Grenades\ToxicGas.sqf";             // Toxic Gas Addon
 	[] execVM "addons\scripts\intro.sqf";                 // Welcome intro
 };
