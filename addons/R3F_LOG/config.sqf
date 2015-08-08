@@ -307,6 +307,8 @@ R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
 	// e.g. : "MyLiftableObjectClassName1", "MyLiftableObjectClassName2"
+	"Land_Device_assembled_F", // Base locker
+	"ReammoBox_F",
 	"Hatchback_01_base_F",
 	"SUV_01_base_F",
 	"Offroad_01_base_F",
@@ -396,11 +398,11 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	// e.g. : ["MyTransportableObjectClassName1", itsCost], ["MyTransportableObjectClassName2", itsCost]
 	["Static_Designator_01_base_F", 2],
 	["Static_Designator_02_base_F", 2],
-	["Land_Device_assembled_F", 10], //Re Locker
+	["Land_Device_assembled_F", 10], // Base Locker
 	["StaticWeapon", 5],
 	["Box_NATO_AmmoVeh_F", 10],
-	["B_supplyCrate_F", 5],
-	["ReammoBox_F", 3],
+	["B_supplyCrate_F", 3],
+	["ReammoBox_F", 5],
 	["Kart_01_Base_F", 5],
 	["Quadbike_01_base_F", 10],
 	["Rubber_duck_base_F", 10],
