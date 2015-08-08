@@ -113,7 +113,7 @@ _exclObjectIDs = [];
 				case "side": { _value = _value call _strToSide };
 				case "R3F_Side": { _value = _value call _strToSide };
 				case "lockDown": { _value }; // BASE LOCKER
-				case "password": { _value }; // BASE LOCKER - SAFE
+				case "password": { _value }; // BASE LOCKER - SAFE - DOOR
 				case "lockedSafe": { _value }; // SAFE
 				case "A3W_inventoryLockR3F": { _value }; // SAFE
 				case "R3F_LOG_disabled": { _value }; // SAFE
