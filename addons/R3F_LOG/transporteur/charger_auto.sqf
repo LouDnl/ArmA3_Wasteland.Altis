@@ -112,10 +112,22 @@ _objets_charges = _transporteur getVariable ["R3F_LOG_objets_charges", []];
 					_objet = _classe createVehicle _pos_degagee;
 					_objet setVectorDirAndUp [[-cos getDir _transporteur, sin getDir _transporteur, 0] vectorCrossProduct surfaceNormal _pos_degagee, surfaceNormal _pos_degagee];
 					_objet setVelocity [0, 0, 0];
+					
+					// Airdrop addition
+					if (_transporteur isKindOf "Land_Pod_Heli_Transport_04_box_F" && {!(_object isKindOf "ReammoBox_F" || _object isKindOf "Land_InfoStand_V2_F")}) then
+					{
+						_objet setVariable ["allowDamage", true, true];
+					};
 				}
 				else
 				{
 					_objet = _classe createVehicle _pos_degagee;
+					
+					// Airdrop addition
+					if (_transporteur isKindOf "Land_Pod_Heli_Transport_04_box_F" && {!(_objet isKindOf "ReammoBox_F" || _objet isKindOf "Land_InfoStand_V2_F")}) then
+					{
+						_objet setVariable ["allowDamage", true, true];
+					};
 				};
 			}
 			else
