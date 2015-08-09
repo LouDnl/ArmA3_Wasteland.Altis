@@ -114,7 +114,7 @@ _objets_charges = _transporteur getVariable ["R3F_LOG_objets_charges", []];
 					_objet setVelocity [0, 0, 0];
 					
 					// Airdrop addition
-					if (_transporteur isKindOf "Land_Pod_Heli_Transport_04_box_F" && {!(_object isKindOf "ReammoBox_F" || _object isKindOf "Land_InfoStand_V2_F")}) then
+					if (_transporteur isKindOf "Land_Pod_Heli_Transport_04_box_F" && {!(_object isKindOf "ReammoBox_F")}) then // || _object isKindOf "Land_InfoStand_V2_F")}) then
 					{
 						_objet setVariable ["allowDamage", true, true];
 					};
