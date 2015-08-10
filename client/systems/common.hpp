@@ -390,7 +390,7 @@ class w_RscCombo {
 	colorText[] = {0, 0, 0, 1};
 	colorBackground[] = {1, 1, 1, 1};
 	colorSelect[] = {1, 0, 0, 1};
-	colorSelectBackground[] = {0.25,0.51,0.96,0.5};
+	colorSelectBackground[] = {0.596,0.69,0.553,0.4};
 	soundSelect[] = {"", 0.000000, 1};
 	soundExpand[] = {"", 0.000000, 1};
 	soundCollapse[] = {"", 0.000000, 1};
