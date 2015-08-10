@@ -88,6 +88,7 @@ _successExec =
 	publicVariable "RemoveLaptopHandler";
 	{ deleteVehicle _x } forEach [_camonet, _laptop, _table];
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_obj1, _obj2, _obj3, _obj4];
+	{ _x setVariable ["allowDamage", true, true];} forEach [_obj1, _obj2, _obj3, _obj4];
 
 	_successHintMessage = format ["The laptop is hacked. Go and kill the hacker to get your money back!"];
 };
