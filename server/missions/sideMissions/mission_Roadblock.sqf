@@ -79,7 +79,7 @@ _successExec =
 	[_box1, _randomBox] call fn_refillbox;
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
 	{ deleteVehicle _x } forEach [_barGate, _bunker1, _bunker2];
-	{ _x setVariable ["allowDamage", true, true];} forEach [_obj1, _obj2];
+	{ _x setVariable ["allowDamage", true, true] } forEach [_obj1, _obj2];
 	
 	_drugpilerandomizer = [4,8];
 	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
