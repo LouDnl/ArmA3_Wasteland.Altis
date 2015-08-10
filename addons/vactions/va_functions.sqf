@@ -321,7 +321,7 @@ va_lock_action = {
   
 
   if (cfg_va_lock_sound_play) then {
-    playSound3d ["a3\sounds_f\air\Heli_Attack_02\Mixxx_door.wss",_player, true];
+    playSound3d ["a3\sounds_f\air\Heli_Attack_02\Mixxx_door.wss",_vehicle, true, getPosASL _vehicle, 1, 1, 15];
   };
   
   [_vehicle] call va_lock;
@@ -335,7 +335,7 @@ va_unlock_action = {
   if (not([_vehicle] call va_is_locked)) exitWith {};
   
    if (cfg_va_lock_sound_play) then {
-    playSound3d ["a3\sounds_f\air\Heli_Attack_01\close.wss", _vehicle, insideAVehicle(_player)];
+    playSound3d ["a3\sounds_f\air\Heli_Attack_01\close.wss", _vehicle, insideAVehicle(_player), getPosASL _vehicle, 1, 1, 15];
   };
   
   [_vehicle] call va_unlock;
