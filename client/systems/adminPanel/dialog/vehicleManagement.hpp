@@ -40,7 +40,7 @@ class VehicleManagement {
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
 			colorBackground[] = {0,0,0,0};
-			text = "#(argb,8,8,3)color(0.25,0.51,0.96,0.8)";
+			text = "#(argb,8,8,3)color(0.546,0.59,0.363,0.4)";
 
 			x = 0.295 * safezoneW + safezoneX;
 			y = 0.228 * safezoneH + safezoneY;
