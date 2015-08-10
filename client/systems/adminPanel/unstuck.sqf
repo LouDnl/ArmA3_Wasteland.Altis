@@ -24,7 +24,7 @@ if (pselect5 != "exit") then
 	_name = pselect5;
 	{    
 	if (isPlayer _x && (name _x == _name)) then {    
-          _unstuck = [(getPosASL _x select 0) + 3, (getPosASL _x select 1) + 3 , (getPosASL _x select 2) + 1000]; 
+          _unstuck = [(getPosASL _x select 0), (getPosASL _x select 1), (getPosASL _x select 2) + 1000]; 
 		  _x setposATL _unstuck
 	}  
 	} forEach playableUnits;
