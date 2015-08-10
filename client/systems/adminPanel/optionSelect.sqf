@@ -44,7 +44,13 @@ if (_uid call isAdmin) then
 					execVM "client\systems\adminPanel\playerTags.sqf";
 					//Is logged from inside target script
 				};
-				case 3: //Teleport
+				case 3: //Unstuck player
+				{
+					closeDialog 0;
+					execVM "client\systems\adminPanel\unstuck.sqf";
+					if (!isNil "notifyAdminMenu") then { ["UnstuckPlayer", "Used"] call notifyAdminMenu };
+				};
+				case 4: //Teleport
 				{
 					closeDialog 0;
 					["A3W_teleport", "onMapSingleClick",
@@ -56,42 +62,42 @@ if (_uid call isAdmin) then
 					}] call BIS_fnc_addStackedEventHandler;
 					hint "Click on map to teleport";
 				};
-				case 4: //Teleport player to me
+				case 5: //Teleport player to me
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\tptome.sqf";
 					if (!isNil "notifyAdminMenu") then { ["TeleportToMe", "Used"] call notifyAdminMenu };
 				};
-				case 5: //Teleport me to player
+				case 6: //Teleport me to player
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\tpmeto.sqf";
 					if (!isNil "notifyAdminMenu") then { ["TeleportMeTo", "Used"] call notifyAdminMenu };
 				};
-				case 6: //Money
+				case 7: //Money
 				{
 					_money = 5000;
 					player setVariable ["cmoney", (player getVariable ["cmoney",0]) + _money, true];
 					if (!isNil "notifyAdminMenu") then { ["money", _money] call notifyAdminMenu };
 				};
-				case 7: //Debug Menu
+				case 8: //Debug Menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadDebugMenu.sqf";
 					if (!isNil "notifyAdminMenu") then { ["LoadDebugMenu", "Opened"] call notifyAdminMenu };
 				};
-				case 8: //Object search menu
+				case 9: //Object search menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadObjectSearch.sqf";
 					if (!isNil "notifyAdminMenu") then { ["ObjectSearch", "Opened"] call notifyAdminMenu };
 				};
-				case 9: // toggle God mode
+				case 10: // toggle God mode
 				{
 					execVM "client\systems\adminPanel\toggleGodMode.sqf";
 					//Is logged from inside target script
 				};
-				case 10: // toggle God mode
+				case 11: // toggle God mode
 				{
 					execVM "client\systems\adminPanel\toggleInvisMode.sqf";
 					//Is logged from inside target script
