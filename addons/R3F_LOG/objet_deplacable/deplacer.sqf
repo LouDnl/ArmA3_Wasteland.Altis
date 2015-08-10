@@ -518,4 +518,14 @@ else
 		hintC format [STR_R3F_LOG_objet_en_cours_transport, getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
 		R3F_LOG_mutex_local_verrou = false;
 	};
+	
+	// No more fucking busted crates
+	if (local _objet && {_objet isKindOf "ReammoBox_F"}) then
+	{
+		_objet allowDamage false;
+		_objet setDamage 0;
+	} else {
+		_objet allowDamage true;
+		_objet setVariable ["allowDamage", true, true];
+	};
 };
