@@ -9,10 +9,12 @@ waitUntil {!isNil "playerSpawning" && {!playerSpawning}};
 
 for "_i" from 0 to 1 step 0 do 
 {
-	_lsdInv = mf_inventory select 10; _lsd = _lsdInv select 1;
-	_marInv = mf_inventory select 11; _mar = _marInv select 1;
-	_cocInv = mf_inventory select 12; _coc = _cocInv select 1;
-	_herInv = mf_inventory select 13; _her = _herInv select 1;
+	_lsdInv = "lsd" call mf_inventory_get; _lsd = _lsdInv select 1;
+	_marInv = "marijuana" call mf_inventory_get; _mar = _marInv select 1;
+	_cocInv = "cocaine" call mf_inventory_get; _coc = _cocInv select 1;
+	_herInv = "heroin" call mf_inventory_get; _her = _herInv select 1;
+	
+	"lsd" call mf_inventory_get;
 	
 	if (isNil "createDrugsMarker" && _lsd > 3 || isNil "createDrugsMarker" && _mar > 3 || isNil "createDrugsMarker" && _coc > 3 || isNil "createDrugsMarker" && _her > 3) then
 		{
