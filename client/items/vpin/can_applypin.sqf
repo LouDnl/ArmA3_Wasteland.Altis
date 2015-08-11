@@ -14,7 +14,6 @@
 #define ERR_LOCKED "This vehicle needs to be unlocked first!"
 #define ERR_PIN "This vehicle already has a pin."
 #define ERR_NO_PINLOCK "You don't own a pinlock device."
-#define ITEM_COUNT(ITEMID) ITEMID call mf_inventory_count
 
 private ["_vehicle", "_error"];
 _vehicle = objNull;
