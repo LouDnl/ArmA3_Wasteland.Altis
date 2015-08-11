@@ -310,7 +310,10 @@ player createDiaryRecord ["changelog",
 "NL United",
 "
 <br/> [Added] Base locker (It is hackable and destroyable)
-<br/> [Added] Safe with keypad to General Store
+<br/> [Added] Base doors with keypad
+<br/> [Added] Safe with keypad
+<br/> [Added] Wasteland item to put a pincode on a vehicle
+<br/> [Added] Camouflage nets now save
 <br/> [Added] Ability to change uniform texture
 <br/> [Added] Ability to mark your owned vehicles and objects on the map
 <br/> [Added] Show R.I.P. map marker on corpse location after death
@@ -332,7 +335,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Altis Madhouse and Orino Fortress (Altis)
 <br/> [Added] BluFor and OpFor Base (Altis)
 <br/> [Added] Mortar to one mission as reward
-<br/> [Added] High value target and Drugs runner
+<br/> [Added] High value target and Drugs runner with removal and message on disconnect
 <br/> [Added] Gas Grenades and Gas Masks by Mokey
 <br/> [Added] Logging to all admin commands
 <br/> [Added] Airdrop system by Apoc
@@ -351,13 +354,20 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Several new objects to General store for base building
 <br/> [Added] Extra mission spawns (Altis)
 <br/> [Added] Extra towns (Altis)
+<br/> [Added] Admin menu: teleport player to me
+<br/> [Added] Admin menu: teleport me to player
+<br/> [Added] Admin menu: unstuck player
+<br/> [Added] Admin menu: invisibility mode
 <br/> [Removed] Mortar from store
+<br/> [Changed] Size of player icons
+<br/> [Changed] Color of menus
 <br/> [Changed] Starting gear
 <br/> [Changed] Only 2 vehicle stores sell planes (Altis)
 <br/> [Changed] Disabled Fog
 <br/> [Changed] Changed prices
 <br/> [Changed] Vehicles spawn in locked and with engine on
 <br/> [Changed] Spawnbeacon insertion to 0 mtrs
+<br/> [Changed] Ability to airlift crates
 <br/> [Changed] Old R3F script to version 3.1
 "
 ]];
