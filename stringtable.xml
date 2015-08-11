@@ -101,6 +101,9 @@
         <Key ID="STR_WL_ShopDescriptions_Heroin">
             <English>A highly addictive analgesic drug derived from morphine, often used illicitly as a narcotic producing euphoria.</English>
         </Key>
+		<Key ID="STR_WL_ShopDescriptions_Pinlock">
+            <English>This programming tool is a once use only and non removable device to add a pincode to an owned vehicle. By using this your friends can also lock and unlock your vehicle!</English>
+        </Key>
 		<Key ID="STR_WL_ShopDescriptions_CCTV_Camera">
             <English>This is the remote camera for a television system in which the video signals are transmitted from one or more cameras via Wifi to a restricted set of base stations.</English>
         </Key>

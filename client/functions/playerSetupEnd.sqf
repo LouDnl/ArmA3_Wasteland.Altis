@@ -14,6 +14,7 @@ _player addRating 9999999;
 [] execVM "addons\EtV\init.sqf";     // Explosives to Vehicles
 [] execVM "addons\Safe\init.sqf";    // Safe script
 [] execVM "addons\Door\init.sqf";    // Door script
+[] execVM "addons\vPin\init.sqf";    // Vehicle Pinlock script
 
 _player groupChat "Wasteland - Initialization Complete";
 playerSetupComplete = true;

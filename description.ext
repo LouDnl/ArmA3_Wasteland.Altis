@@ -66,6 +66,8 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "addons\BoS\dialog\BoS_mainMenu.hpp"
 #include "addons\Safe\dialog\Safe_mainMenu.hpp"
 #include "addons\Door\dialog\Door_mainMenu.hpp"
+#include "addons\vPin\dialog\vPin_mainMenu.hpp"
+
 #include "addons\Painter\dialog\UniformPainter_mainMenu.hpp"
 #include "addons\AF_Keypad\AF_KP_defines.hpp"
 #include "addons\AF_Keypad\AF_KP_dialogs.hpp"
