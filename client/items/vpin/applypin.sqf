@@ -14,7 +14,7 @@
 #define ERR_NOT_OWNER "You can't do if you are not the owner of the vehicle."
 #define ERR_LOCKED "This vehicle needs to be unlocked first!"
 #define ERR_PIN "This vehicle already has a pin."
-#define ERR_NO_PINLOCK "You pinlock device."
+#define ERR_NO_PINLOCK "You don't own a pinlock device."
 #define ERR_CANCELLED "Applying Cancelled!"
 
 private ["_vehicle", "_error"];
