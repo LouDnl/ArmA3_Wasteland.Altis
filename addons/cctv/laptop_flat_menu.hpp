@@ -44,6 +44,7 @@ class laptop_flat_menu {
 		idc = laptop_flat_menu_button_mouse_idc;
 		x = -10; y = -10;
 		w = 0.05; h = 0.05;
+		font = "PuristaBold";
 		text = "";
 	};
 
@@ -51,6 +52,7 @@ class laptop_flat_menu {
 		idc = laptop_flat_menu_button_space_idc;
 		x = -10; y = -10;
 		w = 0.05; h = 0.05;
+		font = "PuristaBold";
 		text = "";
 	};
 };
