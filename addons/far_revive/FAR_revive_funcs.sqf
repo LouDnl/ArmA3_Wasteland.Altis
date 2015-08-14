@@ -219,18 +219,18 @@ FAR_public_EH =
 	{
 		_names = _value select 0;
 		_unitName = _names select 0;
-		_killerName = [_names, 1] call BIS_fnc_param;
+		_killerName = _names param [1, nil];
 		_unit = objectFromNetId (_value select 1);
-		_killer = objectFromNetId (_value select 2);
+
 		if (alive _unit) then
 		{
-			switch (true) do
+			if (isNil "_killerName") then
 			{
-				case (isNil "_killerName"): { systemChat format ["%1 was injured", toString _unitName]; };
-				case (!isNil "_killerName" && !isPlayer _killer): { systemChat format ["%1 was injured by AI", toString _unitName]; };
-				default {
-				systemChat format ["%1 was injured by %2", toString _unitName, toString _killerName]; 
-				};
+				systemChat format ["%1 was injured", toString _unitName];
+			}
+			else
+			{
+				systemChat format ["%1 was injured by %2", toString _unitName, toString _killerName];
 			};
 		};
 	};
