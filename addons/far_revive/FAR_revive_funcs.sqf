@@ -227,7 +227,7 @@ FAR_public_EH =
 			switch (true) do
 			{
 				case (isNil "_killerName"): { systemChat format ["%1 was injured", toString _unitName]; };
-				case (!isNil "_killerName" && !isPlayer _killer): { systemChat format ["%1 was injured by AI", toString _unitName]; };
+				case (!isNil "_killerName" && !isPlayer _killer): { systemChat format ["%1 was injured by enemy AI", toString _unitName]; };
 				default {
 				systemChat format ["%1 was injured by %2", toString _unitName, toString _killerName]; 
 				};
@@ -239,10 +239,10 @@ FAR_public_EH =
 	{
 		_names = _value select 0;
 		_unitName = _names select 0;
-		_killerName = [_names, 1] call BIS_fnc_param;
+		_killerName = _names param [1, nil];
 		//_unit = objectFromNetId (_value select 1);
 
-		systemChat format ["%1 was gutted by %2", toString _unitName, toString _killerName];
+		systemChat format ["%1 had his throat cut by %2", toString _unitName, toString _killerName];
 
 	};
 }
@@ -355,9 +355,9 @@ FAR_Gut =
 		[100] call BIS_fnc_bloodEffect;
 		[player, "gutCount", 1] call fn_addScore;
 		
-	//	FAR_deathMessage = [_names];
-	//	publicVariable "FAR_gutMessage";
-	//	["FAR_gutMessage", FAR_deathMessage] call FAR_public_EH;
+		//FAR_deathMessage = [_names];
+		//publicVariable "FAR_gutMessage";
+		//["FAR_gutMessage", FAR_deathMessage] call FAR_public_EH;
 		
 		_target allowDamage true;
 		_target setDamage 1;
