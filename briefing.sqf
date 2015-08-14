@@ -354,6 +354,8 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Several new objects to General store for base building
 <br/> [Added] Extra mission spawns (Altis)
 <br/> [Added] Extra towns (Altis)
+<br/> [Added] Cut throat feature to unconscious players
+<br/> [Added] Injured by enemy AI message
 <br/> [Added] Admin menu: teleport player to me
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
