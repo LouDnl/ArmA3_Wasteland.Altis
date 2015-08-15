@@ -5,6 +5,7 @@
 //	@file Name: Safe_hack.sqf
 //	@file Author: LouD (based on objectLockStateMachine.sqf by [404] Costlyy)
 //	@file Description: Safe script
+#define Safe_coolDownTimer (["Safe_coolDownTimer", 900] call getPublicVar)
 
 if(mutexScriptInProgress) exitWith {
 	player globalChat "The current operation isn't finished !";
@@ -13,7 +14,7 @@ if(mutexScriptInProgress) exitWith {
 private["_totalDuration", "_checks", "_success"];
 
 mutexScriptInProgress = true;
-_totalDuration = 600;
+_totalDuration = Safe_coolDownTimer;
 
 _checks =
 {

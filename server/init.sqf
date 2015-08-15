@@ -170,7 +170,9 @@ if (isServer) then
 		"A3W_hcObjCachingID",
 		"A3W_hcObjSaving",
 		"A3W_hcObjSavingID",
-		"APOC_coolDownTimer"
+		"APOC_coolDownTimer",
+		"BoS_coolDownTimer",
+		"Safe_coolDownTimer"
 	];
 
 	["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;

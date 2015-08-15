@@ -2,6 +2,7 @@
 //	@file Name: BoS_hackBase.sqf
 //	@file Author: LouD (based on objectLockStateMachine.sqf by [404] Costlyy)
 //	@file Created: 22 march 2015
+#define BoS_coolDownTimer (["BoS_coolDownTimer", 900] call getPublicVar)
 
 if(mutexScriptInProgress) exitWith {
 	player globalChat "The current operation isn't finished !";
@@ -10,7 +11,7 @@ if(mutexScriptInProgress) exitWith {
 private["_totalDuration", "_checks", "_success"];
 
 mutexScriptInProgress = true;
-_totalDuration = 240;
+_totalDuration = BoS_coolDownTimer;
 
 _checks =
 {
