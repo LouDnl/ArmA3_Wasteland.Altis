@@ -357,6 +357,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Cut throat feature to unconscious players
 <br/> [Added] Injured by enemy AI message
 <br/> [Added] Press H for holster/unholster weapon
+<br/> [Added] Several icons for actions
 <br/> [Added] Admin menu: teleport player to me
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
