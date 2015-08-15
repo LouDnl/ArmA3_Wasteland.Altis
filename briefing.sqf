@@ -356,6 +356,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Extra towns (Altis)
 <br/> [Added] Cut throat feature to unconscious players
 <br/> [Added] Injured by enemy AI message
+<br/> [Added] Press H for holster/unholster weapon
 <br/> [Added] Admin menu: teleport player to me
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
@@ -478,6 +479,7 @@ player createDiaryRecord ["infos",
 <br/>
 <br/>" + NKEYNAME(41) + " (open player menu)
 <br/>" + NKEYNAME(207) + " (toggle earplugs)
+<br/>" + NKEYNAME(35) + " (holster/unholster weapon)
 <br/>" + NKEYNAME(199) + ", " + NKEYNAME(219) + ", " + NKEYNAME(220) + " (toggle player names)
 <br/>Ctrl + " + AKEYNAME("GetOut") + " (emergency eject)
 <br/>" + AKEYNAME("GetOver") + " (open parachute)
