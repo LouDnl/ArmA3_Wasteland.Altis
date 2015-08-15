@@ -18,7 +18,7 @@ Door_open =
 	_uid = getPlayerUID _unit;
 	_owner = cursorTarget getvariable "ownerUID";
 
-	if (!isNull (uiNamespace getVariable ["Door_Menu", displayNull]) && player getVariable ["FAR_isUnconscious", 0] == 0) exitWith {};
+	if (!isNull (uiNamespace getVariable ["Door_Menu", displayNull]) && !(player call A3W_fnc_isUnconscious)) exitWith {};
 
 	switch (true) do
 	{

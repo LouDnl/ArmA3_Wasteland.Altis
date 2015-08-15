@@ -96,7 +96,7 @@ T8_fnc_ActionLaptop =
 		ctrlSetText [ 8003, format [ "%1 kb", T8_varFileSize ] ];		
 		ctrlSetText [ 8004, format [ "%1 kb", _newFile ] ];		
 		
-		while { !T8_varDiagAbort && alive player && (player getVariable ["FAR_isUnconscious", 0] == 0)} do
+		while { !T8_varDiagAbort && alive player && !(player call A3W_fnc_isUnconscious) } do
 		{
 			_dlRate = 1000 + random 400;
 			_newFile = _newFile + _dlRate;
