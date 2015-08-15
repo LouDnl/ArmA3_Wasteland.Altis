@@ -26,9 +26,9 @@ if (_uid call isAdmin) then
 					"Access Respawn Dialog",
 					"Access Proving Grounds",
 					"Show Server FPS",
-					"Unlock All Objects (15m)",
-					"Delete Unlocked Objects (15m)",
-					"Relock Objects (30m)",
+					"Unlock Objects around you",
+					"Delete Unlocked Objects around you",
+					"Relock Objects around you",
 					"Access NLU News"
 	];
 
