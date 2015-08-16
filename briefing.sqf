@@ -362,7 +362,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
 <br/> [Added] Admin menu: invisibility mode
-<br/> [Added] Debug menu: unlock, relock and delete objects
+<br/> [Added] Debug menu: lock, unlock, relock and delete objects
 <br/> [Removed] Mortar from store
 <br/> [Moved] Mission weightings to main_config
 <br/> [Changed] Size of player icons
