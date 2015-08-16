@@ -4,8 +4,8 @@
 //	@file Name: fn_sellTruck.sqf
 //	@file Author: Gigatek, Wiking, Lodac
 
-#define SELL_TRUCK_DISTANCE 30
-#define SELLTRUCK_PRICE_RELATIONSHIP 2
+#define Sell_Distance (["Sell_Distance", 30] call getPublicVar)
+#define Sell_Price (["Sell_Price", 2] call getPublicVar)
 
 // Check if mutex lock is active.
 if (mutexScriptInProgress) exitWith
@@ -33,7 +33,7 @@ _price = 100; // price = 100 for vehicles not found in vehicle store.
 {
 	if (_vehClass == _x select 1) exitWith
 	{
-		_price = (ceil (((_x select 2) / SELLTRUCK_PRICE_RELATIONSHIP) / 5)) * 5;
+		_price = (ceil (((_x select 2) / Sell_Price) / 5)) * 5;
 	};
 } forEach (call allVehStoreVehicles);
 
@@ -62,7 +62,7 @@ if (!local _vehicle) then
 	mutexScriptInProgress = false;
 };
 
-if (_vehicle distance _truck > SELL_TRUCK_DISTANCE || vehicle _unit != _vehicle) then
+if (_vehicle distance _truck > Sell_Distance || vehicle _unit != _vehicle) then
 {
 	["Vehicle selling aborted", 5] call mf_notify_client;
 	mutexScriptInProgress = false;

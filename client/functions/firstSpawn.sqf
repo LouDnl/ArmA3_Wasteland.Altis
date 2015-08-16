@@ -5,6 +5,7 @@
 //	@file Name: firstSpawn.sqf
 //	@file Author: [404] Deadbeat
 //	@file Created: 28/12/2013 19:42
+#define A3W_teamSwitchLock (["A3W_teamSwitchLock", 180] call getPublicVar)
 
 client_firstSpawn = true;
 
@@ -185,7 +186,7 @@ _uid = getPlayerUID player;
 if (playerSide in [BLUFOR,OPFOR,INDEPENDENT] && {{_x select 0 == _uid} count pvar_teamSwitchList == 0}) then
 {
 	_startTime = diag_tickTime;
-	waitUntil {sleep 1; diag_tickTime - _startTime >= 180};
+	waitUntil {sleep 1; diag_tickTime - _startTime >= A3W_teamSwitchLock};
 
 	pvar_teamSwitchLock = [_uid, playerSide];
 	publicVariableServer "pvar_teamSwitchLock";

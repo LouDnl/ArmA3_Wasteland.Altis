@@ -3,12 +3,11 @@
 //	@file Author: Wiking, AgentRev
 //	@file Created: 13/07/2014 21:58
 
-#define RESUPPLY_TRUCK_DISTANCE 30
-#define REARM_TIME_SLICE 10
-#define REPAIR_TIME_SLICE 5
-#define REFUEL_TIME_SLICE 5
-#define PRICE_RELATIONSHIP 4
-
+#define Resupply_Distance (["Resupply_Distance", 30] call getPublicVar)
+#define Resupply_Price (["Resupply_Price", 2] call getPublicVar)
+#define Resupply_RearmTime (["Resupply_RearmTime", 5] call getPublicVar)
+#define Resupply_RepairTime (["Resupply_RepairTime", 5] call getPublicVar)
+#define Resupply_RefuelTime (["Resupply_RefuelTime", 5] call getPublicVar)
 
 // Check if mutex lock is active.
 if (mutexScriptInProgress) exitWith
@@ -43,7 +42,7 @@ if ((_vehicle == _unit) && !(_vehicle isKindOf "StaticWeapon")) exitWith
 	if (_vehClass == _x select 1) then
 	{	
 	_price = _x select 2;
-	_price = round (_price / PRICE_RELATIONSHIP);
+	_price = round (_price / Resupply_Price);
 	};
 } forEach (call allVehStoreVehicles);
 
@@ -82,7 +81,7 @@ _resupplyThread = _vehicle spawn
 	if (_vehClass == _x select 1) then
 	{	
 	_price = _x select 2;
-	_price = round (_price / PRICE_RELATIONSHIP);
+	_price = round (_price / Resupply_Price);
 	};
 	
 } forEach (call allVehStoreVehicles);
@@ -93,7 +92,7 @@ _resupplyThread = _vehicle spawn
 	{
 		if (vehicle player == _vehicle) then
 		{
-			titleText [_this, "PLAIN DOWN", ((REARM_TIME_SLICE max 1) / 10) max 1];
+			titleText [_this, "PLAIN DOWN", ((Resupply_RearmTime max 1) / 10) max 1];
 		}
 		else
 		{
@@ -114,7 +113,7 @@ _resupplyThread = _vehicle spawn
 		};
 
 		// Abort everything if no Tempest Device in proximity
-		if ({alive _x} count (_vehicle nearEntities [["O_Truck_03_device_F"], RESUPPLY_TRUCK_DISTANCE]) == 0) then
+		if ({alive _x} count (_vehicle nearEntities [["O_Truck_03_device_F"], Resupply_Distance]) == 0) then
 		{
 			if (_started) then { titleText ["Vehicle resupply aborted!", "PLAIN DOWN", 0.5] };
 			mutexScriptInProgress = false;
@@ -193,7 +192,7 @@ if (_playerMoney < _price) then
 		};
 	};
 
-	sleep (REARM_TIME_SLICE / 2);
+	sleep (Resupply_RearmTime);
 	call _checkAbortConditions;
 	
 	_engineOn = false;
@@ -256,12 +255,12 @@ if (_playerMoney < _price) then
 					_text = format ["Reloading %1...", if (_magName != "") then { _magName } else { _vehName }];
 					_text call _titleText;
 
-					sleep (REARM_TIME_SLICE / 2);
+					sleep (Resupply_RearmTime);
 					call _checkAbortConditions;
 
 					_vehicle addMagazineTurret [_mag, _turretPath];
 
-					sleep (REARM_TIME_SLICE / 2);
+					sleep (Resupply_RearmTime);
 					call _checkAbortConditions;
 				};
 			};
@@ -278,7 +277,7 @@ if (_playerMoney < _price) then
 		{
 			"Repairing..." call _titleText;
 
-			sleep REPAIR_TIME_SLICE;
+			sleep Resupply_RepairTime;
 			call _checkAbortConditions;
 
 			_vehicle setDamage ((damage _vehicle) - 0.1);
@@ -295,7 +294,7 @@ if (_playerMoney < _price) then
 		{
 			"Refueling..." call _titleText;
 
-			sleep REFUEL_TIME_SLICE;
+			sleep Resupply_RefuelTime;
 			call _checkAbortConditions;
 
 			_vehicle setFuel ((fuel _vehicle) + 0.1);

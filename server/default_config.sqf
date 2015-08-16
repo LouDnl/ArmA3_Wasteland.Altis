@@ -11,10 +11,24 @@
 A3W_teamPlayersMap = 1;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
 A3W_disableGlobalVoice = 1;        // Auto-switch channel to Direct communication whenever broadcasting voice on global and side channel, unless being admin (0 = no, 1 = yes)
 A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
-APOC_coolDownTimer = 1800;         // APOC Air Drop Cool Down Time
+A3W_cctvCameraSaving = 1;          // Save cctv cameras between restarts (0 = no, 1 = yes)
+
+// Timers
+APOC_coolDownTimer = 1800;         // APOC Air Drop Cool Down Timer
 BoS_coolDownTimer = 600;           // Baselocker hacking timer
 Safe_coolDownTimer = 600;          // Safe hacking timer
-A3W_cctvCameraSaving = 1;          // Save cctv cameras between restarts (0 = no, 1 = yes)
+A3W_teamSwitchLock = 180;          // Time in seconds before a player is locked into the team he is playing in (INDEPENDENT, BLUFOR, OPFOR)
+
+// Utility trucks
+Sell_Distance = 40;                // Maximum distance the Sell truck will show the sell options at
+Sell_Price = 2;                    // Devider for the store price (e.g. a vehicle that is $10.000 in the store will sell for $5.000 when set to 2)
+ChangeOwner_Distance = 40;         // Maximum distance the Change Ownership truck will show the sell options at
+ChangeOwner_Price = 2;             // Devider for the store price (e.g. a vehicle that is $10.000 in the store will change ownership for $5.000 when set to 2)
+Resupply_Distance = 40;            // Maximum distance the Resupply truck will show the sell options at
+Resupply_Price = 4;                // Devider for the store price (e.g. a vehicle that is $10.000 in the store will resupply for $2.500 when set to 4)
+Resupply_RearmTime = 5;            // Time it takes to rearm in seconds. Is used 3 times.
+Resupply_RepairTime = 5;           // Time it takes to repair in seconds
+Resupply_RefuelTime = 5;           // Time it takes to refuel in seconds
 
 // Time settings
 A3W_startHour = 15;                // In-game hour at mission start (0 to 23) - time is saved and restored between server restarts if A3W_timeSaving = 1

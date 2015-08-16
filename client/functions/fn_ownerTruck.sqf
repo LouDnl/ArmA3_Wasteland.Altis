@@ -4,8 +4,8 @@
 //	@file Name: fn_sellTruck.sqf
 //	@file Author: Gigatek, Wiking, Lodac, Cael817, LouD
 
-#define CHANGEOWNER_VEHICLE_DISTANCE 30
-#define CHANGEOWNER_PRICE_RELATIONSHIP 2
+#define ChangeOwner_Distance (["ChangeOwner_Distance", 30] call getPublicVar)
+#define ChangeOwner_Price (["ChangeOwner_Price", 2] call getPublicVar)
 
 // Check if mutex lock is active.
 if (mutexScriptInProgress) exitWith
@@ -34,11 +34,11 @@ _price = 500; // price = 100 for vehicles not found in vehicle store.
 {
 	if (_vehClass == _x select 1) exitWith
 	{
-		_price = (ceil (((_x select 2) / CHANGEOWNER_PRICE_RELATIONSHIP) / 5)) * 5;
+		_price = (ceil (((_x select 2) / ChangeOwner_Price) / 5)) * 5;
 	};
 } forEach (call allVehStoreVehicles);
 
-_text = format ["Stop engine in 10s or try with engine off, to change ownership. Price is 1/2 of vehicle store price, stay in the vehicle until the next message appears.", _price];
+_text = format ["Stop engine in 10s or try with engine off, to change ownership. Stay in the vehicle until the next message appears."];
 [_text, 5] call mf_notify_client;
 
 uiSleep 10;
@@ -67,7 +67,7 @@ if (!local _vehicle) then
 };
 
 _started = true;
-if (_vehicle distance _truck > CHANGEOWNER_VEHICLE_DISTANCE || vehicle _unit != _vehicle) then
+if (_vehicle distance _truck > ChangeOwner_Distance || vehicle _unit != _vehicle) then
 {
 	if (_started) then { ["Change ownership aborted", 5] call mf_notify_client };
 	mutexScriptInProgress = false;
@@ -115,9 +115,6 @@ if (!isNil "_price") then
 		sleep 5;
 		["Repairing.", 5] call mf_notify_client;
 		_vehicle setDamage 0;
-		sleep 5;
-		["Rearming.", 5] call mf_notify_client;
-		_vehicle setVehicleAmmo 1;
 		sleep 5;
 		["Finishing up and refuelling.", 5] call mf_notify_client;
 

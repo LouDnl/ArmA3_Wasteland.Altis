@@ -170,9 +170,19 @@ if (isServer) then
 		"A3W_hcObjCachingID",
 		"A3W_hcObjSaving",
 		"A3W_hcObjSavingID",
+		"A3W_teamSwitchLock",
 		"APOC_coolDownTimer",
 		"BoS_coolDownTimer",
-		"Safe_coolDownTimer"
+		"Safe_coolDownTimer",
+		"Sell_Distance",
+		"Sell_Price",
+		"ChangeOwner_Distance",
+		"ChangeOwner_Price",
+		"Resupply_Distance",
+		"Resupply_Price",
+		"Resupply_RearmTime",
+		"Resupply_RepairTime",
+		"Resupply_RefuelTime"
 	];
 
 	["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
