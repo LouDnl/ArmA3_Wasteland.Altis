@@ -22,14 +22,14 @@ _takeable = objNull;
 {
 	private ["_objectPos", "_playerPos", "_lineOfSightBroken"];
 	// Check to see if the player can see the object with "lineIntersectsWith"
-	_objectPos = visiblePosition _x; //_objectPos = visiblePositionASL _x;
+	_objectPos = visiblePositionASL _x;
 	// Make the point of intersection a little higher to prevent any ground clipping issues
 	_objectPos set [2, (_objectPos select 2) + 0.2];
 	_playerPos = eyePos player;
 	_lineOfSightBroken = lineIntersects [_playerPos, _objectPos, player, _x];
 
 	switch (true) do {
-		case (_lineOfSightBroken): {};
+		//case (_lineOfSightBroken): {}; // Disabled because objects weren't visible most of the time
 		case (_x getVariable ["objectLocked", false]): {}; //IP Camera
 		case (_id call mf_inventory_is_full): {};
 		case (_x getVariable ["mf_item_id", ""] != _id): {};
