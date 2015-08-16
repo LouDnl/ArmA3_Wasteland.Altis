@@ -113,6 +113,7 @@ _exclObjectIDs = [];
 				case "side": { _value = _value call _strToSide };
 				case "R3F_Side": { _value = _value call _strToSide };
 				case "lockDown": { _value }; // BASE LOCKER
+				case "Lights": { _value }; // BASE LOCKER
 				case "password": { _value }; // BASE LOCKER - SAFE - DOOR
 				case "lockedSafe": { _value }; // SAFE
 				case "A3W_inventoryLockR3F": { _value }; // SAFE
@@ -145,6 +146,12 @@ _exclObjectIDs = [];
 			 if (_obj getVariable ["a3w_cctv_camera",false]) then {
 				cctv_cameras pushBack _obj;
 				publicVariable "cctv_cameras";
+		};
+
+		// Base locker lights
+		if (_obj getVariable ["lights",""] == "off") then
+		{
+			_obj setHit ["light_1_hit", 0.97];
 		};
 
 		clearWeaponCargoGlobal _obj;

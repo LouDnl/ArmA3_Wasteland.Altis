@@ -88,6 +88,7 @@ switch (true) do
 		{ _variables pushBack [_x select 0, _obj getVariable _x] } forEach
 		[
 			["password", ""],
+			["lights", ""],
 			["lockDown", false]
 		];
 	};
