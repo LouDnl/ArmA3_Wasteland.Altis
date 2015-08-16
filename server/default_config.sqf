@@ -22,9 +22,9 @@ A3W_teamSwitchLock = 180;          // Time in seconds before a player is locked 
 // Utility trucks
 Sell_Distance = 40;                // Maximum distance the Sell truck will show the sell options at
 Sell_Price = 2;                    // Devider for the store price (e.g. a vehicle that is $10.000 in the store will sell for $5.000 when set to 2)
-ChangeOwner_Distance = 40;         // Maximum distance the Change Ownership truck will show the sell options at
+ChangeOwner_Distance = 40;         // Maximum distance the Change Ownership truck will show the change ownership options at
 ChangeOwner_Price = 2;             // Devider for the store price (e.g. a vehicle that is $10.000 in the store will change ownership for $5.000 when set to 2)
-Resupply_Distance = 40;            // Maximum distance the Resupply truck will show the sell options at
+Resupply_Distance = 40;            // Maximum distance the Resupply truck will show the resupply options at
 Resupply_Price = 4;                // Devider for the store price (e.g. a vehicle that is $10.000 in the store will resupply for $2.500 when set to 4)
 Resupply_RearmTime = 5;            // Time it takes to rearm in seconds. Is used 3 times.
 Resupply_RepairTime = 5;           // Time it takes to repair in seconds
