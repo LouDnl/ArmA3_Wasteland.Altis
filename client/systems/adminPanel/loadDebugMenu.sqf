@@ -26,6 +26,7 @@ if (_uid call isAdmin) then
 					"Access Respawn Dialog",
 					"Access Proving Grounds",
 					"Show Server FPS",
+					"Lock Objects around you",
 					"Unlock Objects around you",
 					"Delete Unlocked Objects around you",
 					"Relock Objects around you",
