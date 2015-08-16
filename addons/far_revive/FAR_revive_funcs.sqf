@@ -353,7 +353,7 @@ FAR_Gut =
 	if (CAN_PERFORM) then
 	{
 		[100] call BIS_fnc_bloodEffect;
-		[player, "gutCount", 1] call fn_addScore;
+		//[player, "gutCount", 1] call fn_addScore; // Disabled. Don't have this table in the database.
 		
 		//FAR_deathMessage = [_names];
 		//publicVariable "FAR_gutMessage";
