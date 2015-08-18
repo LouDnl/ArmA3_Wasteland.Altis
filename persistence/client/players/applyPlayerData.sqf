@@ -158,5 +158,21 @@ removeHeadgear player;
 		case "BackpackMagazines": { [backpackContainer player, _value] call processMagazineCargo };
 		case "PartialMagazines": { { player addMagazine _x } forEach _value };
 		case "WastelandItems": { { [_x select 0, _x select 1, true] call mf_inventory_add } forEach _value };
+		case "UniformTexture": 
+		{ 
+			if (_value != "") then
+			{
+				player setObjectTextureGlobal [0, _value]; 
+				uniformContainer player setVariable ["uniformTexture", _value, true]; 
+			};
+		};
+		case "BackpackTexture": 
+		{ 
+			if (_value != "") then
+			{
+				backpackContainer player setObjectTextureGlobal [0, _value]; 
+				backpackContainer player setVariable ["backpackTexture", _value, true];
+			};
+		};
 	};
 } forEach _data;
