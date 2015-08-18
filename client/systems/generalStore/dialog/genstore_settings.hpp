@@ -253,7 +253,7 @@ class genstored
 		class StoreButton7: w_RscButton
 		{
 			idc = -1;
-			action = "closeDialog 0;[] execVM 'addons\Painter\UniformPainter_Menu.sqf'";
+			action = "closeDialog 0;[] execVM 'addons\UniformPainter\UniformPainter_Menu.sqf'";
 			text = "Paint Uniform";
 			sizeEx = GenStoreButton_textSize;
 

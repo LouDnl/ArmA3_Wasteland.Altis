@@ -49,7 +49,7 @@ class Paint_Menu
 		class Paint_Menu_Title2:w_RscText
 		{
 			idc=-1;
-			text="(is reset at death, relog and death)";
+			text="$ 500 per paint job";
 			x=0.30;
 			y=0.116;
 			w=0.31;
@@ -72,7 +72,7 @@ class Paint_Menu
 		{
 			idc=-1;
 			text="Select";
-			onButtonClick = "[1] execVM 'addons\Painter\UniformPainter_optionSelect.sqf'";
+			onButtonClick = "[0] execVM 'addons\UniformPainter\UniformPainter_optionSelect.sqf'";
 			x=0.325;
 			y=0.70;
 			w=0.11;
@@ -82,7 +82,7 @@ class Paint_Menu
 		class Paint_Menu_deactivate:w_RscButton
 		{
 			idc=-1;
-			text="Cancel";
+			text="Close";
 			onButtonClick = "closeDialog 0;";
 			x=0.475;
 			y=0.70;
