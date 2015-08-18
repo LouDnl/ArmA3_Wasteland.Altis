@@ -4,7 +4,10 @@
 //	@file Name: setupResupplyTruck.sqf
 //	@file Author: AgentRev
 
-_this addAction ["<img image='client\icons\repair.paa'/> Resupply", "client\functions\fn_resupplytruck.sqf", [], 51, true, true, "", "vehicle _this != _this && _this distance _target <= 30"];
+#define STORE_VEHICLE_CONDITION "(vehicle _this != _this)"
+#define STORE_ACTION_CONDITION "(_this distance _target <= 30)"
+
+_this addAction ["<img image='client\icons\repair.paa'/> Resupply", "client\functions\fn_resupplytruck.sqf", [], 51, true, true, "", STORE_VEHICLE_CONDITION + " && " + STORE_ACTION_CONDITION];
 
 if (!isServer) exitWith {};
 
