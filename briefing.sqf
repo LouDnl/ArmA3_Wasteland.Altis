@@ -315,6 +315,8 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Wasteland item to put a pincode on a vehicle
 <br/> [Added] Camouflage nets now save
 <br/> [Added] Ability to change uniform texture
+<br/> [Added] First iteration of persistent uniform and backpack texture
+<br/> [Added] Ability to repaint your vehicle
 <br/> [Added] Ability to mark your owned vehicles and objects on the map
 <br/> [Added] Show R.I.P. map marker on corpse location after death
 <br/> [Added] Multiplying money reward for players that stay on the server
@@ -358,6 +360,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Injured by enemy AI message
 <br/> [Added] Press H for holster/unholster weapon
 <br/> [Added] Several icons for actions
+<br/> [Added] Throat cut count to database
 <br/> [Added] Admin menu: teleport player to me
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
