@@ -28,20 +28,11 @@ player addEventHandler ["Take",
 		_vehicle setVariable ["itemTakenFromVehicle", true, true];
 	};
 
-	(getObjectTextures player + [uniformContainer player getVariable "uniformTexture"])
-	params ["_texUniform", "_texInsignia", "_texCustom"];
+	([uniformContainer player getVariable "uniformTexture"])
+	params ["_texCustom"];
 	if (isNil "_texCustom") exitWith {};
-	if (_texUniform == _texCustom) exitWith {};
 	player setObjectTextureGlobal [0, _texCustom];
 	false
-	
-	/*(getObjectTextures backpackContainer player + [backpackContainer player getVariable "backpackTexture"])
-	params ["_texBackpack", "_texBCustom"];
-	if (isNil "_texBCustom") exitWith {};
-	if (_texBackpack == _texBCustom) exitWith {};
-	backpackContainer player setObjectTextureGlobal [0, _texBCustom];
-	false
-	*/
 }];	
 
 player addEventHandler ["Put",

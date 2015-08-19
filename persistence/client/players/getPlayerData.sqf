@@ -112,46 +112,49 @@ if (_player == player) then
 };
 
 // Uniform and backpack texture saving
-_uniformTexture = uniformContainer player getVariable ["uniformTexture", ""];
-
-if (call A3W_savingMethod == "extDB") then
+if (_player == player) then
 {
-	_texArr = [];
+	_uniformTexture = uniformContainer player getVariable ["uniformTexture", ""];
 
+	if (call A3W_savingMethod == "extDB") then
 	{
-		_texArr pushBack _x;
+		_texArr = [];
 
-		if (_x == 92) then // backslash
 		{
-			_texArr pushBack 92; // double it
-		};
-	} forEach toArray _uniformTexture;
+			_texArr pushBack _x;
 
-	_uniformTexture = toString _texArr;
-};
+			if (_x == 92) then // backslash
+			{
+				_texArr pushBack 92; // double it
+			};
+		} forEach toArray _uniformTexture;
 
-_backpackTexture = backpackContainer player getVariable ["backpackTexture", ""];
+		_uniformTexture = toString _texArr;
+	};
 
-if (call A3W_savingMethod == "extDB") then
-{
-	_btexArr = [];
+	_backpackTexture = backpackContainer player getVariable ["backpackTexture", ""];
 
+	if (call A3W_savingMethod == "extDB") then
 	{
-		_btexArr pushBack _x;
+		_btexArr = [];
 
-		if (_x == 92) then // backslash
 		{
-			_btexArr pushBack 92; // double it
-		};
-	} forEach toArray _backpackTexture;
+			_btexArr pushBack _x;
 
-	_backpackTexture = toString _btexArr;
+			if (_x == 92) then // backslash
+			{
+				_btexArr pushBack 92; // double it
+			};
+		} forEach toArray _backpackTexture;
+
+		_backpackTexture = toString _btexArr;
+	};
+
+	{ _data pushBack _x } forEach
+	[
+		["UniformTexture", _uniformTexture],
+		["BackpackTexture", _backpackTexture]
+	];
 };
-
-{ _data pushBack _x } forEach
-[
-	["UniformTexture", _uniformTexture],
-	["BackpackTexture", _backpackTexture]
-];
 
 _data
