@@ -8,8 +8,8 @@
 
 { [player, _x] call fn_addManagedAction } forEach
 [
-	["<img image='client\icons\rifle.paa'/> Holster Weapon", { player action ["SwitchWeapon", player, player, 100] }, [], -90, false, false, "", "vehicle player == player && currentWeapon player != ''"],
-	["<img image='client\icons\rifle.paa'/> Unholster Primary Weapon", { player action ["SwitchWeapon", player, player, 0] }, [], -90, false, false, "", "vehicle player == player && currentWeapon player == '' && primaryWeapon player != ''"],
+	["<img image='client\icons\holster.paa'/> Holster Weapon", { player action ["SwitchWeapon", player, player, 100] }, [], -90, false, false, "", "vehicle player == player && currentWeapon player != ''"],
+	["<img image='client\icons\holster.paa'/> Unholster Primary Weapon", { player action ["SwitchWeapon", player, player, 0] }, [], -90, false, false, "", "vehicle player == player && currentWeapon player == '' && primaryWeapon player != ''"],
 
 	[format ["<img image='client\icons\playerMenu.paa' color='%1'/> <t color='%1'>[</t>Player Menu<t color='%1'>]</t>", "#FF8000"], "client\systems\playerMenu\init.sqf", [], -100, false], //, false, "", ""],
 	[format ["<img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa' color='%1'/> <t color='%1'>[</t>Airdrop Menu<t color='%1'>]</t>", "#FF0000"],"addons\APOC_Airdrop_Assistance\APOC_cli_menu.sqf",[], -99, false, false, "","vehicle player == player"],
@@ -23,7 +23,7 @@
 
 	["<img image='client\icons\repair.paa'/> Salvage", "client\actions\salvage.sqf", [], 1.1, false, false, "", "!isNull cursorTarget && !alive cursorTarget && {cursorTarget isKindOf 'AllVehicles' && !(cursorTarget isKindOf 'Man') && player distance cursorTarget <= (sizeOf typeOf cursorTarget / 3) max 2}"],
 
-	["<t color='#FFE496'><img image='client\icons\gunner.paa'/> Mark your stuff on the map</t>", "addons\scripts\markOwned.sqf", [], -95,false,false,"","{_x in ['ItemGPS','B_UavTerminal','O_UavTerminal','I_UavTerminal']} count assignedItems player > 0"],
+	["<t color='#FFE496'><img image='client\icons\search.paa'/> Mark your stuff on the map</t>", "addons\scripts\markOwned.sqf", [], -95,false,false,"","{_x in ['ItemGPS','B_UavTerminal','O_UavTerminal','I_UavTerminal']} count assignedItems player > 0"],
 
 	["<img image='client\icons\medkit.paa'/> Heal Self", "addons\scripts\healself.sqf", [], 1, false, false, "", "(damage player > 0.05) && ('FirstAidKit' in (items player))"],
 	
