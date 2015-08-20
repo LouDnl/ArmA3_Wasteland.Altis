@@ -162,7 +162,7 @@ removeHeadgear player;
 		{ 
 			if (_value != "") then
 			{
-				player setObjectTextureGlobal [0, _value]; 
+				[player, [0, _value]] spawn applyPlayerTexture; // Doing this externally otherwise the texture is not broadcasted globally correctly
 				uniformContainer player setVariable ["uniformTexture", _value, true]; 
 			};
 		};
@@ -170,7 +170,7 @@ removeHeadgear player;
 		{ 
 			if (_value != "") then
 			{
-				backpackContainer player setObjectTextureGlobal [0, _value]; 
+				[backpackContainer player, [0, _value]] spawn applyPlayerTexture; // Doing this externally otherwise the texture is not broadcasted globally correctly
 				backpackContainer player setVariable ["backpackTexture", _value, true];
 			};
 		};
