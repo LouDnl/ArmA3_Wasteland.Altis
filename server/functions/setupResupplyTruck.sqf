@@ -2,12 +2,15 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Name: setupResupplyTruck.sqf
-//	@file Author: AgentRev
+//	@file Author: AgentRev (Edited by LouD)
 
 #define STORE_VEHICLE_CONDITION "(vehicle _this != _this)"
-#define STORE_ACTION_CONDITION "(_this distance _target <= 30)"
+#define STORE_ACTION_CONDITION "(_this distance _target <= ['Resupply_Distance', 30] call getPublicVar)"
+#define SELL_VEH_CONTENTS_CONDITION "{!isNull objectFromNetId (player getVariable ['lastVehicleRidden', ''])}"
 
-_this addAction ["<img image='client\icons\repair.paa'/> Resupply", "client\functions\fn_resupplytruck.sqf", [], 51, true, true, "", STORE_VEHICLE_CONDITION + " && " + STORE_ACTION_CONDITION];
+_this addAction ["<img image='client\icons\repair.paa'/> Resupply Vehicle", "client\functions\fn_resupplytruck.sqf", [], 50, true, true, "", STORE_VEHICLE_CONDITION + " && " + STORE_ACTION_CONDITION];
+_this addAction ["<img image='client\icons\store.paa'/> Repaint Vehicle", "addons\VehiclePainter\VehiclePainter_Check.sqf", [], 49, true, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+_this addAction ["<img image='client\icons\money.paa'/> Sell Vehicle Contents", "client\systems\selling\sellVehicleItems.sqf", [], 48, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
 
 if (!isServer) exitWith {};
 

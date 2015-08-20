@@ -2,14 +2,15 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Name: setupSellTruck.sqf
-//	@file Author: AgentRev, Lodac 
+//	@file Author: AgentRev, Lodac (Edited by LouD)
 
 #define STORE_VEHICLE_CONDITION "(vehicle _this != _this)"
-#define STORE_ACTION_CONDITION "(_this distance _target <= 30)"
+#define STORE_ACTION_CONDITION "(_this distance _target <= ['Sell_Distance', 30] call getPublicVar)"
 #define SELL_VEH_CONTENTS_CONDITION "{!isNull objectFromNetId (player getVariable ['lastVehicleRidden', ''])}"
 
-_this addAction ["<img image='client\icons\store.paa'/> Sell Vehicle", "client\functions\fn_sellTruck.sqf", [], 50, true, true, "", STORE_VEHICLE_CONDITION + " && " + STORE_ACTION_CONDITION];
-_this addAction ["<img image='client\icons\money.paa'/> Sell Vehicle Contents", "client\systems\selling\sellVehicleItems.sqf", [], 51, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+_this addAction ["<img image='client\icons\money.paa'/> Sell Vehicle", "client\functions\fn_sellTruck.sqf", [], 50, true, true, "", STORE_ACTION_CONDITION + " && " + STORE_VEHICLE_CONDITION];
+_this addAction ["<img image='client\icons\money.paa'/> Sell Vehicle Contents", "client\systems\selling\sellVehicleItems.sqf", [], 49, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+_this addAction ["<img image='client\icons\store.paa'/> Repaint Vehicle", "addons\VehiclePainter\VehiclePainter_Check.sqf", [], 48, true, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
 
 if (!isServer) exitWith {};
 
