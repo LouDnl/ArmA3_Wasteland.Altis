@@ -4,11 +4,6 @@
 //	@file Name: setupResupplyTruck.sqf
 //	@file Author: AgentRev
 
-#define STORE_VEHICLE_CONDITION "(vehicle _this != _this)"
-#define STORE_ACTION_CONDITION "(_this distance _target <= 30)"
-
-_this addAction ["<img image='client\icons\repair.paa'/> Resupply", "client\functions\fn_resupplytruck.sqf", [], 51, true, true, "", STORE_VEHICLE_CONDITION + " && " + STORE_ACTION_CONDITION];
-
 if (!isServer) exitWith {};
 
 _this lock 2;
@@ -31,6 +26,16 @@ _marker setMarkerDir 0;
 _this spawn
 {
 	waitUntil {!isNil "A3W_serverSetupComplete"};
+
+	#define RESUPPLY_DISTANCE (["Resupply_Distance", 30] call getPublicVar)
+	#define STORE_VEHICLE_CONDITION "(vehicle _this != _this)"
+	#define STORE_ACTION_CONDITION format ["(_this distance _target <= %1)", RESUPPLY_DISTANCE]
+	#define SELL_VEH_CONTENTS_CONDITION "{!isNull objectFromNetId (player getVariable ['lastVehicleRidden', ''])}"
+
+	_this addAction ["<img image='client\icons\repair.paa'/> Resupply", "client\functions\fn_resupplytruck.sqf", [], 50, true, true, "", STORE_VEHICLE_CONDITION + " && " + STORE_ACTION_CONDITION];
+	_this addAction ["<img image='client\icons\store.paa'/> Repaint Vehicle", "addons\VehiclePainter\VehiclePainter_Check.sqf", [], 49, true, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+	_this addAction ["<img image='client\icons\money.paa'/> Sell Vehicle Contents", "client\systems\selling\sellVehicleItems.sqf", [], 48, false, true, "", STORE_ACTION_CONDITION + " && " + SELL_VEH_CONTENTS_CONDITION];
+
 	[_this] call vehicleSetup;
 	_this enableSimulationGlobal false;
 };
