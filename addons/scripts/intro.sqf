@@ -3,11 +3,11 @@ sleep 90;
 private ["_messages", "_timeout"];
 
 _messages = [
-	["NLU", "NL United A3Wasteland"],
+	["CS.", "Cyber Slackers A3Wasteland"],
 	["Welcome", (name player)],
 	["A3Wasteland", worldName],
-	["Teamspeak", "ts.nl-united.nl"],
-	["Website/Forums", "www.nl-united.nl"],
+	["Teamspeak", "ts.cyberslackers.net"],
+	["Website/Forums", "www.cyberslackers.nl"],
 	["Saving", "Check the Server Rules to see saving times."],
 	["ATM / Bank", "You can use any ATM found in Altis."],
 	["Earplugs", "Put in your earplugs by using the END key."]

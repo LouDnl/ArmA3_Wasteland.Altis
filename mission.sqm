@@ -136,8 +136,8 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="NL United A3Wasteland Altis v1.2";
-		overviewText="Wasteland survival sandbox by NL United - visit www.nl-united.nl for more details. Teamspeak: ts.nl-united.nl";
+		briefingName="Cyber Slackers A3Wasteland Altis v1.2";
+		overviewText="Wasteland survival sandbox by Cyber Slackers - visit www.cyberslackers.net for more details. Teamspeak: ts.cyberslackers.net";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
 		startWeather=0;
@@ -14123,7 +14123,7 @@ class Mission
 		{
 			position[]={12023.773,0.090267554,25987.053};
 			name="teamspeak";
-			text="TEAMSPEAK: TS.NL-UNITED.NL";
+			text="TEAMSPEAK: TS.CYBERSLACKERS.NET";
 			type="mil_box";
 			colorName="ColorWEST";
 			angle=-270;
@@ -14132,7 +14132,7 @@ class Mission
 		{
 			position[]={12024.969,0.0023672134,25500.557};
 			name="website";
-			text="WEBSITE: WWW.NL-UNITED.NL";
+			text="WEBSITE: WWW.CYBERSLACKERS.NET";
 			type="mil_box";
 			colorName="ColorWEST";
 			angle=-270;

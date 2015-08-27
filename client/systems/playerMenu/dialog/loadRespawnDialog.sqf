@@ -47,7 +47,7 @@ _side = switch (playerSide) do
 	default      { "Independent" };
 };
 
-_respawnText ctrlSetStructuredText parseText (format ["Welcome to NL United A3Wasteland<br/>You are on %1. Please select a spawn point.", _side]);
+_respawnText ctrlSetStructuredText parseText (format ["Welcome to Cyber Slackers A3Wasteland<br/>You are on %1. Please select a spawn point.", _side]);
 respawnDialogActive = true;
 
 //buttonSetAction [respawn_Random_Button, format ["%1 [%2,0] execVM 'client\functions\spawnAction.sqf'", _disableAllButtons, respawn_Random_Button]];

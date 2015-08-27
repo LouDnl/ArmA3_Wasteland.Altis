@@ -37,7 +37,7 @@ _price = 100; // price = 100 for vehicles not found in vehicle store.
 	};
 } forEach (call allVehStoreVehicles);
 
-// Added because of expensive planes on NLU server. Could make someone a millionaire.
+// Added because of expensive planes on CS. server. Could make someone a millionaire.
 if (_vehicle isKindOf "Plane") then
 {
 	_price = 5000;

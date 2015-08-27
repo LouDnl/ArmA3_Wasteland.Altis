@@ -30,7 +30,7 @@ if (_uid call isAdmin) then
 					"Unlock Objects around you",
 					"Delete Unlocked Objects around you",
 					"Relock Objects around you",
-					"Access NLU News"
+					"Access CS. News"
 	];
 
 	{

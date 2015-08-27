@@ -32,7 +32,7 @@ class TOParmaInfoD
 		class TAInfoTitle: RscText
 		{
 			idc = 10032;
-			text = "NL United Information";
+			text = "Cyber Slackers Information";
 			colorBackground[] = {0,0,0,1};
 			x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
@@ -44,7 +44,7 @@ class TOParmaInfoD
 			idc = TOParmaInfo_Server_Info;
 			type = CT_STRUCTURED_TEXT;
 			size = 0.040;
-			text = "NL United Server";
+			text = "Cyber Slackers Server";
 			x = "18 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
@@ -58,7 +58,7 @@ class TOParmaInfoD
 			idc = TOParmaInfo_General_Info_BG;
 			type = CT_STRUCTURED_TEXT;
 			size = 0.030;
-			text = "Website: nl-united.nl Forums: nl-united.nl/forum TeamSpeak: ts.nl-united.nl";
+			text = "Website: cyberslackers.net Forums: cyberslackers.net/forum TeamSpeak: ts.cyberslackers.net";
 			x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "1.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "30 * (((safezoneW / safezoneH) min 1.2) / 40)";
@@ -103,7 +103,7 @@ class TOParmaInfoD
 		class TAStatsTiTleBackground: RscText
 		{
 			idc = TOParmaInfo_Stats_Title_BG;
-			text = "NL United Player & Server Stats";
+			text = "Cyber Slackers Player & Server Stats";
 			x = "15.1 * (((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "9.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			w = "14.9 * (((safezoneW / safezoneH) min 1.2) / 40)";

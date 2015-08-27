@@ -22,8 +22,8 @@ class Header
 	maxPlayers=170; // 168 players, 2 headless clients
 };
 author="LouD - A3Wasteland.com"; // it would be if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
-onLoadName = "NL United A3Wasteland"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)" :)
-onLoadMission = "Created by AgentRev - A3Wasteland, edited by LouD - NL United. Thanks to all who helped. Keep playing boys!";
+onLoadName = "Cyber Slackers A3W"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)" :)
+onLoadMission = "Created by AgentRev - A3Wasteland, edited by LouD - Cyber Slackers. Thanks to all who helped. Keep playing boys and girls!";
 overviewText = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
 overviewTextLocked = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
 overviewPicture = "mapConfig\Loading.jpg";
