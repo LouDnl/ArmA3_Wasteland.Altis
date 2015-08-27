@@ -7,7 +7,7 @@ _messages = [
 	["Welcome", (name player)],
 	["A3Wasteland", worldName],
 	["Teamspeak", "ts.cyberslackers.net"],
-	["Website/Forums", "www.cyberslackers.nl"],
+	["Website/Forums", "www.cyberslackers.net"],
 	["Saving", "Check the Server Rules to see saving times."],
 	["ATM / Bank", "You can use any ATM found in Altis."],
 	["Earplugs", "Put in your earplugs by using the END key."]
