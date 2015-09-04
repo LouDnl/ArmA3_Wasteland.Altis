@@ -39,16 +39,16 @@ if (_uid call isAdmin) then
 					execVM "client\systems\adminPanel\vehicleManagement.sqf";
 					if (!isNil "notifyAdminMenu") then { ["VehicleManagement", "Opened"] call notifyAdminMenu };
 				};
-				case 2: //Tags
-				{
-					execVM "client\systems\adminPanel\playerTags.sqf";
-					//Is logged from inside target script
-				};
-				case 3: //Unstuck player
+				case 2: //Unstuck player
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\unstuck.sqf";
 					if (!isNil "notifyAdminMenu") then { ["UnstuckPlayer", "Used"] call notifyAdminMenu };
+				};
+				case 3: //Tags
+				{
+					execVM "client\systems\adminPanel\playerTags.sqf";
+					//Is logged from inside target script
 				};
 				case 4: //Teleport
 				{
