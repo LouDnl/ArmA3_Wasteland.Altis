@@ -34,7 +34,7 @@ class gunshopd
 		class TopBar: IGUIBack
 		{
 			idc = -1;
-			colorBackground[] = {0.546,0.59,0.363,0.4};
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			#define GunStoreTopBar_H (0.05 * SZ_SCALE)
 

@@ -22,24 +22,23 @@ class PlayersMenu
 
 	class controlsBackground {
 
-		class MainBackground: w_RscPicture
+		class MainBackground: IGUIBack
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {0,0,0,0};
-			text = "#(argb,8,8,3)color(0,0,0,0.6)";
+			colorBackground[] = {0,0,0,0.6};
+
 			x = 0.1875 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;
 			w = 0.60 * safezoneW;
 			h = 0.661111 * safezoneH;
 		};
 
-		class TopBar: w_RscPicture
+		class TopBar: IGUIBack
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {0,0,0,0};
-			text = "#(argb,8,8,3)color(0.546,0.59,0.363,0.4)";
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			x = 0.1875 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;
