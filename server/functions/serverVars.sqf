@@ -21,55 +21,32 @@ currentStaticHelis = []; // Storage for the heli marker numbers so that we don't
 //Civilian Vehicle List - Random Spawns
 civilianVehicles =
 [
-//	"C_Quadbike_01_F",
-	"C_Hatchback_01_F",
-	"C_Hatchback_01_sport_F",
+	"C_Quadbike_01_F",
 	"C_SUV_01_F",
 	"C_Offroad_01_F",
-	"I_G_Offroad_01_F",
-	"C_Van_01_box_F",
-	"C_Van_01_transport_F"
+	"RHS_Ural_Open_Civ_01"
 ];
 
 //Light Military Vehicle List - Random Spawns
 lightMilitaryVehicles =
 [
-//	"B_Quadbike_01_F",
-//	"O_Quadbike_01_F",
-//	"I_Quadbike_01_F",
-//	"I_G_Quadbike_01_F",
-	"O_Truck_02_covered_F",
-	"I_Truck_02_covered_F",
-	"O_Truck_02_transport_F",
-	"I_Truck_02_transport_F",
-	"I_G_Offroad_01_armed_F"
+	"rhs_gaz66_vmf",
+	"RHS_UAZ_MSV_01",
+	//"RHS_Ural_MSV_01",
+	"rhs_uaz_open_MSV_01"
 ];
 
 //Medium Military Vehicle List - Random Spawns
 mediumMilitaryVehicles =
 [
-//	"I_Truck_02_Fuel_F",
-//	"O_Truck_02_Fuel_F",
-//	"I_Truck_02_medical_F",
-//	"O_Truck_02_medical_F",
-	"B_MRAP_01_F",
-	"O_MRAP_02_F",
-	"I_MRAP_03_F"
+	"rhsusf_m1025_w",
+	"rhsusf_m998_w_2dr",
+	"hsusf_m998_w_4dr"
 ];
 
 //Water Vehicles - Random Spawns
 waterVehicles =
 [
-//	"B_Lifeboat",
-//	"O_Lifeboat",
-//	"C_Rubberboat",
-//	"B_SDV_01_F",
-//	"O_SDV_01_F",
-//	"I_SDV_01_F",
-//	"B_Boat_Transport_01_F",
-//	"O_Boat_Transport_01_F",
-//	"I_Boat_Transport_01_F",
-//	"I_G_Boat_Transport_01_F",
 	"B_Boat_Armed_01_minigun_F",
 	"O_Boat_Armed_01_hmg_F",
 	"I_Boat_Armed_01_minigun_F",
@@ -141,85 +118,39 @@ staticWeaponsList =
 //Object List - Random Helis.
 staticHeliList =
 [
-	"C_Heli_Light_01_civil_F",
-	"B_Heli_Light_01_F",
-	"O_Heli_Light_02_unarmed_F",
-	"I_Heli_light_03_unarmed_F"
+	"RHS_Mi8amt_civilian",
+	"rhs_ka60_c",
+	"rhs_ka60_grey",
+	"RHS_UH1Y_UNARMED"
 	// don't put cargo helicopters here, it doesn't make sense to find them in towns; they spawn in the CivHeli mission
 ];
 
 //Object List - Random Planes.
 staticPlaneList =
 [
-	"B_Plane_CAS_01_F",
-	"O_Plane_CAS_02_F",
-	"I_Plane_Fighter_03_CAS_F"
+	"RHS_A10",
+	"RHS_Su25SM_vvs"
 ];
 
 //Random Weapon List - Change this to what you want to spawn in cars.
 vehicleWeapons =
 [
-//	"hgun_P07_F",
-//	"hgun_Rook40_F",
-//	"hgun_ACPC2_F",
-//	"arifle_SDAR_F",
-	"SMG_01_F",	// Vermin .45 ACP
-	"SMG_02_F",	// Sting 9mm
-	"hgun_PDW2000_F",
-	"arifle_TRG20_F",
-	"arifle_TRG21_F",
-	"arifle_TRG21_GL_F",
-	"arifle_Mk20C_F",
-	"arifle_Mk20_F",
-	"arifle_Mk20_GL_F",
-	"arifle_Katiba_F",
-	"arifle_Katiba_C_F",
-	"arifle_Katiba_GL_F",
-	"arifle_MXC_F",
-	"arifle_MX_F",
-	"arifle_MX_GL_F",
-	"arifle_MX_SW_F",
-	"arifle_MXM_F",
-	"srifle_EBR_F",
-	"srifle_DMR_02_ACO_F",
-	"srifle_DMR_03_ACO_F",
-	"srifle_DMR_05_MRCO_F",
-	"srifle_DMR_06_camo_khs_F",
-	"LMG_Mk200_F",
-	"LMG_Zafir_F"
+	"hgun_mas_bhp_F",
+	"hgun_mas_usp_F",
+	"arifle_mas_ak12_sf",
+	"arifle_mas_aks74",
+	"arifle_mas_m16",
+	"arifle_mas_m27",
+	"srifle_mas_ebr",
+	"LMG_mas_M240_F"
 ];
 
 vehicleAddition =
 [
-	"muzzle_snds_L", // 9mm
-	"muzzle_snds_M", // 5.56mm
-	"muzzle_snds_H", // 6.5mm
-	"muzzle_snds_H_MG", // 6.5mm LMG
-	"muzzle_snds_B", // 7.62mm
-	"muzzle_snds_acp", // .45 ACP
-	"optic_Arco",
-	"optic_SOS",
-	"optic_Hamr",
-	"optic_Aco",
-	"optic_ACO_grn",
-	"optic_aco_smg",
-	"optic_Holosight",
-	"optic_Holosight_smg",
-	"acc_flashlight",
-	"acc_pointer_IR",
-	"bipod_03_F_blk",
 	"Medikit",
 	"Medikit",
 	"FirstAidKit",
 	"ToolKit",
-	"G_Bandanna_oli",
-	"G_Balaclava_oli",
-	"H_MilCap_dgtl",
-	"H_HelmetIA",
-	"H_HelmetB",
-	"V_Press_F",
-	"V_HarnessO_brn",
-	"V_TacVest_brn",
 	"MiniGrenade",
 	"IEDUrbanSmall_Remote_Mag",
 	"IEDLandSmall_Remote_Mag"

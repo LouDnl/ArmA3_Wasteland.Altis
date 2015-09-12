@@ -307,8 +307,8 @@ R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
 	// e.g. : "MyLiftableObjectClassName1", "MyLiftableObjectClassName2"
-	"Land_Device_assembled_F", // Base locker
-	"ReammoBox_F",
+	//"Land_Device_assembled_F", // Base locker
+	//"ReammoBox_F",
 	"Hatchback_01_base_F",
 	"SUV_01_base_F",
 	"Offroad_01_base_F",

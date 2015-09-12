@@ -20,8 +20,8 @@ if ([_uid, 2] call isAdmin) then {
 
 	_panelOptions = ["Player Management",
 					"Vehicle Management",
-					"Player Markers",
-					"Unstuck player"
+					"Unstuck player",
+					"Player Markers"
 	];
 
 	{

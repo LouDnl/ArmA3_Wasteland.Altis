@@ -36,23 +36,23 @@ switch (_side) do
 		{
 			case (_isSniper):
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 			case (_isDiver):
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = "V_RebreatherB" };
 				if (_item == "goggles") then { _result = "G_Diving" };
 			};
 			default
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 		};
 
-		if (_item == "headgear") then { _result = "H_Cap_tan" };
+		if (_item == "headgear") then { _result = "H_Cap_blu" };
 	};
 	case OPFOR:
 	{
@@ -60,23 +60,23 @@ switch (_side) do
 		{
 			case (_isSniper):
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 			case (_isDiver):
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = "V_RebreatherIR" };
 				if (_item == "goggles") then { _result = "G_Diving" };
 			};
 			default
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 		};
 
-		if (_item == "headgear") then { _result = "H_Cap_tan" };
+		if (_item == "headgear") then { _result = "H_Cap_blu" };
 	};
 	default
 	{
@@ -84,23 +84,23 @@ switch (_side) do
 		{
 			case (_isSniper):
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 			case (_isDiver):
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = "V_RebreatherIA" };
 				if (_item == "goggles") then { _result = "G_Diving" };
 			};
 			default
 			{
-				if (_item == "uniform") then { _result = "U_B_CombatUniform_mcam_worn" };
+				if (_item == "uniform") then { _result = "rhs_uniform_df15" };
 				if (_item == "vest") then { _result = _defaultVest };
 			};
 		};
 
-		if (_item == "headgear") then { _result = "H_Cap_tan" };
+		if (_item == "headgear") then { _result = "H_Cap_blu" };
 	};
 };
 

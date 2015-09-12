@@ -152,7 +152,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				};
 			};
 			
-			if (_class isKindOf "Plane") then
+			/*if (_class isKindOf "Plane") then
 			{
 				{
 					if (["CMFlare", _x] call fn_findString != -1) then
@@ -161,8 +161,9 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					};
 				} forEach getArray (configFile >> "CfgVehicles" >> _class >> "magazines");
 
-				_object addMagazineTurret ["60Rnd_CMFlare_Chaff_Magazine", [-1]];
-			};
+				_object addMagazineTurret ["120Rnd_CMFlare_Chaff_Magazine", [-1]];
+				_object addMagazineTurret ["120Rnd_CMFlareMagazine", [-1]]; // TEST
+			};*/
 
 			if (isPlayer _player && !(_player getVariable [_timeoutKey, true])) then
 			{

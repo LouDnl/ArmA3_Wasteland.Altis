@@ -32,7 +32,7 @@ _itemData = _vehlist lbData _itemIndex;
 _vehText ctrlSetText "";
 
 {
-	if (_itemText == _x select 0 && _itemData == _x select 1) then
+	if (_itemData == _x select 1) then
 	{
 		_vehClass = _x select 1;
 		_price = _x select 2;
