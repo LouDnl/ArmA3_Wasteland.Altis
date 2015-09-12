@@ -136,7 +136,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="Cyber Slackers A3Wasteland Altis v1.2 (RHS/MAS)";
+		briefingName="Cyber Slackers A3Wasteland Altis v1.2";
 		overviewText="Wasteland survival sandbox by Cyber Slackers - visit www.cyberslackers.net for more details. Teamspeak: ts.cyberslackers.net";
 		resistanceWest=0;
 		timeOfChanges=3e+038;

@@ -38,27 +38,27 @@ for "_i" from 1 to _nbUnits do
 	removeGoggles _unit;
 
 	_unit addVest "V_PlateCarrier1_rgr";
-	_unit addMagazine "30Rnd_mas_556x45_Stanag";
-	_unit addMagazine "30Rnd_mas_556x45_Stanag";
-	_unit addMagazine "30Rnd_mas_556x45_Stanag";
+	_unit addMagazine "30Rnd_556x45_Stanag";
+	_unit addMagazine "30Rnd_556x45_Stanag";
+	_unit addMagazine "30Rnd_556x45_Stanag";
 
 	switch (true) do
 	{
 		// Grenadier every 3 units
 		case (_i % 3 == 0):
 		{
-			_unit addUniform "rhs_uniform_m88_patchless";
+			_unit addUniform "U_B_CombatUniform_mcam_vest";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
-			_unit addWeapon "arifle_mas_m16_gl";
+			_unit addWeapon "arifle_TRG21_GL_F";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
 			_unit addMagazine "1Rnd_HE_Grenade_shell";
 		};
 		// RPG every 7 units, starting from second one
 		case ((_i + 5) % 7 == 0):
 		{
-			_unit addUniform "rhs_uniform_m88_patchless";
+			_unit addUniform "U_B_CombatUniform_mcam_tshirt";
 			_unit addBackpack "B_Kitbag_mcamo";
-			_unit addWeapon "arifle_mas_m16_gl";
+			_unit addWeapon "arifle_TRG20_F";
 			_unit addMagazine "Titan_AT";
 			_unit addWeapon "launch_Titan_short_F";
 			_unit addMagazine "Titan_AT";
@@ -67,17 +67,17 @@ for "_i" from 1 to _nbUnits do
 		// Rifleman
 		default
 		{
-			_unit addUniform "rhs_uniform_m88_patchless";
+			_unit addUniform "U_B_CombatUniform_mcam";
 
 			if (_unit == leader _group) then
 			{
-				_unit addWeapon "arifle_mas_m16_gl";
+				_unit addWeapon "arifle_TRG21_F";
 				_unit addMagazine "HandGrenade";
 				_unit setRank "SERGEANT";
 			}
 			else
 			{
-				_unit addWeapon "arifle_mas_m16_gl";
+				_unit addWeapon "arifle_TRG20_F";
 				_unit addMagazine "HandGrenade";
 			};
 		};

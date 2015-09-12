@@ -39,27 +39,27 @@ storeOwnerConfig = compileFinal str
 // Outfits for store owners
 storeOwnerConfigAppearance = compileFinal str
 [
-	["GenStore1", [["weapon", ""], ["uniform", "U_B_HeliPilotCoveralls"]]],
-	["GenStore2", [["weapon", ""], ["uniform", "rhs_uniform_cu_ocp_1stcav"]]],
-	["GenStore3", [["weapon", ""], ["uniform", "rhs_uniform_FROG01_m81"]]],
-	["GenStore4", [["weapon", ""], ["uniform", "rhs_uniform_cu_ocp_1stcav"]]],
-	["GenStore5", [["weapon", ""], ["uniform", "rhs_uniform_FROG01_m81"]]],
-	["GenStore6", [['weapon', ""], ["uniform", "rhs_uniform_FROG01_m81"]]],
-	["GenStore7", [['weapon', ""], ["uniform", "U_B_HeliPilotCoveralls"]]],
-	["GenStore8", [['weapon', ""], ["uniform", "U_B_HeliPilotCoveralls"]]],
+	["GenStore1", [["weapon", ""], ["uniform", "U_B_Protagonist_VR"]]],
+	["GenStore2", [["weapon", ""], ["uniform", "U_O_Protagonist_VR"]]],
+	["GenStore3", [["weapon", ""], ["uniform", "U_I_Protagonist_VR"]]],
+	["GenStore4", [["weapon", ""], ["uniform", "U_O_Protagonist_VR"]]],
+	["GenStore5", [["weapon", ""], ["uniform", "U_I_Protagonist_VR"]]],
+	["GenStore6", [['weapon', ""], ["uniform", "U_I_Protagonist_VR"]]],
+	["GenStore7", [['weapon', ""], ["uniform", "U_B_Protagonist_VR"]]],
+	["GenStore8", [['weapon', ""], ["uniform", "U_B_Protagonist_VR"]]],
 
-	["GunStore1", [["weapon", "srifle_mas_m110"], ["uniform", "U_I_FullGhillie_sard"]]],
-	["GunStore2", [["weapon", "srifle_mas_sr25"], ["uniform", "rhs_uniform_cu_ucp_82nd"]]],
-	["GunStore3", [["weapon", "rhs_weap_ak74m_gp25"], ["uniform", "rhs_uniform_FROG01_wd"]]],
-	["GunStore4", [["weapon", "arifle_Katiba_C_F"], ["uniform", "rhs_uniform_vdv_mflora"]]],
-	["GunStore5", [["weapon", "rhs_weap_ak103_npz"], ["uniform", "U_C_Journalist"]]],
-	["GunStore6", [["weapon", "arifle_mas_m4_m203c"], ["uniform", "rhs_uniform_cu_ocp_82nd"]]],
+	["GunStore1", [["weapon", "LMG_Zafir_F"], ["uniform", "U_B_SpecopsUniform_sgg"]]],
+	["GunStore2", [["weapon", "srifle_DMR_01_F"], ["uniform", "U_O_SpecopsUniform_blk"]]],
+	["GunStore3", [["weapon", "srifle_GM6_camo_SOS_F"], ["uniform", "U_I_CombatUniform_tshirt"]]],
+	["GunStore4", [["weapon", "arifle_Katiba_GL_F"], ["uniform", "U_IG_Guerilla1_1"]]],
+	["GunStore5", [["weapon", "srifle_GM6_camo_SOS_F"], ["uniform", "U_IG_Guerilla1_1"]]],
+	["GunStore6", [["weapon", "arifle_Katiba_GL_F"], ["uniform", "U_IG_Guerilla1_1"]]],
 
-	["VehStore1", [["weapon", ""], ["uniform", "rhs_uniform_vdv_flora"]]],
-	["VehStore2", [["weapon", ""], ["uniform", "U_I_CombatUniform"]]],
-	["VehStore3", [["weapon", ""], ["uniform", "U_C_Driver_4"]]],
-	["VehStore4", [["weapon", ""], ["uniform", "rhs_uniform_vdv_flora"]]],
-	["VehStore5", [["weapon", ""], ["uniform", "U_I_CombatUniform"]]],
-	["VehStore6", [["weapon", ""], ["uniform", "rhs_uniform_vdv_flora"]]],
-	["VehStore7", [["weapon", ""], ["uniform", "U_C_Poloshirt_redwhite"]]]
+	["VehStore1", [["weapon", ""], ["uniform", "U_IG_leader"]]],
+	["VehStore2", [["weapon", ""], ["uniform", "U_Rangemaster"]]],
+	["VehStore3", [["weapon", ""], ["uniform", "U_Competitor"]]],
+	["VehStore4", [["weapon", ""], ["uniform", "U_IG_leader"]]],
+	["VehStore5", [["weapon", ""], ["uniform", "U_Rangemaster"]]],
+	["VehStore6", [["weapon", ""], ["uniform", "U_IG_leader"]]],
+	["VehStore7", [["weapon", ""], ["uniform", "U_Competitor"]]]
 ];
