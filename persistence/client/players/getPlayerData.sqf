@@ -117,18 +117,7 @@ _uniformTexture = uniformContainer _player getVariable ["uniformTexture", ""];
 
 if (call A3W_savingMethod == "extDB") then
 {
-	_texArr = [];
-
-	{
-		_texArr pushBack _x;
-
-		if (_x == 92) then // backslash
-		{
-			_texArr pushBack 92; // double it
-		};
-	} forEach toArray _uniformTexture;
-
-	_uniformTexture = toString _texArr;
+	_uniformTexture = (_uniformTexture splitString "\") joinString "\\";
 };
 
 _backpackTexture = backpackContainer _player getVariable ["backpackTexture", ""];
