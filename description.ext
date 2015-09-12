@@ -31,9 +31,9 @@ loadScreen = "mapConfig\Loading.jpg";
 
 // A3W UI color (default = sky blue)
 
-#define A3W_UICOLOR_R  0.25 // default = 0.25
-#define A3W_UICOLOR_G  0.51 // default = 0.51
-#define A3W_UICOLOR_B  0.96 // default = 0.96
+#define A3W_UICOLOR_R  0.294 // 0.596 // default = 0.25
+#define A3W_UICOLOR_G  0.325 // 0.69 // default = 0.51
+#define A3W_UICOLOR_B  0.125 // 0.553 // default = 0.96
 
 //Dialog includes
 
