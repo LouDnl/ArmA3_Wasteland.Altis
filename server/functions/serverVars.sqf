@@ -151,7 +151,7 @@ staticHeliList =
 //Object List - Random Planes.
 staticPlaneList =
 [
-	"B_Plane_CAS_01_F",
+	//"B_Plane_CAS_01_F",
 	"O_Plane_CAS_02_F",
 	"I_Plane_Fighter_03_CAS_F"
 ];
