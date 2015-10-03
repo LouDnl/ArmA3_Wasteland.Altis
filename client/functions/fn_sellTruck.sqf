@@ -40,7 +40,7 @@ _price = 100; // price = 100 for vehicles not found in vehicle store.
 // Added because of expensive planes on CS. server. Could make someone a millionaire.
 if (_vehicle isKindOf "Plane") then
 {
-	_price = 30000;
+	_price = 50000;
 };
 
 _text = format ["Stop engine in 10s to sell vehicle. $%1 for this vehicle. This will take some time.\nYou can always abort by getting out of the vehicle.", _price];
