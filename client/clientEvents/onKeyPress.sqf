@@ -116,11 +116,12 @@ if (!_handled && _key in actionKeys "GetOut") then
 	{
 		if (_ctrl && {_veh isKindOf 'Air' && !(_veh isKindOf 'ParachuteBase')}) then
 		{
-			[] spawn
+			[[], fn_emergencyEject] execFSM "call.fsm";
+			/*[] spawn
 			{
 				if !(["Are you sure you want to eject?", "Confirm", true, true] call BIS_fnc_guiMessage) exitWith {};
 				[[], fn_emergencyEject] execFSM "call.fsm";
-			};
+			};*/
 		};
 	};
 };
