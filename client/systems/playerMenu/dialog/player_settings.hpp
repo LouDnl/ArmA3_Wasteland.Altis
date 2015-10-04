@@ -66,7 +66,7 @@ class playerSettings {
 
 		class serverLogo : w_RscPicture {
 			idc = -1;
-			text = "mapconfig\cyberslackers.jpg";
+			text = "mapconfig\cyberslackers.paa";
 			x = 0.225; y = 0.32;
 			w = 0.32 / (4/3); h = 0.32;
 		};	
