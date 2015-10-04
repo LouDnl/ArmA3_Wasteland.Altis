@@ -322,6 +322,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Multiplying money reward for players that stay on the server
 <br/> [Added] Changed the appearance of the store NPCs
 <br/> [Added] Sell, Change Ownership and Resupply trucks
+<br/> [Added] Selling a plane will always give you 50k
 <br/> [Added] Vehicle locking and info script by Micovery
 <br/> [Added] Vehicle lock state saving
 <br/> [Added] Locked vehicle break in and hot wire at a cost
@@ -337,7 +338,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Altis Madhouse and Orino Fortress (Altis)
 <br/> [Added] BluFor and OpFor Base (Altis)
 <br/> [Added] Mortar to one mission as reward
-<br/> [Added] High value target and Drugs runner with removal and message on disconnect
+<br/> [Added] High value target at 125k and Drugs runner with removal and message on disconnect
 <br/> [Added] Gas Grenades and Gas Masks by Mokey
 <br/> [Added] Logging to all admin commands
 <br/> [Added] Airdrop system by Apoc
@@ -349,7 +350,6 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Maximum spawnbeacon option
 <br/> [Added] Delete spawnbeacon ability
 <br/> [Added] 3D Markers
-<br/> [Added] ZLT Fastrope
 <br/> [Added] Explosives to vehicles
 <br/> [Added] Fix for spawnbeacons placed above water
 <br/> [Added] IEDs to stores and vehicles.
@@ -361,13 +361,17 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Press H for holster/unholster weapon
 <br/> [Added] Several icons for actions
 <br/> [Added] Throat cut count to database
+<br/> [Added] Logo to player menu
+<br/> [Added] New Epoch style status bas
 <br/> [Added] Admin menu: teleport player to me
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
 <br/> [Added] Admin menu: invisibility mode
 <br/> [Added] Debug menu: lock, unlock, relock and delete objects
 <br/> [Removed] Mortar from store
+<br/> [Removed] Confirmation of emergency eject
 <br/> [Moved] Mission weightings to main_config
+<br/> [Changed] Removed the Wipeout from static spawns
 <br/> [Changed] Size of player icons
 <br/> [Changed] Color of menus
 <br/> [Changed] Starting gear
