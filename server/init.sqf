@@ -37,8 +37,8 @@ if (isServer) then
 				parseText format
 				[
 					"<t color='#ff0000' size='1.2' align='center'>[SERVER MESSAGE]</t><br />" +
-					"<t color='#FFFFFF'>------------------------------</t><br/>" +
-					"<t color='#FFFFFF' size='1.0'>player %1 disconnected while being high value target!</t>",
+					"<t color='#FFFFFF' align='center'>------------------------------</t><br/>" +
+					"<t color='#FFFFFF' size='1.0' align='center'>player %1 disconnected while being high value target!</t>",
 					_name
 				]
 			] call hintBroadcast;
@@ -55,8 +55,8 @@ if (isServer) then
 				parseText format
 				[
 					"<t color='#ff0000' size='1.2' align='center'>[SERVER MESSAGE]</t><br />" +
-					"<t color='#FFFFFF'>------------------------------</t><br/>" +
-					"<t color='#FFFFFF' size='1.0'>player %1 disconnected while being a drugsrunner!</t>",
+					"<t color='#FFFFFF' align='center'>------------------------------</t><br/>" +
+					"<t color='#FFFFFF' size='1.0' align='center'>player %1 disconnected while being a drugsrunner!</t>",
 					_name
 				]
 			] call hintBroadcast;

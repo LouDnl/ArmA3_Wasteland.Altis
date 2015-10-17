@@ -17,11 +17,11 @@ _titleColor = param [4, "", [""]];
 [
 	parseText format
 	[
-		"<t color='%5' shadow='2' size='1.75'>%1</t><br/>" +
-		"<t color='%5'>--------------------------------</t><br/>" +
-		(if (_subtitle != "") then { "<t size='1.25'>%2</t><br/>" } else { "" }) +
-		(if (_picture != "") then { "<img size='5' image='%3'/><br/>" } else { "" }) +
-		"%4",
+		"<t color='%5' shadow='2' size='1.75' align='center'>%1</t><br/>" +
+		"<t color='%5' align='center'>--------------------------------</t><br/>" +
+		(if (_subtitle != "") then { "<t size='1.25' align='center'>%2</t><br/>" } else { "" }) +
+		(if (_picture != "") then { "<img size='5' align='center' image='%3'/><br/>" } else { "" }) +
+		"<t align ='center'>%4</t>",
 		_title,
 		_subtitle,
 		_picture,
