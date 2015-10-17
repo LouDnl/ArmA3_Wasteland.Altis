@@ -3,14 +3,11 @@ sleep 90;
 private ["_messages", "_timeout"];
 
 _messages = [
-	["CS.", "Cyber Slackers A3Wasteland"],
+	["GAMERSInc.net", "A3Wasteland"],
 	["Welcome", (name player)],
 	["A3Wasteland", worldName],
-	["Teamspeak", "ts.cyberslackers.net"],
-	["Website/Forums", "www.cyberslackers.net"],
-	["Saving", "Check the Server Rules to see saving times."],
-	["ATM / Bank", "You can use any ATM found in Altis."],
-	["Earplugs", "Put in your earplugs by using the END key."]
+	["Teamspeak", "ts.gamersinc.net"],
+	["Website/Forums", "www.gamersinc.net"]
 ];
 
 _timeout = 5;

@@ -18,20 +18,19 @@ createDialog "TOParmaInfoD";
 _display = (findDisplay TOParmaInfo_dialog);
 
 _serverInfoText = _display displayCtrl TOParmaInfo_Server_Info;
-_serverInfoString = format ["<t color='#A0FFFF'>Cyber Slackers #%1 %2 Wasteland</t>", call A3W_extDB_ServerID, worldName];
+_serverInfoString = format ["<t color='#A0FFFF'>GAMERSInc #%1 %2 Wasteland</t>", call A3W_extDB_ServerID, worldName];
 _serverInfoText ctrlSetStructuredText parseText _serverInfoString;
 
 _generalInfoText = _display displayCtrl TOParmaInfo_General_Info_BG;
-_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.cyberslackers.net'>Cyberslackers.net</a></t> Forums: <t color='#0091CD'><a href='http://www.cyberslackers.net/forum'>Cyber Slackers Forum</a></t> TeamSpeak: ts.cyberslackers.net";
+_generalInfoString = "Website: <t color='#0091CD'><a href='http://www.gamersinc.net'>GAMERSInc.net</a></t> Forums: <t color='#0091CD'><a href='http://www.gamersinc.net/forums'>GAMERSInc Forum</a></t> TeamSpeak: ts.gamersinc.net";
 _generalInfoText ctrlSetStructuredText parseText _generalInfoString;
 
 
-_rulesOnline = "http://arma.cyberslackers.net/rules.php";
+_rulesOnline = "http://atlas.gamersinc.net:9090/rules.php";
 _rulesOffline = "addons\TOParmaInfo\rules.html";
-_newsOnline = "http://arma.cyberslackers.net/news.php";
+_newsOnline = "http://atlas.gamersinc.net:9090/news.php";
 _newsOffline = "addons\TOParmaInfo\news.html";
-//_statsOnline = "http://arma.cyberslackers.net/stats.php?uid=" + _uid;
-_statsOnline = "http://arma.cyberslackers.net/stats.php";
+_statsOnline = "http://atlas.gamersinc.net:9090/index.php";
 _statsOffline = "addons\TOParmaInfo\stats.html";
 
 

@@ -21,19 +21,20 @@ class Header
 	minPlayers=1;
 	maxPlayers=170; // 168 players, 2 headless clients
 };
-author="LouD - A3Wasteland.com"; // it would be if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
-onLoadName = "Cyber Slackers A3W"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)" :)
-onLoadMission = "Created by AgentRev - A3Wasteland, edited by LouD - Cyber Slackers. Thanks to all who helped. Keep playing boys and girls!";
+author="A3Wasteland.com | LouD and CRE4MPIE"; // it would be if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
+onLoadName = "GamersInc. Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)" :)
+onLoadMission = "Created by AgentRev - A3Wasteland, edited by LouD and CRE4MPIE - GAMERSInc. Thanks to all who helped. Keep playing boys and girls!";
 overviewText = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
 overviewTextLocked = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
-overviewPicture = "mapConfig\Loading.jpg";
-loadScreen = "mapConfig\Loading.jpg";
+overviewPicture = "mapConfig\loading.jpg";
+loadScreen = "mapConfig\loading.jpg";
 
 // A3W UI color (default = sky blue)
 
-#define A3W_UICOLOR_R  0.294 // 0.596 // default = 0.25
-#define A3W_UICOLOR_G  0.325 // 0.69 // default = 0.51
-#define A3W_UICOLOR_B  0.125 // 0.553 // default = 0.96
+#define A3W_UICOLOR_R  0.45  // 0.294 // 0.596 // default = 0.25
+#define A3W_UICOLOR_G  0.005 // 0.325 // 0.69 // default = 0.51
+#define A3W_UICOLOR_B  0     // 0.125 // 0.553 // default = 0.96
+#define A3W_UIFILL     1     // default = 0.8
 
 //Dialog includes
 

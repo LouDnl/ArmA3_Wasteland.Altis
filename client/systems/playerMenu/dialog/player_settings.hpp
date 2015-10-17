@@ -26,7 +26,7 @@ class playerSettings {
 		{
 			idc = -1;
 			colorText[] = {1, 1, 1, 1};
-			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, A3W_UIFILL};
 
 			x = 0;
 			y = 0.1;
@@ -66,8 +66,8 @@ class playerSettings {
 
 		class serverLogo : w_RscPicture {
 			idc = -1;
-			text = "mapconfig\cyberslackers.paa";
-			x = 0.225; y = 0.32;
+			text = "mapconfig\logo.paa";
+			x = 0.225; y = 0.20;
 			w = 0.32 / (4/3); h = 0.32;
 		};	
 
@@ -169,50 +169,58 @@ class playerSettings {
 		class btnDistanceNear : w_RscButton {
 			idc = -1;
 			text = "Near";
-			onButtonClick = "setViewDistance 1100; setObjectViewDistance 1100;";
-			x = 0.02; y = 0.43;
+			onButtonClick = "setViewDistance 1000; setObjectViewDistance 1000;";
+			x = 0.02; y = 0.36;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 
 		class btnDistanceMedium : w_RscButton {
 			idc = -1;
 			text = "Medium";
-			onButtonClick = "setViewDistance 2200; setObjectViewDistance 2200;";
-			x = 0.02; y = 0.5;
+			onButtonClick = "setViewDistance 2000; setObjectViewDistance 2000;";
+			x = 0.02; y = 0.43;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 
 		class btnDistanceFar : w_RscButton {
 			idc = -1;
 			text = "Far";
-			onButtonClick = "setViewDistance 3300; setObjectViewDistance 3300;";
+			onButtonClick = "setViewDistance 3000; setObjectViewDistance 3000;";
+			x = 0.02; y = 0.5;
+			w = 0.125; h = 0.033 * safezoneH;
+		};
+		
+		class btnDistanceFurther : w_RscButton {
+			idc = -1;
+			text = "Further";
+			onButtonClick = "setViewDistance 4000; setObjectViewDistance 4000;";
 			x = 0.02; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 		
+		class TOParmaInfoButton : w_RscButton {
+			idc = -1;
+			text = "Info";
+			onButtonClick = "[] execVM 'addons\TOParmaInfo\loadTOParmaInfo.sqf'";
+			x = 0.158; y = 0.57;
+			w = 0.125; h = 0.033 * safezoneH;
+		};
+			
+		/*class btnDistanceEffects : w_RscButton {
+			idc = -1;
+			text = "Effects";
+			onButtonClick = "[] execVM 'addons\disableEnvironment\disableEnvironment.sqf'";
+			x = 0.158; y = 0.57;
+			w = 0.125; h = 0.033 * safezoneH;
+		};*/
+		
 		/*class btnDistanceCustom : w_RscButton {
 			idc = -1;
 			text = "Custom";
-			onButtonClick = "[] execVM 'custom_view_distance.sqf'";
+			onButtonClick = "call CHVD_fnc_openDialog";
 			x = 0.158; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
-		};*/ // Disable viewdistance button for now // Not used
-
-		
-		class TOParmaInfoButton : w_RscButton {
-			idc = -1;
-			text = "Cyber Slackers Info";
-			onButtonClick = "[] execVM 'addons\TOParmaInfo\loadTOParmaInfo.sqf'";
-			x = 0.228; y = 0.254;
-			w = 0.225; h = 0.033 * safezoneH;
-		};
-				
-		class btnDistanceInsane : w_RscButton {
-			text = "Insane";
-			onButtonClick = "setViewDistance 5000;";
-			x = 0.02; y = 0.60;
-			w = 0.125; h = 0.033 * safezoneH;
-		};
+		};*/
 
 	};
 };
