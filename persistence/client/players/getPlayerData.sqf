@@ -117,7 +117,8 @@ _uniformTexture = uniformContainer _player getVariable ["uniformTexture", ""];
 
 if (call A3W_savingMethod == "extDB") then
 {
-	_texArr = [];
+	_uniformTexture = (_uniformTexture splitString "\") joinString "\\";
+/*	_texArr = [];
 
 	{
 		_texArr pushBack _x;
@@ -128,14 +129,15 @@ if (call A3W_savingMethod == "extDB") then
 		};
 	} forEach toArray _uniformTexture;
 
-	_uniformTexture = toString _texArr;
+	_uniformTexture = toString _texArr;*/
 };
 
 _backpackTexture = backpackContainer _player getVariable ["backpackTexture", ""];
 
 if (call A3W_savingMethod == "extDB") then
 {
-	_btexArr = [];
+	_backpackTexture = (_backpackTexture splitString "\") joinString "\\";
+/*	_btexArr = [];
 
 	{
 		_btexArr pushBack _x;
@@ -146,7 +148,7 @@ if (call A3W_savingMethod == "extDB") then
 		};
 	} forEach toArray _backpackTexture;
 
-	_backpackTexture = toString _btexArr;
+	_backpackTexture = toString _btexArr;*/
 };
 
 { _data pushBack _x } forEach
