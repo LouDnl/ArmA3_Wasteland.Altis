@@ -143,7 +143,8 @@ if (_uid call isAdmin) then
 				case 5: //Access Proving Grounds
 				{
 					closeDialog 0;
-					createDialog "balca_debug_main";
+					hint "This feature is disabled.";
+					//createDialog "balca_debug_main";
 					if (!isNil "notifyAdminMenu") then { ["ProvingGrounds", "Opened"] call notifyAdminMenu };
 				};
 				case 6: //Show server FPS function
