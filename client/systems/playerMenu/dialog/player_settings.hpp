@@ -168,7 +168,7 @@ class playerSettings {
 		
 		class btnDistanceNear : w_RscButton {
 			idc = -1;
-			text = "Near";
+			text = "1000m";
 			onButtonClick = "setViewDistance 1000; setObjectViewDistance 1000;";
 			x = 0.02; y = 0.36;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -176,7 +176,7 @@ class playerSettings {
 
 		class btnDistanceMedium : w_RscButton {
 			idc = -1;
-			text = "Medium";
+			text = "2000m";
 			onButtonClick = "setViewDistance 2000; setObjectViewDistance 2000;";
 			x = 0.02; y = 0.43;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -184,7 +184,7 @@ class playerSettings {
 
 		class btnDistanceFar : w_RscButton {
 			idc = -1;
-			text = "Far";
+			text = "3000m";
 			onButtonClick = "setViewDistance 3000; setObjectViewDistance 3000;";
 			x = 0.02; y = 0.5;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -192,7 +192,7 @@ class playerSettings {
 		
 		class btnDistanceFurther : w_RscButton {
 			idc = -1;
-			text = "Further";
+			text = "4000m";
 			onButtonClick = "setViewDistance 4000; setObjectViewDistance 4000;";
 			x = 0.02; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
@@ -202,17 +202,17 @@ class playerSettings {
 			idc = -1;
 			text = "Info";
 			onButtonClick = "[] execVM 'addons\TOParmaInfo\loadTOParmaInfo.sqf'";
-			x = 0.158; y = 0.57;
+			x = 0.158; y = 0.50;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 			
-		/*class btnDistanceEffects : w_RscButton {
+		class btnDistanceEffects : w_RscButton {
 			idc = -1;
 			text = "Effects";
 			onButtonClick = "[] execVM 'addons\disableEnvironment\disableEnvironment.sqf'";
 			x = 0.158; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
-		};*/
+		};
 		
 		/*class btnDistanceCustom : w_RscButton {
 			idc = -1;

@@ -19,7 +19,7 @@ class osefStatusBarAdmin {
 			w = 1.35;
 			h = 0.06;
 			shadow = 2;
-			colorBackground[] = { 0, 0, 0, 0.5 };  // uncomment and increase 4th number to have a background
+			//colorBackground[] = { 0, 0, 0, 0.5 };  // uncomment and increase 4th number to have a background
 			font = "PuristaSemibold";
 			size = 0.04;
 			type = 13;

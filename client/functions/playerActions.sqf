@@ -54,3 +54,11 @@ if (["A3W_savingMethod", "profile"] call getPublicVar == "extDB" && {["A3W_purch
 {
 	[player, ["<img image='client\icons\save.paa'/> Force Save Vehicle", { pvar_manualVehicleSave = netId cursorTarget; publicVariableServer "pvar_manualVehicleSave" }, [], -9.5, false, true, "", "call canForceSaveVehicle"]] call fn_addManagedAction;
 };
+
+// Boom boom
+if (["_crew_", typeOf player] call fn_findString != -1) then
+{
+
+[player, ["<t color='#FF0000'><img image='client\icons\bomb.paa'/> Perform your duty!</t>", "addons\far_revive\FAR_lastResort.sqf",[], 10, false ]] call fn_addManagedAction;
+
+};

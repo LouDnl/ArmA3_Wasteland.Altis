@@ -11,6 +11,12 @@ _hasSatchel = "IEDUrbanBig_Remote_Mag" in magazines player;
 _hasCharge2 = "IEDLandSmall_Remote_Mag" in magazines player;
 _hasSatchel2 = "IEDLandBig_Remote_Mag" in magazines player;
 
+_shout = 
+	[ // ["filename", volume, bomb timer]
+		["lastresort", 0.7, 1.75],
+		["yililili", 0.5, 1.9]
+	] call BIS_fnc_selectRandom;
+
 if !(player getVariable ["performingDuty", false]) then
 {
 	if (_hasCharge || _hasSatchel || _hasCharge2 || _hasSatchel2) then
@@ -18,7 +24,7 @@ if !(player getVariable ["performingDuty", false]) then
 		if (["Perform your duty?", "", "Yes", "No"] call BIS_fnc_guiMessage) then
 		{
 			player setVariable ["performingDuty", true];
-			playSound3D [call currMissionDir + "client\sounds\lastresort.wss", vehicle player, false, getPosASL player, 0.7, 1, 1000];
+			playSound3D [call currMissionDir + "client\sounds\" + (_shout select 0) + ".wss", vehicle player, false, getPosASL player, (_shout select 1), 1, 1000];
 
 			switch (true) do
 			{

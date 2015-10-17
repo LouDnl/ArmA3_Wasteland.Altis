@@ -29,7 +29,7 @@ _getValue =
 	};
 };
 
-["Donator", "NUMBER", "PlayerInfo"] call _getValue;
+["Supporter", "NUMBER", "PlayerInfo"] call _getValue;
 ["BankMoney", "NUMBER", "PlayerInfo"] call _getValue;
 
 ["Damage", "NUMBER"] call _getValue;
