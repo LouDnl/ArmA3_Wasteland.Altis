@@ -30,7 +30,7 @@ _rulesOnline = "http://atlas.gamersinc.net:9090/rules.php";
 _rulesOffline = "addons\TOParmaInfo\rules.html";
 _newsOnline = "http://atlas.gamersinc.net:9090/news.php";
 _newsOffline = "addons\TOParmaInfo\news.html";
-_statsOnline = "http://atlas.gamersinc.net:9090/index.php";
+_statsOnline = "http://atlas.gamersinc.net:9090/stats.php";
 _statsOffline = "addons\TOParmaInfo\stats.html";
 
 
