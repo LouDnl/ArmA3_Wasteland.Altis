@@ -103,12 +103,9 @@ switch (_supporterLevel) do {
 					
 [_crate,[
 // Accessories
-"optic_Holosight",
-"optic_MRD",
+/*
 "muzzle_snds_L",
 "muzzle_snds_acp",
-"optic_Hamr",
-"optic_aco_smg",
 "muzzle_snds_M",
 "muzzle_snds_H",
 "muzzle_snds_H_MG",
@@ -116,8 +113,9 @@ switch (_supporterLevel) do {
 "muzzle_snds_338_black",
 "muzzle_snds_338_green",
 "muzzle_snds_338_sand",
-"muzzle_snds_93mmg"
-,"muzzle_snds_93mmg_tan",
+"muzzle_snds_93mmg",
+"muzzle_snds_93mmg_tan",
+*/
 "bipod_01_F_blk",
 "bipod_02_F_blk",
 "bipod_03_F_blk",
@@ -128,6 +126,10 @@ switch (_supporterLevel) do {
 "bipod_02_F_tan",
 "acc_flashlight",
 "acc_pointer_IR",
+"optic_Holosight",
+"optic_MRD",
+"optic_Hamr",
+"optic_aco_smg",
 "optic_Yorris",
 "optic_Holosight_smg",
 "optic_Aco",
