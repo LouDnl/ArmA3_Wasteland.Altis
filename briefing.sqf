@@ -315,14 +315,13 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Wasteland item to put a pincode on a vehicle
 <br/> [Added] Camouflage nets now save
 <br/> [Added] Ability to change uniform texture
-<br/> [Added] First iteration of persistent uniform and backpack texture
+<br/> [Added] Persistent uniform and backpack textures
 <br/> [Added] Ability to repaint your vehicle
 <br/> [Added] Ability to mark your owned vehicles and objects on the map
 <br/> [Added] Show R.I.P. map marker on corpse location after death
 <br/> [Added] Multiplying money reward for players that stay on the server
 <br/> [Added] Changed the appearance of the store NPCs
-<br/> [Added] Sell, Change Ownership and Resupply trucks
-<br/> [Added] Selling a plane will always give you 50k
+<br/> [Added] Sell, License and Service option to vehicle store
 <br/> [Added] Vehicle locking and info script by Micovery
 <br/> [Added] Vehicle lock state saving
 <br/> [Added] Locked vehicle break in and hot wire at a cost
@@ -335,10 +334,8 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Intro script
 <br/> [Added] Player controlled IP cameras
 <br/> [Added] Device detector (IP Cameras, Spawn Beacons and Base Lockers)
-<br/> [Added] Altis Madhouse and Orino Fortress (Altis)
-<br/> [Added] BluFor and OpFor Base (Altis)
 <br/> [Added] Mortar to one mission as reward
-<br/> [Added] High value target at 125k and Drugs runner with removal and message on disconnect
+<br/> [Added] High value target and Drugs runner with removal and message on disconnect
 <br/> [Added] Gas Grenades and Gas Masks by Mokey
 <br/> [Added] Logging to all admin commands
 <br/> [Added] Airdrop system by Apoc
@@ -362,26 +359,33 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Several icons for actions
 <br/> [Added] Throat cut count to database
 <br/> [Added] Logo to player menu
-<br/> [Added] New Epoch style status bas
+<br/> [Added] New Epoch style status bar
+<br/> [Added] New mission announcements
+<br/> [Added] More shops
+<br/> [Added] Disable environment option
+<br/> [Added] Different classes with different gear
+<br/> [Added] Supporter loadouts
+<br/> [Added] Immersion to main airfield (buildings)
+<br/> [Added] Hide body option
+<br/> [Added] AI drop money on death
+<br/> [Added] Info page with keyboard shortcuts
 <br/> [Added] Admin menu: teleport player to me
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
 <br/> [Added] Admin menu: invisibility mode
 <br/> [Added] Debug menu: lock, unlock, relock and delete objects
-<br/> [Removed] Mortar from store
-<br/> [Removed] Confirmation of emergency eject
-<br/> [Moved] Mission weightings to main_config
 <br/> [Changed] Removed the Wipeout from static spawns
 <br/> [Changed] Size of player icons
 <br/> [Changed] Color of menus
-<br/> [Changed] Starting gear
-<br/> [Changed] Only 2 vehicle stores sell planes (Altis)
-<br/> [Changed] Disabled Fog
 <br/> [Changed] Changed prices
-<br/> [Changed] Vehicles spawn in locked and with engine on
-<br/> [Changed] Spawnbeacon insertion to 0 mtrs
-<br/> [Changed] Ability to airlift crates
+<br/> [Changed] Vehicles spawn in locked and with engine on except UAV and UGV
 <br/> [Changed] Old R3F script to version 3.1
+<br/> [Changed] Viewdistance settings
+<br/> [Moved] Mission weightings to main_config
+<br/> [Disabled] Proving Grounds
+<br/> [Disabled] Thermal on UAV and UGV
+<br/> [Removed] Mortar from store
+<br/> [Removed] Confirmation of emergency eject
 "
 ]];
 
