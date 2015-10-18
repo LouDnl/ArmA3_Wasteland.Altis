@@ -34,12 +34,9 @@ _checks =
 	{
 		case (!alive player): { _text = "" };
 		case (vehicle player != player): { _text = "Action failed! You can't do this in a vehicle" };
-		case (player distance _object > (sizeOf typeOf _object / 3) max 2): { _text = "Action failed! You are too far away from the object" };
-
-		case (isNull _object): { _text = "The object no longer exists" };
-		case (alive _object || {alive _x} count crew _object > 0): { _text = "Action failed! You are not allowed to salvage this object" };
-		case (!isNull (_object getVariable ["R3F_LOG_est_deplace_par", objNull])): { _text = "Action failed! Somebody moved the object" };
-		case (!isNull (_object getVariable ["R3F_LOG_est_transporte_par", objNull])): { _text = "Action failed! Somebody loaded or towed the object" };
+		case (player distance _object > (sizeOf typeOf _object / 3) max 2): { _text = "Action failed! You are too far away from the body" };
+		case (isNull _object): { _text = "The body no longer exists" };
+		case (alive _object || {alive _x} count crew _object > 0): { _text = "Action failed! You are not allowed to hide this body" };
 		case (doCancelAction): { doCancelAction = false; _text = "Hiding cancelled" };
 		default
 		{
@@ -63,25 +60,17 @@ mutexScriptInProgress = true;
 // Salvage time and default money reward according to vehicle type
 switch (true) do
 {
-	case ({_vehClass isKindOf _x} count ["Quadbike_01_base_F", "Kart_01_Base_F", "Rubber_duck_base_F", "UAV_01_base_F"] > 0): // Quadbikes, karts, rubber boats, UAV_01
+	case (_vehClass isKindOf "Man"):
 	{
-		_time = 3;
-		_money = 50;
+		_time = 5;
+		_money = 500;
 	};
 	default // Everything else
 	{
 		_time = 5;
-		_money = 2500;
+		_money = 500;
 	};
 };
-
-// Final money reward is decided from vehicle store price
-{
-	if (_x select 1 == _vehClass) exitWith
-	{
-		_money = GET_ONE_TENTH_PRICE(_x select 2);
-	};
-} forEach call allVehStoreVehicles;
 
 mutexScriptInProgress = true;
 
