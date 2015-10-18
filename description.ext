@@ -26,8 +26,8 @@ onLoadName = "GamersInc. Altis"; // it would be great if you could keep "A3" in 
 onLoadMission = "Created by AgentRev - A3Wasteland, edited by LouD and CRE4MPIE - GAMERSInc. Thanks to all who helped. Keep playing boys and girls!";
 overviewText = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
 overviewTextLocked = "Wasteland is a harsh survival sandbox where two teams and independent players fight for survival.";
-overviewPicture = "mapConfig\loading.jpg";
-loadScreen = "mapConfig\loading.jpg";
+overviewPicture = "mapConfig\Loading.jpg";
+loadScreen = "mapConfig\Loading.jpg";
 
 // A3W UI color (default = sky blue)
 
