@@ -179,11 +179,15 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			{
 				_object setPosATL [_safePos select 0, _safePos select 1, 0.05];
 				_object setVelocity [0,0,0.01];
+				// _object spawn cleanVehicleWreck;
+				_object setVariable ["A3W_purchasedVehicle", true, true];
+			};
+
+			if (_object isKindOf "AllVehicles" && !({_object isKindOf _x} count ["StaticWeapon","UAV_02_base_F","UGV_01_base_F"] > 0)) then
+			{
 				_object engineOn true; // Lets already turn the engine one to see if it fixes exploding vehicles.
 				_object lock 2; // Spawn vehicles in locked
 				_object setVariable ["R3F_LOG_disabled", true, true]; // Spawn vehicles in locked
-				// _object spawn cleanVehicleWreck;
-				_object setVariable ["A3W_purchasedVehicle", true, true];
 			};
 
 			_object setDir (if (_object isKindOf "Plane") then { markerDir _marker } else { random 360 });
