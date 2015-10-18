@@ -20,6 +20,8 @@ switch (_type) do {
 	case "supply": 	{_selectionArray = APOC_AA_SupOptions};
 	case "picnic":	{_selectionArray = APOC_AA_SupOptions};
 	case "base":	{_selectionArray = APOC_AA_SupOptions};
+	case "base1":	{_selectionArray = APOC_AA_SupOptions};
+	case "base2":	{_selectionArray = APOC_AA_SupOptions};
 	default 		{_selectionArray = APOC_AA_VehOptions; diag_log "AAA - Default Array Selected - Something broke";};
 };
 
@@ -118,17 +120,49 @@ _object = switch (_type) do {
 	case "base":
 	{
 		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
-		_object = createVehicle ["Land_Pod_Heli_Transport_04_box_F", _objectSpawnPos, [], 0, "None"];
-		diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
+		_object = createVehicle ["Land_CargoBox_V1_F", _objectSpawnPos, [], 0, "None"];
+		_object AllowDamage false;
+		//diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
 		_object setVariable ["A3W_purchasedStoreObject", true];
-		_object setVariable ["R3F_LOG_disabled",false,true];
+		_object setVariable ["R3F_LOG_Disabled", false, true];
 		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
-		[_object, ["Land_Cargo_Tower_V1_F", ["Land_Canal_Wall_Stairs_F", 2], ["Land_Mil_WallBig_4m_F", 5], ["Land_Canal_WallSmall_10m_F", 10], ["Land_RampConcreteHigh_F",2], ["Land_RampConcrete_F", 2],["BlockConcrete_F",4],["Land_BagFence_Round_F",2],["Land_BagFence_Short_F",4],["Land_HBarrier_3_F",2],["Land_Crash_barrier_F",2],["Land_LampShabby_F",4]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
 		clearBackpackCargoGlobal _object;
 		clearMagazineCargoGlobal _object;
 		clearWeaponCargoGlobal _object;
 		clearItemCargoGlobal _object;
-		_object setVariable ["allowDamage", false, true];
+		[_object, [["Land_Canal_Wall_Stairs_F", 2],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrier_3_F", 4],["Land_Canal_WallSmall_10m_F", 6],["Land_LampShabby_F", 10], ["Land_RampConcrete_F",1],["Land_Crash_barrier_F",4],["B_HMG_01_high_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+		_object
+	};
+	case "base1":
+	{
+		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
+		_object = createVehicle ["Land_Cargo20_yellow_F", _objectSpawnPos, [], 0, "None"];
+		_object AllowDamage false;
+		//diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
+		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object setVariable ["R3F_LOG_Disabled", false, true];
+		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
+		clearBackpackCargoGlobal _object;
+		clearMagazineCargoGlobal _object;
+		clearWeaponCargoGlobal _object;
+		clearItemCargoGlobal _object;
+		[_object, ["Land_Cargo_Tower_V1_F", ["Land_Canal_Wall_Stairs_F", 4],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrierWall6_F", 4],["Land_Canal_WallSmall_10m_F", 10],["Land_LampShabby_F", 10], ["Land_RampConcreteHigh_F",2], ["Land_RampConcrete_F", 2],["Land_Crash_barrier_F",6],["B_HMG_01_high_F",2]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+		_object
+	};
+		case "base2":
+	{
+		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
+		_object = createVehicle ["Land_Cargo40_white_F", _objectSpawnPos, [], 0, "None"];
+		_object AllowDamage false;
+		//diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
+		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object setVariable ["R3F_LOG_Disabled", false, true];
+		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
+		clearBackpackCargoGlobal _object;
+		clearMagazineCargoGlobal _object;
+		clearWeaponCargoGlobal _object;
+		clearItemCargoGlobal _object;
+		[_object, ["Land_Cargo_Tower_V1_F", ["Land_Canal_Wall_Stairs_F", 4],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrierWall6_F", 4],["Land_Canal_WallSmall_10m_F", 10],["Land_LampShabby_F", 10], ["Land_RampConcreteHigh_F",2], ["Land_RampConcrete_F", 2],["Land_Crash_barrier_F",6],["B_HMG_01_high_F",2]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
 		_object
 	};
 	default {
@@ -214,7 +248,8 @@ WaitUntil {(((position _object) select 2) < (_flyHeight-20))};
 		_heli fire "CMFlareLauncher";
 		_objectPosDrop = position _object;
 		_para = createVehicle ["B_Parachute_02_F", _objectPosDrop, [], 0, ""];
-		_object attachTo [_para,[0,0,-1.5]];
+		//_object attachTo [_para,[0,0,-1.5]];
+		_object attachTo [_para,[0,0,0]];
 
 		_smoke1= "SmokeShellGreen" createVehicle getPos _object;
 		_smoke1 attachto [_object,[0,0,-0.5]];
@@ -229,6 +264,7 @@ WaitUntil {((((position _object) select 2) < 1) || (isNil "_para"))};
 		//_smoke2 attachto [_object,[0,0,-0.5]];
 		_flare2= "F_40mm_Green" createVehicle getPos _object;
 		//_flare2 attachto [_object,[0,0,-0.5]];
+		_object setDamage 0;
 		sleep 2;
 		if (_type == "picnic") then {  //So let's go ahead and delete that ugly ammo pallet and create a wonderful picnic basket/barrel
 			_objectLandPos = position _object;
@@ -252,3 +288,4 @@ WaitUntil {((((position _object) select 2) < 1) || (isNil "_para"))};
 				};
 			};
 		};
+		_object setDamage 0;

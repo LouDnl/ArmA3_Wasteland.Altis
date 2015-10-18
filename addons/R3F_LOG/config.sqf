@@ -330,7 +330,10 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"MBT_01_base_F",
 	"MBT_02_base_F",
 	"MBT_03_base_F",
-	"Land_Pod_Heli_Transport_04_box_F"
+	"Land_Pod_Heli_Transport_04_box_F",
+	"Land_CargoBox_V1_F",
+	"Land_Cargo20_yellow_F",
+	"Land_Cargo40_white_F"
 ];
 
 
@@ -383,7 +386,10 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["Heli_Transport_04_base_F", 30],
 	["Heli_Attack_01_base_F", 10],
 	["Heli_Attack_02_base_F", 20],
-	["Land_Pod_Heli_Transport_04_box_F", 300]
+	["Land_Pod_Heli_Transport_04_box_F", 300],
+	["Land_CargoBox_V1_F", 500],
+	["Land_Cargo20_yellow_F", 1000],
+	["Land_Cargo40_white_F", 2000]
 ];
 
 /**
@@ -421,7 +427,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_BarGate_F", 3],
 	["Land_Canal_WallSmall_10m_F", 4],
 	["Land_Canal_Wall_Stairs_F", 3],
-	["Land_CargoBox_V1_F", 5],
+	//["Land_CargoBox_V1_F", 5],
 	["Land_Cargo_Patrol_V1_F", 7],
 	["Land_Cargo_Tower_V1_F", 30],
 	["Land_Cargo_HQ_V1_F", 30], // Added on player request
@@ -455,7 +461,10 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_Shoot_House_Wall_F", 3],
 	["Land_Stone_8m_F", 5],
 	["Land_ToiletBox_F", 2],
-	["Land_BarrelWater_F", 2]
+	["Land_BarrelWater_F", 2],
+	["Land_LampHalogen_F", 5],
+	["Land_GH_Platform_F", 25], 
+	["Land_FirePlace_F", 1]
 ];
 
 /****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
@@ -527,5 +536,10 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_BarrelWater_F",
 	"Land_HandyCam_F",
 	"Land_Laptop_F",
-	"Land_Pod_Heli_Transport_04_box_F"
+	"Land_Pod_Heli_Transport_04_box_F",
+	"Land_LampHalogen_F",
+	"Land_GH_Platform_F", 
+	"Land_FirePlace_F",
+	"Land_Cargo20_yellow_F",
+	"Land_Cargo40_white_F"
 ];

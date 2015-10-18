@@ -253,6 +253,21 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				{
 					_object setRepairCargo 25;
 				};
+				
+				case ({_object isKindOf _x} count ["Land_CargoBox_V1_F"] > 0):
+				{
+						[_object, [["Land_Canal_Wall_Stairs_F", 2],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrier_3_F", 4],["Land_Canal_WallSmall_10m_F", 6],["Land_LampShabby_F", 10], ["Land_RampConcrete_F",1],["Land_Crash_barrier_F",4],["B_HMG_01_high_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
+				
+				case ({_object isKindOf _x} count ["Land_Cargo20_yellow_F"] > 0):
+				{
+						[_object, ["Land_Cargo_Tower_V1_F", ["Land_Canal_Wall_Stairs_F", 4],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrierWall6_F", 4],["Land_Canal_WallSmall_10m_F", 10],["Land_LampShabby_F", 10], ["Land_RampConcreteHigh_F",2], ["Land_RampConcrete_F", 2],["Land_Crash_barrier_F",6],["B_HMG_01_high_F",2]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
+				
+				case ({_object isKindOf _x} count ["Land_Cargo40_white_F"] > 0):
+				{
+						[_object, [["Land_Cargo_Tower_V1_F",2],["Land_GH_Platform_F",10],["Land_Canal_Wall_Stairs_F", 10],["Land_BarGate_F", 4],["Land_Cargo_Patrol_V1_F", 4],["Land_HBarrierWall6_F", 10],["Land_Canal_WallSmall_10m_F", 20],["Land_LampHalogen_F", 10], ["Land_RampConcreteHigh_F",4], ["Land_RampConcrete_F", 4],["Land_Crash_barrier_F",6],["B_GMG_01_F",2],["B_static_AA_F",2],["B_static_AT_F",2],["B_Quadbike_01_F",4],["C_Heli_light_01_digital_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
 			};
 
 			if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
