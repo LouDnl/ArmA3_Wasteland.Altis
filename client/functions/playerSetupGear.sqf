@@ -14,7 +14,7 @@ _vest = [_player, "vest"] call getDefaultClothing;
 _headgear = [_player, "headgear"] call getDefaultClothing;
 _goggles = [_player, "goggles"] call getDefaultClothing;
 
-if (_uniform != "") then { _player addUniform _uniform };
+//if (_uniform != "") then { _player addUniform _uniform };
 if (_uniform != "") then { _player forceAddUniform _uniform };
 if (_vest != "") then { _player addVest _vest };
 if (_headgear != "") then { _player addHeadgear _headgear };
