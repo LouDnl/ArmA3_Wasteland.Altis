@@ -656,14 +656,17 @@ allStoreGear = compileFinal str (call headArray + call uniformArray + call vestA
 
 genObjectsArray = compileFinal str
 [
-	//["Base Re-Locker", "Land_Portable_generator_F", 100000, "object"],  //Cael817, SNAFU,Used for base operations <-- Non destroyable
+	//["Base in a Box (Small)", "Land_CargoBox_V1_F", 50000, "object"],
+	//["Base in a Box (Medium)", "Land_Cargo20_yellow_F", 100000, "object"],
+	//["Base in a Box (Large)", "Land_Cargo40_white_F", 150000, "object"],
 	["Base door (beta)", "Land_Canal_Wall_10m_F", 25000, "object"],  // LouD
 	["Base door key (PIN: 0000) (beta)", "Land_InfoStand_V2_F", 10000, "object"],  // LouD
 	["Base locker (PIN: 0000)", "Land_Device_assembled_F", 50000, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
 	["Safe (PIN: 0000)", "Box_NATO_AmmoVeh_F", 50000, "ammocrate"],
 	["Empty Ammo Crate", "Box_NATO_Ammo_F", 200, "ammocrate"],
-	//["Metal Barrel", "Land_MetalBarrel_F", 25, "object"],
-	//["Toilet Box", "Land_ToiletBox_F", 25, "object"],
+	["Camp Fire", "Land_FirePlace_F", 100, "object"],
+	["Small Platform", "Land_GH_Platform_F", 500, "object"],
+	["Halogen lamp post", "Land_LampHalogen_F", 500, "object"],
 	["Lamp Post (Harbour)", "Land_LampHarbour_F", 200, "object"],
 	["Lamp Post (Shabby)", "Land_LampShabby_F", 200, "object"],
 	["Boom Gate", "Land_BarGate_F", 300, "object"],
@@ -919,7 +922,7 @@ colorsArray = compileFinal str
 			["Hello Kitty", _texDir + "hellokitty.paa"],
 			["Hex", _texDir + "hex.paa"],
 			["Hippie", _texDir + "hippie.paa"],
-			["ISIS", _texDir + "isis.paa"],
+			//["ISIS", _texDir + "isis.paa"],
 			["Leopard", _texDir + "leopard.paa"],
 			["Mountain Dew", _texDir + "mtndew.paa"],
 			["'Murica", _texDir + "murica.paa"],
