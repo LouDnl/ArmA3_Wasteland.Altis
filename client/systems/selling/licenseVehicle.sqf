@@ -11,7 +11,7 @@
 
 storeSellingHandle = _this spawn
 {
-#define LICENS_PRICE (["License_Price", 10] call getPublicVar)
+#define LICENSE_PRICE (["License_Price", 10] call getPublicVar)
 #define VEHICLE_MAX_SELLING_DISTANCE (["Vehicle_Distance", 50] call getPublicVar)
 
 
@@ -44,7 +44,7 @@ _objName = getText (configFile >> "CfgVehicles" >> _objClass >> "displayName");
 	if (_type == _x select 1) then
 	{	
 	_price = _x select 2;
-	_price = _price / CHANGEOWNER_PRICE;
+	_price = _price / LICENSE_PRICE;
 	};
 	
 } forEach (call allVehStoreVehicles);
