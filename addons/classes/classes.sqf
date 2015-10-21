@@ -161,7 +161,7 @@
 			_player addWeapon "MMG_02_black_F";
 			_player addPrimaryWeaponItem "optic_aco_smg";
 			_player addPrimaryWeaponItem "bipod_01_F_blk";
-			_player addHeadgear "H_PilotHelmetFighter_B";
+			_player addHeadgear "H_CrewHelmetHeli_B";
 			};
 			
 			default
