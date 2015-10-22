@@ -131,7 +131,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="GAMERSInc A3Wasteland Altis v1.2 (GI004A)";
+		briefingName="GAMERSInc A3Wasteland Altis v1.2 (GI005A)";
 		overviewText="Wasteland survival sandbox by GAMERSInc - visit www.gamersinc.net for more details. Teamspeak: ts.gamersinc.net";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
