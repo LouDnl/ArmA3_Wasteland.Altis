@@ -179,7 +179,8 @@ if (isServer) then
 		"License_Price",
 		"Service_Price",
 		"Vehicle_Distance",
-		"A3W_supportersEnabled"
+		"A3W_supportersEnabled",
+		"A3W_territoryAllowed"
 	];
 
 	["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
