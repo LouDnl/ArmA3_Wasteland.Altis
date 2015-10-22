@@ -36,7 +36,7 @@ class playerSettings {
 
 		class MainTitle : w_RscText {
 			idc = -1;
-			text = "Player Inventory";
+			text = "Player Menu";
 			sizeEx = 0.04;
 			shadow = 2;
 			x = 0.260; y = 0.1;
@@ -45,21 +45,21 @@ class playerSettings {
 
 		class waterIcon : w_RscPicture {
 			idc = -1;
-			text = "client\icons\water.paa";
+			text = "client\icons\thirst.paa";
 			x = 0.022; y = 0.2;
 			w = 0.04 / (4/3); h = 0.04;
 		};
 
 		class foodIcon : w_RscPicture {
 			idc = -1;
-			text = "client\icons\food.paa";
+			text = "client\icons\hunger.paa";
 			x = 0.022; y = 0.26;
 			w = 0.04 / (4/3); h = 0.04;
 		};
 
 		class moneyIcon : w_RscPicture {
 			idc = -1;
-			text = "client\icons\money.paa";
+			text = "client\icons\money2.paa";
 			x = 0.022; y = 0.32;
 			w = 0.04 / (4/3); h = 0.04;
 		};
