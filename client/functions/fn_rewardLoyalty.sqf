@@ -10,7 +10,7 @@ while {_i < 3} do
 {
 	if ( _i == 1) then 
 	{
-		_reward = (2500 * multiPlyWith);
+		_reward = (1000 * multiPlyWith);
 		player setVariable ["cmoney", ((player getVariable ["cmoney", 0]) + _reward), true];
 		_msg = parseText format ["<t align='center' color='#FFFFFF' shadow='2' size='1.75'>Gift!</t><br/><t align='center' color='#17FF41'>------------------------------</t><br/><t align='center' color='#FFFFFF'>%1 Thank you for playing on our Server! Your loyalty is rewarded with: </t><t align='center' color='#40FF00'>%2$</t>", name player, _reward];
 		hint _msg;
