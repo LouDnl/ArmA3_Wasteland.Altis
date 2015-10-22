@@ -7,10 +7,11 @@
 //	@file Created: 20/11/2012 05:19
 //	@file Args:
 
-private ["_marker", "_preload", "_pos", "_rad", "_townName", "_playerPos"];
+private ["_marker", "_preload", "_height", "_pos", "_rad", "_townName", "_playerPos"];
 _marker = _this select 0;
 _preload = param [1, false, [false]];
 
+_height = (["A3W_townSpawnSpawnHeight", 0] call getPublicVar) max 0;
 {
 	if (_x select 0 == _marker) exitWith
 	{
@@ -18,7 +19,7 @@ _preload = param [1, false, [false]];
 		_rad = _x select 1;
 		_townName = _x select 2;
 
-		_playerPos = [_pos,_rad,_rad + 150,1,0,0,0] call findSafePos;	// Added to make players spawn within 150 meters of town borders instead of in towns.
+		_playerPos = [[_pos select 0, _pos select 1, _height],_rad,_rad + 150,1,0,0,0] call findSafePos;	// Added to make players spawn within 150 meters of town borders instead of in towns.
 //		_playerPos = [_pos,5,_rad,1,0,0,0] call findSafePos;
 		if (_preload) then { waitUntil {sleep 0.1; preloadCamera _playerPos} };
 
