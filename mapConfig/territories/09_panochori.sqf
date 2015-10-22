@@ -29,7 +29,7 @@ _marker setMarkerText "B";
 _marker setMarkerSize [.5, .5];
 _marker setMarkerColor "ColorWhite";
 
-_pos = [15195.2939,11122.498,53.127033];
+_pos = [5195.2939,11122.498,53.127033];
 _marker = createMarker ["TERRITORY_9_PANOCHORI_C", _pos];
 _marker setMarkerShape "ELLIPSE";
 _marker setMarkerBrush "DiagGrid";
