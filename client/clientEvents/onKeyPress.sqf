@@ -114,7 +114,7 @@ if (!_handled && _key in actionKeys "GetOut") then
 
 	if (alive player && _veh != player) then
 	{
-		if (_ctrl && {_veh isKindOf 'Air' && !(_veh isKindOf 'ParachuteBase')}) then
+		if (_veh isKindOf 'Air' && !(_veh isKindOf 'ParachuteBase')) then
 		{
 			[[], fn_emergencyEject] execFSM "call.fsm";
 			/*[] spawn
