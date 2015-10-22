@@ -14,7 +14,7 @@ _hint = messageSystem;
 	_hint,
 	[
 		0,
-		safeZoneY + 0.15,
+		safeZoneY + 0.03,
 		1,
 		1
 	],
