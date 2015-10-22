@@ -162,6 +162,7 @@ if (isServer) then
 		"A3W_atmRemoveIfDisabled",
 		"A3W_uavControl",
 		"A3W_townSpawnCooldown",
+		"A3W_townSpawnSpawnHeight",
 		"A3W_maxSpawnBeacons",
 		"A3W_survivalSystem",
 		"A3W_extDB_GhostingAdmins",
