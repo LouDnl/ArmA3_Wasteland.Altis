@@ -821,9 +821,9 @@ helicoptersArray = compileFinal str
 	["UH-80 Ghost Hawk (Black)", "B_Heli_Transport_01_F", 30000, "vehicle"], // UH-60 Stealth with 2 side miniguns
 	["UH-80 Ghost Hawk (Green)", "B_Heli_Transport_01_camo_F", 30000, "vehicle"], // UH-60 Stealth with 2 side miniguns (green camo)
 	["CH-67 Huron (Armed) [DLC]", "B_Heli_Transport_03_F", 35000, "vehicle"], // CH-47 with 2 side miniguns
-	["AH-9 Pawnee", "B_Heli_Light_01_armed_F", 20000, "vehicle"], // Armed AH-6
-	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 35000, "vehicle"], // Armed Ka-60 with orca paintjob
-	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 45000, "vehicle"], // Armed AW159
+	["AH-9 Pawnee", "B_Heli_Light_01_armed_F", 35000, "vehicle"], // Armed AH-6
+	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 50000, "vehicle"], // Armed Ka-60 with orca paintjob
+	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 65000, "vehicle"], // Armed AW159
 	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 125000, "vehicle"], // Armed Ka-60
 	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 150000, "vehicle"], // Mi-28 with gunner
 	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 150000, "vehicle"], // Mi-28 with gunner (black camo)
