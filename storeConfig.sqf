@@ -84,10 +84,10 @@ rifleArray = compileFinal str
 	["Cyrus Rifle (Tan) [DLC]", "srifle_DMR_05_tan_f", 1000],
 
 	// Sniper Rifles
-	["M320 LRR Sniper", "srifle_LRR_LRPS_F", 2000],
-	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_LRPS_F", 2100],
-	["GM6 Lynx Sniper", "srifle_GM6_LRPS_F", 2250],
-	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_LRPS_F", 2350],
+	["M320 LRR Sniper", "srifle_LRR_LRPS_F", 3500],
+	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_LRPS_F", 3750],
+	["GM6 Lynx Sniper", "srifle_GM6_LRPS_F", 4000],
+	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_LRPS_F", 4250],
 
 	["ASP-1 Kir Rifle (Black) [DLC]", "srifle_DMR_04_F", 5000],
 	["ASP-1 Kir Rifle (Tan) [DLC]", "srifle_DMR_04_Tan_F", 5000]
@@ -112,12 +112,12 @@ launcherArray = compileFinal str
 [
 	["RPG-42 Alamut", "launch_RPG32_F", 400],
 	["PCML", "launch_NLAW_F", 800],
-	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 2500],
-	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 2500],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 2500],
-	["Titan MPRL AA (Desert)", "launch_Titan_F", 1500],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 1500],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 1500]
+	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 7500],
+	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 7500],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 7500],
+	["Titan MPRL AA (Desert)", "launch_Titan_F", 6500],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 6500],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 6500]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
@@ -125,12 +125,12 @@ allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call 
 staticGunsArray = compileFinal str
 [
 	// ["Vehicle Ammo Crate", "Box_NATO_AmmoVeh_F", 2500],
-	["Static Titan AT 4Rnd (NATO)", "B_static_AT_F", 3500], // Static launchers only have 4 ammo, hence the low price
-	["Static Titan AT 4Rnd (CSAT)", "O_static_AT_F", 3500],
-	["Static Titan AT 4Rnd (AAF)", "I_static_AT_F", 3500],
-	["Static Titan AA 4Rnd (NATO)", "B_static_AA_F", 4000],
-	["Static Titan AA 4Rnd (CSAT)", "O_static_AA_F", 4000],
-	["Static Titan AA 4Rnd (AAF)", "I_static_AA_F", 4000],
+	["Static Titan AT 4Rnd (NATO)", "B_static_AT_F", 12500], // Static launchers only have 4 ammo, hence the low price
+	["Static Titan AT 4Rnd (CSAT)", "O_static_AT_F", 12500],
+	["Static Titan AT 4Rnd (AAF)", "I_static_AT_F", 12500],
+	["Static Titan AA 4Rnd (NATO)", "B_static_AA_F", 10000],
+	["Static Titan AA 4Rnd (CSAT)", "O_static_AA_F", 10000],
+	["Static Titan AA 4Rnd (AAF)", "I_static_AA_F", 10000],
 	["Mk30 HMG .50 Low tripod (NATO)", "B_HMG_01_F", 3000],
 	["Mk30 HMG .50 Low tripod (CSAT)", "O_HMG_01_F", 3000],
 	["Mk30 HMG .50 Low tripod (AAF)", "I_HMG_01_F", 3000],
@@ -212,18 +212,18 @@ ammoArray = compileFinal str
 	["7.62mm 150Rnd Tracer (Green) Box", "150Rnd_762x54_Box_Tracer", 125],
 	[".338 LM 10Rnd Mag", "10Rnd_338_Mag", 65], //DLC Ammo
 	[".338 NM 130Rnd Belt", "130Rnd_338_Mag", 150], //DLC Ammo
-	[".408 7Rnd Cheetah Mag", "7Rnd_408_Mag", 100],
+	[".408 7Rnd Cheetah Mag", "7Rnd_408_Mag", 650],
 	["9.3mm 10Rnd Mag", "10Rnd_93x64_DMR_05_Mag", 65], //DLC Ammo
 	["9.3mm 150Rnd Belt", "150Rnd_93x64_Mag", 150], //DLC Ammo
-	["12.7mm 5Rnd Mag", "5Rnd_127x108_Mag", 100],
-	["12.7mm 5Rnd Armor-Piercing Mag", "5Rnd_127x108_APDS_Mag", 150],
-	["12.7mm 10Rnd Subsonic Mag", "10Rnd_127x54_Mag", 75], //DLC Ammo
+	["12.7mm 5Rnd Mag", "5Rnd_127x108_Mag", 700],
+	["12.7mm 5Rnd Armor-Piercing Mag", "5Rnd_127x108_APDS_Mag", 850],
+	["12.7mm 10Rnd Subsonic Mag", "10Rnd_127x54_Mag", 175], //DLC Ammo
 	["RPG-42 Anti-Tank Rocket", "RPG32_F", 200],              // Direct damage: high      | Splash damage: low    | Guidance: none
 	["RPG-42 High-Explosive Rocket", "RPG32_HE_F", 175],      // Direct damage: medium    | Splash damage: medium | Guidance: none
 	["PCML Anti-Tank Missile", "NLAW_F", 400],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
-	["Titan Anti-Tank Missile", "Titan_AT", 1000],            // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	["Titan Anti-Personnel Missile", "Titan_AP", 750],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
-	["Titan Anti-Air Missile", "Titan_AA", 500],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
+	["Titan Anti-Tank Missile", "Titan_AT", 2500],            // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
+	["Titan Anti-Personnel Missile", "Titan_AP", 1500],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	["Titan Anti-Air Missile", "Titan_AA", 2000],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
 	["40mm Smoke Round (White)", "1Rnd_Smoke_Grenade_shell", 50],
@@ -256,25 +256,25 @@ ammoArray = compileFinal str
 //Text name, classname, buy cost, item class
 accessoriesArray = compileFinal str
 [
-	["Suppressor 9mm", "muzzle_snds_L", 100, "item"],
-	["Suppressor .45 ACP", "muzzle_snds_acp", 175, "item"],
-	["Suppressor 5.56mm", "muzzle_snds_M", 200, "item"],
-	["Suppressor 6.5mm", "muzzle_snds_H", 250, "item"],
-	["Suppressor 6.5mm LMG", "muzzle_snds_H_MG", 300, "item"],
-	["Suppressor 7.62mm", "muzzle_snds_B", 350, "item"],
-	["Suppressor .338 [DLC]", "muzzle_snds_338_black", 450, "item"],
-	["Suppressor .338 (Green) [DLC]", "muzzle_snds_338_green", 450, "item"],
-	["Suppressor .338 (Sand) [DLC]", "muzzle_snds_338_sand", 450, "item"],
-	["Suppressor 9.3mm [DLC]", "muzzle_snds_93mmg", 550, "item"],
-	["Suppressor 9.3mm (Tan) [DLC]", "muzzle_snds_93mmg_tan", 550, "item"],
-	["Bipod (NATO)", "bipod_01_F_blk", 450, "item"],
-	["Bipod (CSAT)", "bipod_02_F_blk", 450, "item"],
-	["Bipod (AAF)", "bipod_03_F_blk", 450, "item"],
-	["Bipod (MTP)", "bipod_01_F_mtp", 450, "item"],
-	["Bipod (Hex)", "bipod_02_F_hex", 450, "item"],
-	["Bipod (Olive)", "bipod_03_F_oli", 450, "item"],
-	["Bipod (Sand)", "bipod_01_F_snd", 450, "item"],
-	["Bipod (Tan)", "bipod_02_F_tan", 450, "item"],
+	["Suppressor 9mm", "muzzle_snds_L", 200, "item"],
+	["Suppressor .45 ACP", "muzzle_snds_acp", 275, "item"],
+	["Suppressor 5.56mm", "muzzle_snds_M", 300, "item"],
+	["Suppressor 6.5mm", "muzzle_snds_H", 350, "item"],
+	["Suppressor 6.5mm LMG", "muzzle_snds_H_MG", 400, "item"],
+	["Suppressor 7.62mm", "muzzle_snds_B", 550, "item"],
+	["Suppressor .338 [DLC]", "muzzle_snds_338_black", 650, "item"],
+	["Suppressor .338 (Green) [DLC]", "muzzle_snds_338_green", 650, "item"],
+	["Suppressor .338 (Sand) [DLC]", "muzzle_snds_338_sand", 650, "item"],
+	["Suppressor 9.3mm [DLC]", "muzzle_snds_93mmg", 750, "item"],
+	["Suppressor 9.3mm (Tan) [DLC]", "muzzle_snds_93mmg_tan", 750, "item"],
+	["Bipod (NATO)", "bipod_01_F_blk", 650, "item"],
+	["Bipod (CSAT)", "bipod_02_F_blk", 650, "item"],
+	["Bipod (AAF)", "bipod_03_F_blk", 650, "item"],
+	["Bipod (MTP)", "bipod_01_F_mtp", 650, "item"],
+	["Bipod (Hex)", "bipod_02_F_hex", 650, "item"],
+	["Bipod (Olive)", "bipod_03_F_oli", 650, "item"],
+	["Bipod (Sand)", "bipod_01_F_snd", 650, "item"],
+	["Bipod (Tan)", "bipod_02_F_tan", 650, "item"],
 	["Flashlight", "acc_flashlight", 100, "item"],
 	["IR Laser Pointer", "acc_pointer_IR", 100, "item"],
 	["Yorris Sight (Zubr Revolver)", "optic_Yorris", 50, "item"],
@@ -298,9 +298,9 @@ accessoriesArray = compileFinal str
 	["Kahlia (Old) [DLC]", "optic_KHS_old", 500, "item"],
 	["LRPS", "optic_LRPS", 750, "item"],
 	["NVS", "optic_NVS", 1500, "item"],
-	["TWS", "optic_tws", 7500, "item"],
-	["TWS MG", "optic_tws_mg", 8500, "item"],
-	["Nightstalker", "optic_Nightstalker", 10000, "item"]
+	["TWS", "optic_tws", 17500, "item"],
+	["TWS MG", "optic_tws_mg", 18500, "item"],
+	["Nightstalker", "optic_Nightstalker", 25000, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -832,8 +832,8 @@ helicoptersArray = compileFinal str
 
 planesArray = compileFinal str
 [
-	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 75000, "vehicle"],
-	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 125000, "vehicle"],
+	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 125000, "vehicle"],
+	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 150000, "vehicle"],
 	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 175000, "vehicle"],
 	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 250000, "vehicle"],
 	["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 300000, "vehicle"],
