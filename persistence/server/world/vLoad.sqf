@@ -166,7 +166,7 @@ _exclVehicleIDs = [];
 				};
 			} forEach _backpacks;
 		};
-
+/*		// Disable loading of saved ammo as test
 		_veh setVehicleAmmo 0;
 
 		if (!isNil "_turretMags3") then
@@ -184,7 +184,7 @@ _exclVehicleIDs = [];
 		{
 			{ _veh addMagazineTurret _x } forEach _turretMags2;
 		};
-
+*/
 		if (!isNil "_ammoCargo") then { _veh setAmmoCargo _ammoCargo };
 		if (!isNil "_fuelCargo") then { _veh setFuelCargo _fuelCargo };
 		if (!isNil "_repairCargo") then { _veh setRepairCargo _repairCargo };
