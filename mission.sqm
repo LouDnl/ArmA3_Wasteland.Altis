@@ -6082,7 +6082,7 @@ class Mission
 		class Item253
 		{
 			position[]={10811.983,146.49916,17569.744};
-			name="TERRITORY_ORINO_FORTRESS_1";
+			name="TERRITORY_ORINO_FORTRESS";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorYellow";
