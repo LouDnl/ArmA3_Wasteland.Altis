@@ -145,7 +145,7 @@ if (isNil "_repairCargo" || {!finite _repairCargo}) then { _repairCargo = 0 };
 _turretMags = [];
 _ammoCargo = 0;
 _fuelCargo = 0;
-_repairCargo = 0
+_repairCargo = 0;
 
 [
 	["Class", _class],
