@@ -123,6 +123,7 @@ if (_class call fn_hasInventory) then
 	_backpacks = (getBackpackCargo _obj) call cargoToPairs;
 };
 
+/* // Disable saving of static ammo as test
 _turretMags = [];
 
 if (_staticWeaponSavingOn && {_class call _isStaticWeapon}) then
@@ -138,6 +139,13 @@ _repairCargo = getRepairCargo _obj;
 if (isNil "_ammoCargo" || {!finite _ammoCargo}) then { _ammoCargo = 0 };
 if (isNil "_fuelCargo" || {!finite _fuelCargo}) then { _fuelCargo = 0 };
 if (isNil "_repairCargo" || {!finite _repairCargo}) then { _repairCargo = 0 };
+*/
+
+// Added to create empty saves
+_turretMags = [];
+_ammoCargo = 0;
+_fuelCargo = 0;
+_repairCargo = 0
 
 [
 	["Class", _class],
