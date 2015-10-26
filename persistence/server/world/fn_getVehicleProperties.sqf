@@ -79,7 +79,7 @@ if (_class call fn_hasInventory) then
 	_items = (getItemCargo _veh) call cargoToPairs;
 	_backpacks = (getBackpackCargo _veh) call cargoToPairs;
 };
-
+/* // Disable saving of vehicle ammo as test
 _turretMags = magazinesAmmo _veh;
 _turretMags2 = [];
 _turretMags3 = [];
@@ -131,6 +131,15 @@ _repairCargo = getRepairCargo _veh;
 if (isNil "_ammoCargo" || {!finite _ammoCargo}) then { _ammoCargo = 0 };
 if (isNil "_fuelCargo" || {!finite _fuelCargo}) then { _fuelCargo = 0 };
 if (isNil "_repairCargo" || {!finite _repairCargo}) then { _repairCargo = 0 };
+*/
+
+// Added to create empty saves
+_turretMags = [];
+_turretMags2 = [];
+_turretMags3 = [];
+_ammoCargo = 0;
+_fuelCargo = 0;
+_repairCargo = 0;
 
 _props =
 [
