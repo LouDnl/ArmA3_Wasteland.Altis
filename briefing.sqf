@@ -371,7 +371,6 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Info page with keyboard shortcuts
 <br/> [Added] Ability let people paradrop in on towns
 <br/> [Added] Armor penetration properties to store
-<br/> [Added] Conquest system. Courtesy of TOPARMA and l0dac
 <br/> [Added] Admin menu: teleport player to me
 <br/> [Added] Admin menu: teleport me to player
 <br/> [Added] Admin menu: unstuck player
