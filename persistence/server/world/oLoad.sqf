@@ -205,7 +205,7 @@ _exclObjectIDs = [];
 					} forEach _backpacks;
 				};
 			};
-
+/* // Disable saving of static weapon ammo as test
 			if (!isNil "_turretMags" && _staticWeaponSavingOn && {_class call _isStaticWeapon}) then
 			{
 				_obj setVehicleAmmo 0;
@@ -217,6 +217,7 @@ _exclObjectIDs = [];
 			if (!isNil "_repairCargo") then { _obj setRepairCargo _repairCargo };
 
 			reload _obj;
+*/
 		};
 
 		_obj hideObjectGlobal false;
