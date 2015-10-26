@@ -74,7 +74,6 @@ if (isServer) then
 {
 	diag_log format ["############################# %1 #############################", missionName];
 	diag_log "WASTELAND SERVER - Initializing Server";
-	call compile preprocessFile "mapConfig\territories\init_external.sqf";
 	[] execVM "server\init.sqf";
 };
 
