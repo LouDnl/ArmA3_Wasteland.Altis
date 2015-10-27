@@ -39,6 +39,6 @@
 	["TERRITORY_6_DOCKS_A", "DOCKS North", 500],
 	["TERRITORY_6_DOCKS_B", "DOCKS Center", 500],
 	["TERRITORY_6_DOCKS_C", "DOCKS South", 500],
-	["TERRITORY_6_DOCKS_D", "DOCKS Military", 500]//,
-	//["TERRITORY_ORINO_FORTRESS", "Orino Fortress", 500]
+	["TERRITORY_6_DOCKS_D", "DOCKS Military", 500],
+	["TERRITORY_ORINO_FORTRESS", "Orino Fortress", 500]
 ]
