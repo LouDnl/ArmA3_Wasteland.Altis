@@ -26,7 +26,9 @@ if (isServer) then
 		_uid = _this select 2;
 		_name = _this select 3;
 
-		diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3", [_name, _uid], alive _unit, local _unit];
+		//diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3", [_name, _uid], alive _unit, local _unit];
+		// Added to counter act AI ghosts
+		diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3 - isPlayer: %4 - getPlayerUID: '%5'", [_name, _uid], alive _unit, local _unit, isPlayer _unit, getPlayerUID _unit];
 		
 		_bountyMarker = format ["%1_bountyMarker", _name];  	
 		if (markerType _bountyMarker == "mil_dot") then
@@ -83,7 +85,13 @@ if (isServer) then
 				_unit spawn fn_ejectCorpse;
 			};
 		};
-
+		
+		// Added to counter act AI ghosts
+		if (!isNull _unit) then
+		{
+			_unit addEventHandler ["Respawn", { deleteVehicle (_this select 0) }]; // goddamnit BIS, stahp it
+		};
+		
 		false
 	}];
 
