@@ -51,7 +51,7 @@ storePurchaseHandle = player spawn
 				player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
 				_text = format ["You paid $%1 to repaint your vehicle.",_price];
 				[_text, 10] call mf_notify_client;		
-				player spawn fn_savePlayerData;
+				[] spawn fn_savePlayerData;
 			};
 
 		if (count _colorData > 0) then
