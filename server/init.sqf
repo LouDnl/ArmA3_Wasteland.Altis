@@ -89,7 +89,7 @@ if (isServer) then
 		// Added to counter act AI ghosts
 		if (!isNull _unit) then
 		{
-			_unit addEventHandler ["Respawn", { deleteVehicle (_this select 0) }]; // goddamnit BIS, stahp it
+			_unit addEventHandler ["Respawn", { deleteVehicle (_this select 0); diag_log "Ghost deleted" }];
 		};
 		
 		false
