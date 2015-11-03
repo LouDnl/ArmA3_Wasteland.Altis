@@ -14,12 +14,12 @@ _hint = messageSystem;
 	_hint,
 	[
 		0,
-		safeZoneY + 0.03,
+		safeZoneY,
 		1,
 		1
 	],
 	[10,10],
-	8,
-	1.5,
+	4,
+	1,
 	0
 ] spawn BIS_fnc_textTiles;
