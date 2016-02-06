@@ -166,7 +166,7 @@ _exclVehicleIDs = [];
 				};
 			} forEach _backpacks;
 		};
-/*		// Disable loading of saved ammo as test
+
 		_veh setVehicleAmmo 0;
 
 		if (!isNil "_turretMags3") then
